@@ -1,0 +1,69 @@
+.location {
+  h1, h2, h3, h4, p, .wysiwyg__content, ul li, ol li {
+    @apply tw-text-core #{!important};
+  }
+
+  .label--dark {
+    @apply tw-text-[16px] tw-tracking-[-1px] #{!important};
+  }
+
+  blockquote {
+    @apply tw-border-core #{!important};
+  }
+
+  a:not(.btn) {
+    @apply tw-text-sky hover:tw-text-mist #{!important};
+  }
+
+  p {
+    @apply tw-text-core #{!important};
+  }
+
+  &__image-container {
+    @apply tw-overflow-hidden;
+  }
+
+  &__image {
+    @apply tw-h-[240px];
+
+    @media screen and (min-width: 768px) {
+      @apply tw-h-[320px];
+    }
+  }
+
+  &__label {
+    .label--dark {
+      @apply tw-text-xs tw-uppercase tw-tracking-wider;
+    }
+  }
+
+  &__detail {
+    &-content {
+      p {
+        @apply tw-text-sm tw-leading-relaxed tw-mb-0;
+      }
+
+      a {
+        @apply tw-text-sky hover:tw-text-mist #{!important};
+      }
+    }
+  }
+
+  &__route {
+    &-toggle {
+      @apply tw-transition-colors tw-duration-200;
+      @apply tw-border-0 tw-cursor-pointer;
+
+      &:hover {
+        @apply tw-bg-blue-02;
+      }
+    }
+
+    &-content {
+      h3,
+      h4 {
+        @apply tw-font-bold tw-text-core tw-mt-4 tw-mb-2;
+      }
+    }
+  }
+}

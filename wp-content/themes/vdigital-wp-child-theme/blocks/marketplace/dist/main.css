@@ -1,0 +1,13 @@
+@media (min-width: 375px) and (max-width: 530px) {
+  .marketplace .marketplace__container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.marketplace .marketplace__container > a:hover {
+  box-shadow: 1px 5px 17px 5px var(--color-sky);
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .marketplace .marketplace__missing-connection > .title--h2 {
+    font-size: 32px;
+  }
+}

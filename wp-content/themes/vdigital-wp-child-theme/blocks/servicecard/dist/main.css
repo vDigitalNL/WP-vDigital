@@ -1,0 +1,28 @@
+body:not(.wp-admin) .servicecard .servicecard__image img,
+body.wp-admin .servicecard .servicecard__image img {
+  aspect-ratio: 1.345;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  body:not(.wp-admin) .servicecard .servicecard__content__btn,
+body.wp-admin .servicecard .servicecard__content__btn {
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+  }
+}
+body:not(.wp-admin) .servicecard .servicecard__content__btn,
+body.wp-admin .servicecard .servicecard__content__btn {
+  display: inline-block;
+  height: auto;
+}
+body:not(.wp-admin) .block__background--light .servicecard,
+body.wp-admin .block__background--light .servicecard {
+  --tw-text-opacity: 1;
+  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+}

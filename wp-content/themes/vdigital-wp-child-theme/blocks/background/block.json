@@ -1,0 +1,20 @@
+{
+  "name": "acf/background",
+  "title": "Background",
+  "category": "ww-backgrounds",
+  "description": "A container block.",
+  "style": "ww_background",
+  "script": "ww_background",
+  "icon": "block-default",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php",
+    "jsx": true
+  },
+  "parent": [
+    "core/post-content"
+  ]
+}

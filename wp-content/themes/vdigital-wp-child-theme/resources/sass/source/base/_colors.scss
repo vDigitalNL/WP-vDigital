@@ -1,0 +1,49 @@
+@layer base {
+  :root {
+    --color-primary: theme(colors.primary);
+    --color-turquoise: theme(colors.turquoise);
+    --color-spring: theme(colors.spring);
+    --color-core: theme(colors.core.DEFAULT);
+    --color-core-20: theme(colors.core.20);
+    --color-core-50: theme(colors.core.50);
+    --color-core-80: theme(colors.core.80);
+    --color-shade: theme(colors.shade);
+    --color-mist: theme(colors.mist);
+    --color-horizon: theme(colors.horizon);
+    --color-edge: theme(colors.edge.DEFAULT);
+    --color-edge-hover: theme(colors.edge.hover);
+    --color-sky: theme(colors.sky);
+    --color-growth: theme(colors.growth.DEFAULT);
+    --color-growth-hover: theme(colors.growth.hover);
+    --color-focus: theme(colors.focus.DEFAULT);
+    --color-focus-50: theme(colors.focus.50);
+    --color-focus-70: theme(colors.focus.70);
+    --color-warning: theme(colors.warning);
+    --color-cobalt: theme(colors.cobalt.DEFAULT);
+    --color-cobalt-hover: theme(colors.cobalt.hover);
+    --color-teal: theme(colors.teal.DEFAULT);
+    --color-teal-hover: theme(colors.teal.hover);
+    --color-forest: theme(colors.forest.DEFAULT);
+    --color-forest-hover: theme(colors.forest.hover);
+  }
+
+  .gradient--1, .gradient--2, .gradient--3, .gradient--4 {
+    @apply tw-bg-contain tw-bg-no-repeat;
+    &.flip {
+      @apply tw-scale-x-[-1];
+    }
+  }
+
+  .gradient--1 {
+    background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/gradients/gradient_01.svg");
+  }
+  .gradient--2 {
+    background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/gradients/gradient_02.svg");
+  }
+  .gradient--3 {
+    background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/gradients/gradient_03.svg");
+  }
+  .gradient--4 {
+    background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/gradients/gradient_04.svg");
+  }
+}

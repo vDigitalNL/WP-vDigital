@@ -1,0 +1,655 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+msgid "Company name is too short"
+msgstr "Bedrijfsnaam is te kort"
+
+msgid "Firstname is too short"
+msgstr "Voornaam is te kort"
+
+msgid "Lastname is too short"
+msgstr "Achternaam is te kort"
+
+msgid "Phone number is too short"
+msgstr "Telefoonnummer is te kort"
+
+msgid "E-mail address is not valid"
+msgstr "E-mail is niet geldig"
+
+msgid "Please enter your business email address"
+msgstr "Voer je zakelijke e-mailadres in"
+
+msgid "Dyflexis. All rights reserved."
+msgstr "Dyflexis. Alle rechten voorbehouden."
+
+msgid "Choose a language"
+msgstr "Kies een taal"
+
+msgid "Your request has been sent"
+msgstr "De aanvraag is verstuurd"
+
+msgid "Salutation"
+msgstr "Aanhef"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Phone number"
+msgstr "Telefoonnummer"
+
+msgid "Company name"
+msgstr "Bedrijfsnaam"
+
+msgid "Number of employees"
+msgstr "Aantal werknemers"
+
+msgid "This field is required"
+msgstr "Verplicht om in te vullen"
+
+msgid "Load more"
+msgstr "Toon meer"
+
+msgid "Show all"
+msgstr "Toon alles"
+
+msgid "Filter category"
+msgstr "Filter categorie"
+
+msgid "Per user / per month"
+msgstr "Per gebruiker / per maand"
+
+msgid "This license contains"
+msgstr "Deze licentie bevat"
+
+msgid "from"
+msgstr "vanaf"
+
+msgid "Pound"
+msgstr "Pond"
+
+msgid "Popular"
+msgstr "Populair"
+
+msgid "Request pricing"
+msgstr "Prijs op aanvraag"
+
+msgid "No results found."
+msgstr "Geen resultaten gevonden."
+
+msgid "Search results for"
+msgstr "Zoekresultaten voor"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "Search by keyword or phrase"
+msgstr "Zoeken op trefwoord of zin"
+
+msgid "Show all results"
+msgstr "Toon alle resultaten"
+
+msgid "What are you looking for?"
+msgstr "Waar ben je naar op zoek?"
+
+msgid "Integration"
+msgstr "Integratie"
+
+msgid "Partner"
+msgstr "Partner"
+
+msgid "Review"
+msgstr "Referentie"
+
+msgid "News"
+msgstr "Nieuws"
+
+msgid "Page"
+msgstr "Pagina"
+
+msgid "Showing results for \"%s\""
+msgstr "Resultaten getoond voor \"%s\""
+
+msgid "Dutch"
+msgstr "Nederlands"
+
+msgid "German"
+msgstr "Duits"
+
+msgid "English"
+msgstr "Engels"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Log in by entering your system name and navigating to your system where you can log in."
+msgstr "Login door uw systeemnaam in te vullen en naar uw systeem te gaan waar u kunt inloggen."
+
+msgid "System name (Company name)"
+msgstr "Systeemnaam (Bedrijfsnaam)"
+
+msgid "To your system"
+msgstr "Naar uw systeem"
+
+msgid "Follow us"
+msgstr "Volg ons via"
+
+msgid "All stories"
+msgstr "Alle verhalen"
+
+msgid "Other news"
+msgstr "Ander nieuws"
+
+msgid "Company"
+msgstr "Bedrijf"
+
+msgid "Hours"
+msgstr "Uren"
+
+msgid "Cost"
+msgstr "Kosten"
+
+msgid "Efficiency"
+msgstr "Efficiëntie"
+
+msgid "Select your Branch:"
+msgstr "Selecteer uw branche:"
+
+msgid "Select"
+msgstr "Selecteer"
+
+msgid "Production and warehousing"
+msgstr "Productie en Warehousing"
+
+msgid "Retail & E-Commerce"
+msgstr "Retail & E-Commerce"
+
+msgid "Healthcare"
+msgstr "Zorg & Welzijn"
+
+msgid "Catering industry"
+msgstr "Horeca"
+
+msgid "Recreation"
+msgstr "Recreatie"
+
+msgid "How many locations does your company have?"
+msgstr "Hoeveel vestigingen heeft uw bedrijf?"
+
+msgid "How many workdays per week is your company open?"
+msgstr "Hoeveel werkdagen per week is uw bedrijf open?"
+
+msgid "How many employees does your company have?"
+msgstr "Hoeveel medewerkers heeft uw bedrijf?"
+
+msgid "How many FTE?"
+msgstr "Hoeveel FTE?"
+
+msgid "FTE stands for full-time equivalent. This expresses the size of a position or the number of employees. "
+msgstr "FTE staat voor fulltime-equivalent. Het is een rekeneenheid waarmee de omvang van een functie of de personeelssterkte kan worden uitgedrukt."
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "How many managers are busy with the planning and hour registration? "
+msgstr "Hoeveel managers zijn bezig met de planning en urenregistratie? "
+
+msgid "How many hours per week does a manager spend on..."
+msgstr "Hoeveel uur per week besteedt een manager aan..."
+
+msgid "Planning?"
+msgstr "Planning?"
+
+msgid "0 hours"
+msgstr "0 uur"
+
+msgid "20 hours"
+msgstr "20 uur"
+
+msgid "40 hours"
+msgstr "40 uur"
+
+msgid "Leave and absence?"
+msgstr "Verlof en verzuim?"
+
+msgid "Hour registration?"
+msgstr "Urenregistratie?"
+
+msgid "Payroll?"
+msgstr "Salarisadministratie?"
+
+msgid "Communication and corrections?"
+msgstr "Communicatie en correcties?"
+
+msgid "What is the average hourly wage, employer charges incl.?"
+msgstr "Wat is het gemiddeld uurloon incl. werkgeverslasten?"
+
+msgid "This average hourly wage is based on figures from Statistics Netherlands in the sector of your choice"
+msgstr "Dit gemiddelde uurloon is gebaseerd op cijfers van het CBS in de door u gekozen sector"
+
+msgid "(Source)"
+msgstr "(Bron)"
+
+msgid "What are your total monthly personnel costs?"
+msgstr "Uw maandelijkse personeelslasten"
+
+msgid "Your monthly personnel costs are calculated by multiplying the number of FTEs by the average hourly wage."
+msgstr "Uw maandelijkse personeelslasten worden berekend door het aantal FTE's te vermenigvuldigen met het gemiddelde uurloon."
+
+msgid "On a scale from 1 to 10, to what extent do you consider budget, forecast and existing overtime during scheduling?"
+msgstr "Op de schaal van 1 tot 10, in hoeverre houdt u tijdens het inroosteren rekening met budget, forecast, bestaande overuren & tijd voor tijd?"
+
+msgid "On a scale from 1 to 10, how accurate is your current timekeeping based on clocked work hours, unnecessary overwork and allowances."
+msgstr "Op de schaal van 1 tot 10, hoe nauwkeurig is uw huidige urenregistratie op basis van geklokte werktijden, gemaakte overuren en toeslaguren?"
+
+msgid "Your company"
+msgstr "Uw bedrijf"
+
+msgid "Hours spent by manager per week on "
+msgstr "Uren besteed door manager per week aan "
+
+msgid "Your potential savings"
+msgstr "Uw potentiële besparingen"
+
+msgid "Savings per month"
+msgstr "Besparingen per maand"
+
+msgid "Savings per year"
+msgstr "Besparingen per jaar"
+
+msgid "Savings per month per location"
+msgstr "Besparingen per maand per locatie"
+
+msgid "Savings per year per location"
+msgstr "Besparingen per jaar per locatie"
+
+msgid "Savings per month per FTE"
+msgstr "Besparingen per maand per FTE"
+
+msgid "Savings per year per FTE"
+msgstr "Besparingen per jaar per FTE"
+
+msgid "Savings per month per employee"
+msgstr "Besparingen per maand per medewerker"
+
+msgid "Savings per year per employee"
+msgstr "Besparingen per jaar per medewerker"
+
+msgid "Savings per month per manager"
+msgstr "Besparingen per maand per manager"
+
+msgid "Savings per year per manager"
+msgstr "Besparingen per jaar per manager"
+
+msgid "Savings per month in % of personnel costs"
+msgstr "Besparingen per maand in % van personeelskosten"
+
+msgid "Savings per year in % of personnel costs"
+msgstr "Besparingen per jaar in % van personeelskosten"
+
+msgid "Savings per month in hours"
+msgstr "Besparingen per maand in uren"
+
+msgid "Savings per year in hours"
+msgstr "Besparingen per jaar in uren"
+
+msgid "Savings per month in hours per manager"
+msgstr "Besparingen per maand in uren per manager"
+
+msgid "Savings per year in hours per manager"
+msgstr "Besparingen per jaar in uren per manager"
+
+msgid "Savings per month in days"
+msgstr "Besparingen per maand in dagen"
+
+msgid "Savings per year in days"
+msgstr "Besparingen per jaar in dagen"
+
+msgid "Savings per month in days per manager"
+msgstr "Besparingen per maand in dagen per manager"
+
+msgid "Savings per year in days per manager"
+msgstr "Besparingen per jaar in dagen per manager"
+
+msgid "Your results"
+msgstr "Uw resultaten"
+
+msgid "Download as PDF"
+msgstr "Download als PDF"
+
+msgid "Request a demo to see how Dyflexis can help you save"
+msgstr "Vraag een demo aan om te zien hoe Dyflexis u kan helpen besparen"
+
+msgid "Request a demo now"
+msgstr "Vraag nu een demo aan"
+
+msgid "Request a demo"
+msgstr "Vraag een demo aan"
+
+msgid "Request a demo to see how Dyflexis can help you save costs"
+msgstr "Vraag een demo aan om te zien hoe Dyflexis u kan helpen kosten te besparen"
+
+msgid "Thank you for your interest in Dyflexis"
+msgstr "Bedankt voor uw interesse in Dyflexis"
+
+msgid "We will contact you as soon as possible"
+msgstr "Wij nemen zo spoedig mogelijk contact met u op"
+
+msgid "Back to website"
+msgstr "Terug naar website"
+
+msgid "You have calculated the potential cost savings for %s"
+msgstr "U heeft de potentiële kostenbesparing voor %s berekend."
+
+msgid "All clientcases"
+msgstr "Alle klantverhalen"
+
+msgid "Other reviews"
+msgstr "Andere referenties"
+
+msgid "Your Savings Potential Report"
+msgstr "Uw besparingspotentieel rapport"
+
+msgid "Savings potential"
+msgstr "Besparingspotentieel"
+
+msgid "savings potential"
+msgstr "besparingspotentieel"
+
+msgid "Savings potential report"
+msgstr "Rapport besparingspotentieel"
+
+msgid "Our consultant will be more than happy to explain your savings potential:"
+msgstr "Onze adviseur geeft u graag een toelichting op uw besparingspotentieel:"
+
+msgid "Monthly"
+msgstr "Maandelijks"
+
+msgid "Yearly"
+msgstr "Jaarlijks"
+
+msgid "Minimal"
+msgstr "Minimaal"
+
+msgid "Maximum"
+msgstr "Maximaal"
+
+msgid "About Dyflexis"
+msgstr "Over Dyflexis"
+
+msgid ""
+"Dyflexis is specialized in the development of the most user-friendly software and hardware for workforce management. More than 3200 companies in hospitality, recreation, Retail & E-commerce, production & warehousing and healthcare "
+"are using our system daily. They rate us with 4.8/5 from 400+ reviews on Trustpilot. More information is available in the enclosed brochure: "
+msgstr ""
+"Dyflexis specialiseert zich in de ontwikkeling van de meest gebruiksvriendelijke software en hardware voor workforce management. Ruim 3200 bedrijven in horeca, recreatie, Retail & E-commerce, productie & warehousing en zorg & "
+"welzijn gebruiken dagelijks on systeem. Zij waarderen ons met een 4.8/5 uit 400+ reviews op trustpilot. In bijgevoegde brochure leest u meer informatie over"
+
+msgid "Dyflexis in the"
+msgstr "Dyflexis in de"
+
+msgid "Fill in and immediately see your advantage. Curious about the entire report? Press the button below."
+msgstr "Vul in en zie direct uw voordeel. Benieuwd naar het gehele rapport? Druk dan op de onderstaande knop."
+
+msgid "Download full report"
+msgstr "Download volledig rapport"
+
+msgid "Questions?"
+msgstr "Vragen?"
+
+msgid "Per month"
+msgstr "Per maand"
+
+msgid "Per year"
+msgstr "Per jaar"
+
+msgid "Dear"
+msgstr "Beste"
+
+msgid "ISO Certified &nbsp; &nbsp; &nbsp;"
+msgstr "ISO Gecertificeerd"
+
+msgid "Free updates &nbsp; &nbsp; &nbsp;"
+msgstr "Gratis updates"
+
+msgid "always the latest version"
+msgstr "altijd de nieuwste versie"
+
+msgid "Free support &nbsp; &nbsp; &nbsp;"
+msgstr "Gratis support"
+
+msgid "for all your employees"
+msgstr "voor al uw medewerkers"
+
+msgid "Rex-O-Matic &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "Rex-O-Matic &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "integrated clock system"
+msgstr "geïntergeerd kloksysteem"
+
+msgid "25% time savings"
+msgstr "25% tijdbesparing"
+
+msgid "On your administrative burden"
+msgstr "Op uw administratieve lasten"
+
+msgid "In 5 languages &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "In 5 talen &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "For you and your employees"
+msgstr "Voor u en uw medewerkers"
+
+msgid "3200+ customers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "3200+ klanten &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "in 5 industries"
+msgstr "in 5 branches"
+
+msgid "Trustscore 4.8/5"
+msgstr "Trustscore 4.8/5"
+
+msgid "From 400+ customer reviews"
+msgstr "Uit 400+ klantreviews"
+
+msgid "Download your:"
+msgstr "Download hier uw:"
+
+msgid "Savings Potential Report"
+msgstr "Rapport besparingspotentieel"
+
+msgid "Would you like to know more about how this calculation was made"
+msgstr "Wilt u meer weten over hoe deze berekening tot stand is gekomen"
+
+msgid "and"
+msgstr "en"
+
+msgid "Send a response to this email or call us on: +31 (0)880 111 555"
+msgstr "Stuur een reactie op deze email of bel ons op: +31 (0)880 111 555"
+
+msgid "Full insight?"
+msgstr "Volledig inzicht?"
+
+msgid "Fill out the form and receive the full savings potential report."
+msgstr "Vul het formulier in en ontvang het volledige besparingspotentieel rapport."
+
+msgid "You will receive the report shortly."
+msgstr "U ontvangt het rapport spoedig via de mail."
+
+msgid "Calculate your savings yourself"
+msgstr "Bereken zelf uw besparing"
+
+msgid "Report"
+msgstr "Rapport"
+
+msgid "Press message"
+msgstr "Persbericht"
+
+msgid "Herewith, your download | Dyflexis"
+msgstr "Bij deze, uw download | Dyflexis"
+
+msgid "Price request"
+msgstr "Prijsaanvraag"
+
+msgid "Required to fill in"
+msgstr "Verplicht in te vullen"
+
+msgid "Other"
+msgstr "Anders"
+
+msgid ""
+"Dyflexis is a smart Workforce Management software that helps companies with efficient workforce planning, accurate time registration and error-free payroll. Ideal for organisations with flexible staff in sectors such as retail, "
+"hospitality and manufacturing. Employees always know where they stand via the app, and integrations with HR and payroll systems complete it. Grip, convenience and overview - that is Dyflexis."
+msgstr ""
+"Dyflexis is slimme Workforce Management software die bedrijven helpt met efficiënte personeelsplanning, nauwkeurige urenregistratie en foutloze verloning. Ideaal voor organisaties met flexibel personeel in sectoren zoals retail, "
+"horeca en productie. Medewerkers weten altijd waar ze aan toe zijn via de app, en integraties met HR- en salarissystemen maken het compleet. Grip, gemak en overzicht – dat is Dyflexis."
+
+msgid "20+ countries &nbsp; &nbsp; &nbsp;"
+msgstr "20+ landen &nbsp; &nbsp; &nbsp;"
+
+msgid "are using Dyflexis"
+msgstr "Gebruiken ons dagelijks"
+
+msgid "Always up to date"
+msgstr "Altijd up-to-date"
+
+msgid "following every legislation"
+msgstr "volgens wet- & regelgeving"
+
+msgid "Support included &nbsp; &nbsp; &nbsp;"
+msgstr "Inclusief support &nbsp; &nbsp; &nbsp;"
+
+msgid "for the entire organization"
+msgstr "voor de gehele organisatie"
+
+msgid "4500+ customers &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "4500+ klanten &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "and growing fast"
+msgstr "en we groeien hard"
+
+msgid "Guaranteed saving"
+msgstr "Gegarandeerde besparing"
+
+msgid "on administrative tasks"
+msgstr "op administratieve lasten"
+
+msgid "Branch"
+msgstr "Branche"
+
+msgid "Number of locations"
+msgstr "Aantal vestigingen"
+
+msgid "Workdays per week"
+msgstr "Werkdagen per week"
+
+msgid "Total number of employees / FTE"
+msgstr "Totaal aantal medewerkers / FTE"
+
+msgid "Number of managers planning & hour registration"
+msgstr "Aantal managers planning & urenregistratie"
+
+msgid "Leave and absence"
+msgstr "Verlof en verzuim"
+
+msgid "Hour registration"
+msgstr "Urenregistratie"
+
+msgid "Payroll"
+msgstr "Verloning"
+
+msgid "Communication and corrections"
+msgstr "Communicatie en correcties"
+
+msgid "Average hourly wage, employer charges incl."
+msgstr "Gemiddelde uurloon incl. werkgeverslasten"
+
+msgid "Total monthly personal costs"
+msgstr "Totale maandelijkse personeelslasten"
+
+msgid "Of current planning"
+msgstr "Van de huidige planning"
+
+msgid "Of current hour registration"
+msgstr "Van de huidige urenregistratie"
+
+msgid "It looks like you have been editing something. If you leave before saving, your changes will be lost."
+msgstr "Het lijkt erop dat u iets gewijzigd hebt. Als u verlaat voordat u opslaat, zullen uw wijzigingen verloren gaan."
+
+msgid "Unknown system name"
+msgstr "Systeemnaam onbekend"
+
+msgid "Try again or ask your manager for the correct system name"
+msgstr "Probeer opnieuw of vraag uw leidinggevende om de juiste systeemnaam"
+
+msgid "System name not filled in"
+msgstr "Systeemnaam niet ingevuld"
+
+msgid "A system name must be entered."
+msgstr "Er dient een systeemnaam te worden ingevuld."
+
+msgid "Logo showcase"
+msgstr "Logo showcase"
+
+msgid "Logo Gallery"
+msgstr "Logo gallerij"
+
+msgid "For best results, upload logos with transparent backgrounds. Logos will be displayed with a maximum resolution of 112px x 40px so landscape orientation is recommended. When possible, use SVG format for optimal clarity."
+msgstr ""
+"Voor het beste resultaat uploadt u logo's met transparante achtergronden. Logo's worden weergegeven met een maximale resolutie van 112px x 40px, dus een liggende oriëntatie wordt aanbevolen. Gebruik waar mogelijk het SVG-formaat "
+"voor optimale scherpte."
+
+msgid "Logo Showcase Block Fields"
+msgstr "Logo Showcase blokvelden"
+
+msgid "Header (optional)"
+msgstr "Koptekst (optioneel)"
+
+msgid "If left empty, the title of the selected logo showcase will be used."
+msgstr "Indien leeg gelaten, wordt de titel van de geselecteerde logo showcase gebruikt."
+
+msgid "Select Logo Showcase"
+msgstr "Selecteer Logo Showcase"
+
+msgid "Logo showcases"
+msgstr "Logo-overzichten"
+
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+msgid "The video was not found."
+msgstr "De video werd niet gevonden."
+
+msgid "404<br/>Browser says no"
+msgstr "404<br/>Browser says no"
+
+msgid "We can't find the page that you're looking for :("
+msgstr "We kunnen de pagina die je zoekt niet vinden :("
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Client cases"
+msgstr "Klantverhalen"
+
+msgid "The complete workforce management system. Enterprise power mixed with human simplicity. The complete workforce management system, which ensures the right person, with the right skills in the right place."
+msgstr "Het complete workforce management systeem. Enterprise-kracht gecombineerd met menselijke eenvoud. Het complete workforce management systeem dat ervoor zorgt dat de juiste persoon, met de juiste skills, op de juiste plek staat."
+
+msgid "System name"
+msgstr "Systeemnaam"
+
+msgid "Once a month, we send our customers the Release Radar. In this, we announce the most important updates for the coming month. This way, you’ll immediately know how to work smarter in Dyflexis and can inform your colleagues."
+msgstr "Een keer per maand sturen wij klanten de Release Radar. Hierin kondigen wij de belangrijkste updates van de komende maand aan. Zo weet jij direct hoe je slimmer werkt in Dyflexis en kun je collega's inlichten."
+
+msgid "Show by role"
+msgstr "Toon per rol"
+
+msgid "Show by sector"
+msgstr "Toon per branche"

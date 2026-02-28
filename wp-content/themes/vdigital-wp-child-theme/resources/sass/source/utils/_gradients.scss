@@ -1,0 +1,212 @@
+.gradient--blue-green-triangles {
+  background: transparent
+    linear-gradient(132deg, $blueDark02 0%, $blueGreen02 51%, $green02 100%) 0%
+    0% no-repeat padding-box;
+
+  @media (min-width: $tabletBreakpoint) {
+    background: transparent
+      linear-gradient(132deg, $blueDark01 0%, $blueGreen01 51%, $green01 100%)
+      0% 0% no-repeat padding-box;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+  }
+
+  &:before {
+    width: 350px;
+    height: 500px;
+    transform: rotate(45deg);
+    left: -250px;
+    top: -300px;
+    background-color: $blueLight01;
+
+    @media (min-width: $tabletBreakpoint) {
+      left: -250px;
+      top: -400px;
+      width: 600px;
+      height: 800px;
+      background: transparent
+        linear-gradient(345deg, transparent 0%, $blueLight02 100%) 0% 0%
+        no-repeat padding-box;
+    }
+  }
+
+  &:after {
+    width: 800px;
+    height: 600px;
+    right: -400px;
+    bottom: -250px;
+    transform: rotate(-45deg);
+    background: transparent
+      linear-gradient(80deg, $green03 0%, transparent 100%) 0% 0% no-repeat
+      padding-box;
+    display: none;
+
+    @media (min-width: $tabletBreakpoint) {
+      display: block;
+    }
+  }
+
+  &--01 {
+    background: transparent
+      linear-gradient(132deg, $blueDark01 0%, $blueGreen01 51%, $green04 100%)
+      0% 0% no-repeat padding-box;
+
+    &:before {
+      width: 750px;
+      background: transparent
+        linear-gradient(110deg, transparent 0%, $blueLight02 100%) 0% 0%
+        no-repeat padding-box;
+      display: none;
+
+      @media (min-width: $desktopBreakpoint) {
+        display: block;
+      }
+    }
+
+    &:after {
+      width: 630px;
+      bottom: -300px;
+      background: transparent
+        linear-gradient(20deg, $green03 0%, transparent 100%) 0% 0% no-repeat
+        padding-box;
+      display: none;
+
+      @media (min-width: $desktopBreakpoint) {
+        display: block;
+      }
+    }
+  }
+}
+
+@layer utilities {
+  .gradient--blue-green {
+    background: transparent
+      linear-gradient(132deg, #004cab 0%, #209b2c 80%, #34a902 100%) 0% 0%
+      no-repeat padding-box;
+
+    &--1 {
+      background: transparent
+        linear-gradient(132deg, #004ca8 0%, #007d7d 50%, #32aa00 100%) 0% 0%
+        no-repeat padding-box;
+    }
+
+    &--2 {
+      background: transparent
+        linear-gradient(
+          132deg,
+          #01289e 0%,
+          #014080 20%,
+          #015971 40%,
+          #048b4e 60%,
+          #209b2c 80%,
+          #34a902 100%
+        )
+        0% 0% no-repeat padding-box;
+    }
+
+    &--3 {
+      background: transparent linear-gradient(132deg, #008fde 0%, #46ad10 100%)
+        0% 0% no-repeat padding-box;
+    }
+  }
+}
+
+.gradient--blue {
+  background: transparent
+    linear-gradient(180deg, $blueDark01 0%, $blueLight02 32%, $gray01 100%) 0%
+    0% no-repeat padding-box;
+}
+
+.gradient--blue-light-to-dark {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 125, 205, 1) 0%,
+    rgba(0, 63, 146, 1) 100%
+  );
+}
+
+.gradient--green {
+  background: transparent
+    linear-gradient(
+      180deg,
+      $blueGreen01 0%,
+      $green01 34%,
+      $green03 57%,
+      $gray01 100%
+    )
+    0% 0% no-repeat padding-box;
+}
+
+.gradient--green-no-white {
+  background: transparent
+    linear-gradient(180deg, #007d7d 0%, #32aa00 34%, #96c800 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+.gradient--blue-green-dark {
+  background: transparent
+    linear-gradient(90deg, #004ca8 0%, #007d7d 56%, #32aa00 100%) 0% 0%
+    no-repeat padding-box;
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 23.52%,
+    rgba(0, 0, 0, 0) 65.63%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 23.52%,
+    rgba(0, 0, 0, 0) 65.63%
+  );
+}
+
+@property --blue-color {
+  syntax: "<color>";
+  initial-value: rgba(8, 19, 40, 0.8);
+  inherits: false;
+}
+
+.gradient--default-overlay-images {
+  @apply tw-relative;
+  &.dark {
+    &:before {
+      --blue-color: rgba(8, 19, 40, 1);
+    }
+  }
+  &:hover {
+    &:before {
+      --blue-color: rgba(1, 143, 220, 1);
+    }
+  }
+  &:before {
+    --blue-color: rgba(8, 19, 40, 0.8);
+    content: "";
+    @apply tw-absolute tw-inset-0 tw-z-20;
+    transition: --blue-color 150ms ease-out;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 19, 40, 0) 20%,
+      var(--blue-color) 100%
+    );
+    border-radius: inherit;
+  }
+  > *:not[img] {
+    @apply tw-z-30;
+  }
+}
+
+.simple-gradient-growth {
+  background: linear-gradient(90deg, #37a63e 0%, #34a902 100%);
+}
+.simple-gradient-forest {
+  background: linear-gradient(90deg, #04795c 0%, #36a644 100%);
+}
+.simple-gradient-teal {
+  background: linear-gradient(90deg, #015971 0%, #026b65 100%);
+}
+.simple-gradient-cobalt {
+  background: linear-gradient(90deg, #01289e 0%, #02437f 100%);
+}

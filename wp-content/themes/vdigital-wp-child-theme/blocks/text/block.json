@@ -1,0 +1,13 @@
+{
+  "name": "acf/text",
+  "title": "Text",
+  "description": "A text block.",
+  "icon": "heading",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

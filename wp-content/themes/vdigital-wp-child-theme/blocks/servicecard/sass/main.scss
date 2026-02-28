@@ -1,0 +1,26 @@
+body:not(.wp-admin),
+body.wp-admin {
+  .servicecard {    // to override default styles, we need to increase specificity
+    .servicecard {
+      &__image {
+        img {
+          aspect-ratio: 1.345;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      &__content {
+        &__btn {
+          @apply md:tw-text-[20px] md:tw-rounded-[20px] md:tw-px-[35px] md:tw-py-[15px];
+          display: inline-block;
+          height: auto;
+        }
+      }
+    }
+  }
+  .block__background--light {
+    .servicecard {
+        @apply tw-text-core;
+    }
+}
+}

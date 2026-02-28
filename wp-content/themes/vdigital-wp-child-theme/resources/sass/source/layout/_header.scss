@@ -1,0 +1,30 @@
+header#header {
+  height: 64px;
+
+  @media (min-width: 1024px) {
+    height: 132px;
+  }
+
+  @apply tw-sticky tw-top-0 tw-z-40 #{!important};
+
+  nav {
+    @apply tw-relative #{!important};
+  }
+}
+
+body.admin-bar {
+  header#header {
+    @media (min-width: 600px) and (max-width: 782px){
+      @apply tw-top-[46px] #{!important};
+    }
+    @media (min-width: 783px) and (max-width: 1023px) {
+      @apply tw-top-[32px] #{!important};
+    }
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      @apply tw-top-[24px] #{!important};
+    }
+    @media (min-width: 1400px) {
+      @apply tw-top-[32px] #{!important};
+    }
+  }
+}

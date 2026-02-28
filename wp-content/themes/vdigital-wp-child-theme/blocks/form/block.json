@@ -1,0 +1,19 @@
+{
+  "name": "acf/form",
+  "title": "Form",
+  "category": "media",
+  "description": "A block to display an inline form with title and text.",
+  "icon": "feedback",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "ancestor": [
+    "core/column"
+  ],
+  "style": "ww_form",
+  "script": "ww_form"
+}

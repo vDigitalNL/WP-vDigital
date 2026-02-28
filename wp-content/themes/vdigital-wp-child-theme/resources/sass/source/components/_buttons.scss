@@ -1,0 +1,104 @@
+@layer components {
+  body:not(.wp-admin),
+  body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor {
+    a.btn {
+      @apply tw-flex tw-items-center tw-justify-center;
+    }
+
+    button.btn,
+    a.btn {
+      @apply font--dm-sans tw-font-light tw-text-[16px] md:tw-text-[20px] tw-rounded-[10px] md:tw-rounded-[20px] tw-py-2.5 tw-px-[25px] md:tw-px-[35px] tw-leading-[1.2] tw-h-[40px] md:tw-h-[60px] tw-bg-focus hover:tw-bg-sky tw-text-core hover:tw-text-focus;
+
+      // Outlines
+      &.button--outline {
+        @apply tw-bg-transparent hover:tw-bg-sky tw-border tw-border-sky tw-text-focus;
+      }
+
+      &.button--dark_outline {
+        @apply tw-bg-transparent hover:tw-bg-sky tw-border tw-border-core hover:tw-border-sky tw-text-core hover:tw-text-focus;
+      }
+
+      &.button--white_outline {
+        @apply tw-bg-transparent hover:tw-bg-sky tw-border tw-border-focus hover:tw-border-sky tw-text-focus;
+      }
+
+      // Solid colors
+      &.button--blue, &.button--green, &.button--dark_green, &.button--teal, &.button--cobalt {
+        @apply tw-text-focus;
+      }
+      &.button--blue {
+        @apply tw-bg-edge hover:tw-bg-edge-hover;
+      }
+      &.button--green {
+        @apply tw-bg-growth hover:tw-bg-growth-hover;
+      }
+      &.button--dark_green {
+        @apply tw-bg-forest hover:tw-bg-forest-hover;
+      }
+      &.button--teal {
+        @apply tw-bg-teal hover:tw-bg-teal-hover;
+      }
+      &.button--cobalt {
+        @apply tw-bg-cobalt hover:tw-bg-cobalt-hover;
+      }
+
+      &.button--toggle,
+      &.button--toggle--white,
+      &.button--navigate,
+      &.button--close,
+      &.button--play {
+        @apply tw-font-light tw-w-10 tw-h-10 tw-rounded-full tw-p-0 tw-text-center tw-flex tw-items-center tw-justify-center;
+        @apply tw-leading-none #{!important};
+        @apply tw-ring-[1.5px] tw-ring-sky tw-ring-offset-0;
+      }
+
+      &.button--toggle {
+        @apply  tw-text-focus tw-bg-core hover:tw-bg-sky tw-ring-sky;
+      }
+
+      &.button--toggle--white {
+        @apply tw-text-core hover:tw-text-focus tw-bg-focus hover:tw-bg-sky tw-ring-sky;
+      }
+
+      &.button--navigate {
+        @apply tw-text-[18px] tw-text-core hover:tw-text-focus tw-bg-focus hover:tw-bg-sky tw-ring-sky;
+      }
+
+      &.button--close {
+        @apply tw-text-[18px] tw-text-focus tw-bg-focus hover:tw-bg-sky tw-ring-sky;
+        @apply tw-leading-none tw-pt-[2px] #{!important}; // center the "x" better vertically
+        background-color: rgba(255, 255, 255, 0.1);
+
+        &.alternative {
+          @media screen and (max-width: 1024px) {
+            @apply tw-text-core hover:tw-text-focus tw-bg-focus hover:tw-bg-sky;
+          }
+        }
+      }
+
+      &.button--play {
+        @apply tw-w-[94px] tw-h-[94px] tw-ring-0 tw-text-focus tw-bg-sky hover:tw-bg-core;
+      }
+    }
+  }
+
+  .btn {
+    @apply font--dm-sans tw-font-light tw-text-[16px] md:tw-text-[20px] tw-rounded-[10px] md:tw-rounded-[20px] tw-py-2.5 tw-px-[25px] md:tw-px-[35px] tw-leading-[1.2] tw-h-[40px] md:tw-h-[60px] tw-bg-focus hover:tw-bg-sky tw-text-core hover:tw-text-focus;
+  }
+
+  .button--blue {
+    @apply tw-bg-sky hover:tw-bg-white tw-text-focus hover:tw-text-core;
+  }
+
+  .button--outline {
+    @apply tw-bg-transparent hover:tw-bg-sky tw-border tw-border-sky tw-text-focus;
+  }
+
+  .button--dark_outline {
+    @apply tw-bg-transparent hover:tw-bg-sky tw-border tw-border-core hover:tw-border-sky tw-text-core hover:tw-text-focus;
+  }
+
+  .button--white_outline {
+    @apply tw-bg-transparent hover:tw-bg-sky tw-border tw-border-focus hover:tw-border-sky tw-text-focus;
+  }
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+
+.block__banner {
+  background-image: var(--bg-image-mobile);
+  background-size: cover;
+  background-position: center;
+
+  // When preload-blur is set, show the blurred image first
+  // JavaScript will swap to the sharp image once it's loaded
+  &[preload-blur] {
+    background-image: var(--bg-image-mobile-blurred);
+  }
+
+  @screen md {
+    background-image: var(--bg-image-tablet) !important;
+  }
+  @screen lg {
+    background-image: var(--bg-image) !important;
+  }
+
+  &.block__banner--light {
+    .text-block__title-wrapper > *,
+    .text-block__content .wysiwyg__content > *,
+    .button--outline,
+    .block__banner__content h3 {
+      @apply tw-text-core #{!important};
+    }
+  }
+  .text-block {
+    transition: margin 0.3s ease-in-out;
+    opacity: 0;
+    animation: textBlockFadeIn 0.3s ease-in-out forwards;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+      opacity: 1;
+      transition-property: none;
+    }
+  }
+
+  @keyframes textBlockFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

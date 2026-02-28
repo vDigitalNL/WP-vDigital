@@ -1,0 +1,17 @@
+<?php
+
+	//Define child theme paths
+	define( 'WP_CHILD_THEME_DIR_ASSETS', WP_CHILD_THEME_DIR_ROOT . 'assets' . DS );
+	define( 'WP_CHILD_THEME_DIR_INCLUDES', WP_CHILD_THEME_DIR_ROOT . 'inc' . DS );
+	define( 'WP_CHILD_THEME_DIR_BLOCKS', WP_CHILD_THEME_DIR_ROOT . 'blocks' . DS );
+	define( 'WP_CHILD_THEME_DIR_LANGUAGES', WP_CHILD_THEME_DIR_ROOT . 'languages' . DS );
+	define( 'WP_CHILD_THEME_DIR_MODULES', WP_CHILD_THEME_DIR_ROOT . 'modules' . DS );
+	define( 'WP_CHILD_THEME_DIR_TEMP_MODULES', WP_CHILD_THEME_DIR_ROOT . 'temporary-modules' . DS );
+	define( 'WP_CHILD_THEME_DIR_RESOURCES', WP_CHILD_THEME_DIR_ROOT . 'resources' . DS );
+	define( 'WP_CHILD_THEME_DIR_TEMPLATE_PARTS', WP_CHILD_THEME_DIR_ROOT . 'template-parts' . DS );
+	define( 'WP_CHILD_THEME_DIR_VENDOR', WP_CHILD_THEME_DIR_ROOT . 'vendor' . DS );
+
+	define( 'WP_CHILD_THEME_DIR_CLASSES', WP_CHILD_THEME_DIR_INCLUDES . 'classes' . DS );
+	define( 'WP_CHILD_THEME_DIR_CLASSES_VENDOR', WP_CHILD_THEME_DIR_CLASSES . 'Vendor' . DS );
+	define( 'WP_CHILD_THEME_DIR_FUNCTIONS', WP_CHILD_THEME_DIR_INCLUDES . 'functions' . DS );
+	define( 'WP_CHILD_THEME_DIR_HOOKS', WP_CHILD_THEME_DIR_INCLUDES . 'hooks' . DS );

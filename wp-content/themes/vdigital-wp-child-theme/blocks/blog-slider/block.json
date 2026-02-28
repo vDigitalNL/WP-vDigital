@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/blog-slider",
+    "title": "Blog Slider",
+    "category": "text",
+    "description": "A blog slider block.",
+    "icon": "admin-comments",
+    "script": "ww_blog-slider",
+    "editorScript": "ww_blog-slider",
+    "style": "ww_blog-slider",
+    "editorStyle": "ww_blog-slider",
+    "supports": {
+      "align": false
+    },
+    "acf": {
+      "mode": "preview",
+      "renderTemplate": "template.php"
+    },
+    "ancestor": ["core/columns"]
+  }

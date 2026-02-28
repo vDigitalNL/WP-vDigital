@@ -1,0 +1,33 @@
+@layer components {
+  .salesforce_popup {
+    .btn {
+      @apply tw-justify-center;
+    }
+
+    .salesforce_popup__wrapper__left {
+      .salesforce_popup__wrapper__left__text, .salesforce_submit_content {
+        h1, h2, h3, h4, h5, h6, p, li {
+          @apply tw-text-core #{!important};
+        }
+
+        p, li, a {
+          @apply tw-text-[20px] #{!important};
+        }
+      }
+    }
+
+    .salesforce_popup__wrapper__right {
+      > div {
+        @apply tw-flex-1 tw-max-w-full;
+
+        form {
+          @apply tw-flex tw-flex-col tw-gap-y-2 tw-h-full;
+
+          .w2lsubmit {
+            @apply tw-mt-auto;
+          }
+        }
+      }
+    }
+  }
+}

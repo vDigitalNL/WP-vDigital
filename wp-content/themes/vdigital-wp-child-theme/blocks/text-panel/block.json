@@ -1,0 +1,20 @@
+{
+  "name": "acf/text-panel",
+  "title": "Text panel",
+  "category": "text",
+  "description": "A text panel that can be positioned outside the regular content container within specific column layouts.",
+  "style": "file:./dist/main.css",
+  "editorStyle": "file:./dist/main.css",
+  "script": "file:./dist/main.js",
+  "editorScript": "file:./dist/main.js",
+  "icon": "excerpt-view",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php",
+    "jsx": true
+  },
+  "ancestor": ["core/column"]
+}

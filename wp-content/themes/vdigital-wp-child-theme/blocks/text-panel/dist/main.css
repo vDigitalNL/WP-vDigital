@@ -1,0 +1,48 @@
+.text-panel h1, .text-panel h2, .text-panel h3, .text-panel h4, .text-panel p, .text-panel .wysiwyg__content, .text-panel ul li, .text-panel ol li {
+  --tw-text-opacity: 1 !important;
+  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important
+}
+.text-panel blockquote {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(8 19 40 / var(--tw-border-opacity, 1)) !important
+}
+.text-panel a:not(.btn) {
+  --tw-text-opacity: 1 !important;
+  color: rgb(1 143 220 / var(--tw-text-opacity, 1)) !important
+}
+.text-panel a:not(.btn):hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(82 111 166 / var(--tw-text-opacity, 1)) !important
+}
+.text-panel p {
+  --tw-text-opacity: 1 !important;
+  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important
+}
+@media (min-width: 768px) {
+  .text-panel.text-panel--right .text-panel__inner {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px
+  }
+  .text-panel.text-panel--left .text-panel__inner {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+  }
+}
+.text-panel .text-panel__inner > h2 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important
+}
+.text-panel .text-panel__inner .wysiwyg__content h1, .text-panel .text-panel__inner .wysiwyg__content h2, .text-panel .text-panel__inner .wysiwyg__content h3, .text-panel .text-panel__inner .wysiwyg__content h4, .text-panel .text-panel__inner .wysiwyg__content h5, .text-panel .text-panel__inner .wysiwyg__content h6, .text-panel .text-panel__inner .wysiwyg__content p {
+  --tw-text-opacity: 1 !important;
+  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important
+}
+@media screen and (min-width: 1512px) {
+  .text-panel .text-panel__inner {
+    border-radius: 20px
+  }
+}
+@media screen and (min-width: 1134px) and (max-width: 1400px) {
+  .text-panel .text-panel__inner {
+    border-radius: 20px
+  }
+}

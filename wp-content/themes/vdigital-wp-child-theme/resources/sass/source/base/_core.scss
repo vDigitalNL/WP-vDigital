@@ -1,0 +1,101 @@
+@import "../utils/variables";
+@tailwind utilities;
+
+:root {
+  --container-padding-mobile: #{$containerPaddingMobile};
+  --container-padding-desktop: #{$containerPaddingDesktop};
+}
+
+@layer utilities {
+  .gradient {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-turquoise) 50%, var(--color-spring) 100%);
+  }
+
+  .container-padding-desktop {
+    @apply tw-px-[80px];
+  }
+
+  .container-margin-desktop--negative {
+    @apply tw-mx-[-80px];
+  }
+
+  .container-padding-mobile {
+    @apply tw-px-[40px];
+  }
+
+  .container-margin-mobile--negative {
+    @apply tw-mx-[-40px];
+  }
+}
+
+.outer-container.template404 {
+  .text-block {
+    @apply tw-gap-[25px] md:tw-gap-[25px];
+  }
+  .block__banner {
+    @apply tw-mb-20;
+  }
+}
+
+body:not(.wp-admin) {
+  @apply tw-bg-core;
+}
+
+body {
+  @apply tw-overflow-x-hidden;
+}
+
+.outer-container {
+  @apply container-padding-mobile lg:container-padding-desktop;
+  @apply tw-mx-auto tw-w-full tw-max-w-full lg:tw-max-w-[1512px] tw-overflow-hidden container:tw-overflow-visible;
+}
+
+.break-container-padding {
+  @apply container-margin-mobile--negative lg:container-margin-desktop--negative;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1352px;
+}
+
+body:not(.wp-admin):not(.block-editor-page) {
+  a, img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
+
+.page {
+  .attachment-post-thumbnail {
+    display: none;
+  }
+}
+
+.max-width-24 {
+  max-width: 96px;
+}
+
+.hyphenated {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+body.disable-hyphens {
+  .hyphenated {
+    -webkit-hyphens: initial;
+    hyphens: initial;
+  }
+}
+
+// This is to overwrite the default wordpress rounded style.
+:root :where(.wp-block-image.is-style-rounded-corners--1 img,
+.wp-block-image.is-style-rounded-corners--1 .wp-block-image__crop-area,
+.wp-block-image.is-style-rounded-corners--1 .components-placeholder) {
+  border-radius: 40px !important;
+}

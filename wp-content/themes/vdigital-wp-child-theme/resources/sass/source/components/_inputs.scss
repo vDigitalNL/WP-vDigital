@@ -1,0 +1,353 @@
+@layer components {
+  .input__field, .input__field--radio, .input__field--checkbox, .input__select, .input__textarea {
+    @apply tw-flex tw-flex-col;
+
+    > label {
+      @apply tw-hidden;
+    }
+
+    > input, > textarea, > select, .select-selected {
+      @apply font--dm-sans tw-font-light tw-text-[18px] tw-leading-[1.2] tw-px-5 tw-py-[19px]
+      tw-bg-core tw-border-2 tw-rounded-[25px] tw-border-mist tw-text-focus placeholder:tw-text-[#ffffff80]
+      focus:placeholder:tw-text-focus focus:tw-outline-none focus:tw-border-edge;
+    }
+
+    > textarea {
+      @apply tw-max-h-[100px];
+      @apply tw-min-h-0 tw-resize-none #{!important}
+    }
+
+    > input[type="radio"], > input[type="checkbox"] {
+      @apply tw-text-[18px];
+
+      &+label {
+        @apply tw-text-[18px] tw-mb-0;
+      }
+    }
+
+    &.required > label > span {
+      @apply tw-text-sky;
+    }
+
+    &.on_white {
+      > label {
+        @apply tw-text-core;
+      }
+
+      > input, > select, > textarea, .select-selected {
+        @apply tw-bg-focus #{!important};
+        @apply tw-border-mist focus:tw-border-edge tw-text-core placeholder:tw-text-core-50;
+      }
+
+      .select-selected {
+        @apply tw-text-core-50;
+
+        &.select-selected--has-value {
+          @apply tw-text-core;
+        }
+
+        &:after {
+          background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/arrow-down-black.svg");
+        }
+
+        &.select-arrow-active {
+          @apply tw-border-edge;
+
+          + .select-items {
+            @apply tw-border-edge;
+
+            > div {
+              @apply tw-border-t-core-20;
+            }
+          }
+        }
+
+        &.input__field--radio {
+          > input[type="radio"] {
+            @apply focus:tw-border-mist tw-p-1;
+          }
+        }
+      }
+
+      .select-items {
+        @apply tw-bg-focus tw-border-edge;
+
+        > div {
+          @apply tw-text-core-50 tw-border-core-50 hover:tw-text-core;
+        }
+      }
+    }
+
+    &.error {
+      > input, > select, > textarea, .select-selected, .select-items {
+        border-color: var(--color-warning) !important;
+      }
+
+      > span {
+        @apply tw-text-warning font--dm-sans tw-font-light tw-text-[18px] tw-mt-1;
+      }
+
+      &.required > label > span {
+        color: var(--color-warning) !important;
+      }
+    }
+  }
+
+  .input__field--radio, .input__field--checkbox {
+    @apply tw-flex-row tw-items-center;
+
+    > label {
+      @apply tw-block font--dm-sans tw-font-light tw-text-focus tw-text-[24px] tw-leading-[1.2];
+    }
+
+    > input {
+      @apply tw-appearance-none tw-bg-transparent tw-p-0 tw-min-w-0 tw-mr-2.5 tw-border-2
+        checked:tw-border-focus checked:tw-bg-edge tw-border-edge tw-w-[30px] tw-h-[30px];
+
+      &:checked {
+        background: var(--color-edge) content-box;
+      }
+    }
+
+    &.on_white {
+      > input {
+        @apply tw-border-mist checked:tw-border-mist;
+      }
+
+      > label {
+        @apply tw-text-core;
+      }
+    }
+  }
+
+  .input__field--radio {
+    > input[type="radio"] {
+      @apply focus:tw-border-focus tw-p-[3px];
+    }
+
+    &.on_white {
+      > input[type="radio"] {
+        @apply focus:tw-border-mist;
+        @apply checked:tw-bg-edge #{!important};
+      }
+    }
+  }
+
+  .input__field--checkbox {
+    @apply tw-flex tw-flex-wrap;
+
+    > input {
+      @apply tw-rounded-[10px] tw-relative;
+
+      &:checked {
+        @apply tw-bg-transparent;
+        &::after {
+          @apply tw-content-[""] tw-absolute tw-left-[9px] tw-top-[3px] tw-w-[9px] tw-h-[18px] tw-border-2 tw-border-focus;
+          border-width: 0 3px 3px 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    > label {
+      max-width: calc(100% - 40px);
+    }
+
+    &.on_white {
+      > input:checked {
+        @apply tw-bg-focus;
+
+        &::after {
+          @apply tw-border-edge;
+        }
+      }
+    }
+
+    &.error {
+      span {
+        @apply tw-w-full;
+      }
+    }
+  }
+
+  .input__select {
+    @apply tw-relative;
+
+    > select {
+      @apply tw-hidden;
+    }
+
+    .select-selected {
+      @apply tw-relative tw-text-[#ffffff80] tw-text-[16px];
+
+      &.select-selected--has-value {
+        @apply tw-text-focus;
+      }
+
+      &:after {
+        @apply tw-content-[""] tw-w-8 tw-h-full tw-absolute tw-bg-no-repeat tw-top-0 tw-right-[4px];
+
+        background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/arrow-down.svg");
+        background-position: right 12px center;
+      }
+
+      &.select-arrow-active {
+        @apply tw-rounded-bl-none tw-rounded-br-none tw-border-b-2 tw-border-edge;
+
+        &:after {
+          @apply tw-rotate-180 tw-right-[16px];
+        }
+
+        + .select-items {
+          @apply tw-border-edge;
+
+          > div {
+            @apply tw-border-t-mist;
+          }
+        }
+      }
+    }
+
+    .select-items {
+      @apply font--dm-sans tw-font-light tw-bg-core tw-fixed tw-z-30 tw-max-h-[250px] md:tw-max-h-[350px] tw-overflow-y-scroll tw-px-5 tw-py-[9px]
+        tw-border-2 tw-border-edge tw-border-t-0 tw-rounded-bl-[25px] tw-rounded-br-[25px];
+
+      &::-webkit-scrollbar {
+        @apply tw-w-1;
+      }
+
+      &::-webkit-scrollbar-track {
+        @apply tw-bg-transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @apply tw-rounded-[8px] tw-bg-[rgba(0,0,0,0.4)];
+      }
+
+      &::-webkit-scrollbar-button {
+        @apply tw-hidden;
+      }
+
+      > div {
+        @apply tw-text-[#ffffff80] tw-cursor-pointer tw-border-t-[1px] tw-border-mist
+          tw-py-[15px] tw-text-[16px] tw-font-light hover:tw-text-focus;
+      }
+    }
+
+    .select-hide {
+      @apply tw-hidden;
+    }
+
+    &.select--open-up-top {
+      .select-selected {
+        &.select-arrow-active {
+          @apply tw-rounded-tl-none tw-rounded-tr-none tw-border-t-[2px] tw-border-t-transparent tw-pb-[19px] tw-border-b-[2px] tw-rounded-b-[25px];
+        }
+
+        &.select-arrow-active + .select-items {
+          @apply tw-border-t-2 tw-border-b-0 tw-rounded-tl-[25px] tw-rounded-tr-[25px] tw-rounded-bl-none tw-rounded-br-none;
+        }
+      }
+
+      .select-items {
+        > div {
+          @apply tw-border-t-0 tw-border-b-[1px] last-of-type:tw-border-b-0;
+        }
+      }
+    }
+  }
+
+  // Salesforce styling overwrites
+  // Apply on_white only for popups and form blocks with white background
+  .salesforce_popup,
+  .form-block--light, .block__background--light .form-block--dark {
+    .sf_type_text, .sf_field_email, .sf_type_radio fieldset > div, .sf_type_checkbox, .sf_type_textarea {
+      @extend .on_white;
+    }
+  }
+
+  .sf_type_radio fieldset > div {
+    @extend .input__field--radio;
+  }
+
+  .sf_type_checkbox {
+    @extend .input__field--checkbox;
+  }
+
+  .sf_type_text, .sf_field_email {
+    @extend .input__field;
+  }
+
+  .sf_type_select {
+    @extend .input__select;
+  }
+
+  .sf_type_textarea {
+    @extend .input__textarea;
+  }
+
+  // Standalone select-items styles (appended to body)
+  // These are needed because the dropdown is now outside the .input__select wrapper
+  .select-items {
+    @apply font--dm-sans tw-font-light tw-bg-core tw-fixed tw-z-30 tw-max-h-[250px] md:tw-max-h-[350px] tw-overflow-y-auto tw-overflow-x-hidden tw-px-5 tw-py-[9px]
+      tw-border-2 tw-border-edge tw-border-t-0 tw-rounded-bl-[25px] tw-rounded-br-[25px];
+
+    // Clip scrollbar to rounded corners
+    clip-path: inset(0 round 0 0 25px 25px);
+
+    &::-webkit-scrollbar {
+      @apply tw-w-1;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply tw-bg-transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply tw-rounded-[8px] tw-bg-[rgba(255,255,255,0.4)];
+    }
+
+    &::-webkit-scrollbar-button {
+      @apply tw-hidden;
+    }
+
+    > div {
+      @apply tw-text-[#ffffff80] tw-cursor-pointer tw-border-t-[1px] tw-border-mist
+        tw-py-[15px] tw-text-[16px] tw-font-light hover:tw-text-focus;
+    }
+
+    &.select-hide {
+      @apply tw-hidden;
+    }
+
+    // Light theme variant (on_white)
+    &.select-items--light {
+      @apply tw-bg-focus tw-border-edge;
+
+      &::-webkit-scrollbar-thumb {
+        @apply tw-bg-[rgba(0,0,0,0.4)];
+      }
+
+      > div {
+        @apply tw-text-core-50 tw-border-core-20 hover:tw-text-core;
+      }
+    }
+
+    // Open up top modifier
+    &.select-items--open-up-top {
+      @apply tw-border-t-2 tw-border-b-0 tw-rounded-tl-[25px] tw-rounded-tr-[25px] tw-rounded-bl-none tw-rounded-br-none;
+
+      // Clip scrollbar to top rounded corners
+      clip-path: inset(0 round 25px 25px 0 0);
+
+      > div {
+        @apply tw-border-t-0 tw-border-b-[1px] last-of-type:tw-border-b-0;
+      }
+    }
+
+    // Higher z-index when inside popup (popup is z-100)
+    &.select-items--in-popup {
+      @apply tw-z-[110];
+    }
+  }
+}

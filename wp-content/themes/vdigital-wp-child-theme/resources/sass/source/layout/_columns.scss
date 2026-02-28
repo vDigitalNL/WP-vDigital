@@ -1,0 +1,114 @@
+:where(.wp-block-columns.is-layout-flex) {
+  @apply tw-gap-x-0 tw-gap-y-[80px] #{!important};
+}
+
+:where(.wp-block-columns) {
+  @apply tw-mb-0 #{!important};
+}
+
+.wp-block-columns {
+  @apply tw-relative tw-z-[20];
+  //@apply tw-flex-wrap tw-overflow-x-hidden md:tw-overflow-x-visible md:tw-flex-nowrap #{!important};
+  @apply tw-flex-wrap tw-overflow-x-visible md:tw-flex-nowrap #{!important};
+
+  @media (max-width: 767px) {
+    @apply tw-flex-wrap #{!important};
+  }
+
+  .wp-block-column {
+    @apply tw-flex tw-flex-col tw-gap-y-[20px] md:tw-gap-y-[40px]
+  }
+
+  &.is-layout-flex {
+    @apply tw-flex;
+
+    > div  {
+      @apply tw-flex-grow tw-basis-full md:tw-basis-0;
+
+      @media (max-width: 768px) {
+        @apply tw-basis-full #{!important};
+      }
+    }
+  }
+
+  &.layout-two-columns, &.layout-three-columns, &.layout-four-columns, &.layout-six-columns {
+    @apply tw-gap-x-[20px] #{!important};
+  }
+
+  // Can't use gap for this layout since we have a column gap as the first column, spacing is still necessary between the 2nd and 3rd element, that's why we use margin here
+  &.layout-asymmetric-space-left-right {
+     > .wp-block-column:not(:first-child):not(:last-child), > .dyflexis-block-wrapper:not(:first-child):not(:last-child) {
+       @apply tw-mr-0 md:tw-mr-[20px];
+     }
+
+    > .wp-block-column.column-50 {
+      @apply tw-flex-shrink-0 #{!important};
+    }
+  }
+
+  &.layout-two-columns, &.layout-asymmetric-right-left, &.layout-asymmetric-left-right, &.layout-asymmetric-spaced-columns, &.layout-asymmetric-left-spaced-columns {
+    @apply tw-gap-y-[80px] #{!important};
+  }
+
+  &.layout-three-columns, &.layout-four-columns, &.layout-six-columns {
+    @apply tw-gap-y-[40px] #{!important};
+  }
+
+  &:not(.is-not-stacked-on-mobile) {
+    &.layout-four-columns, &.layout-six-columns {
+      @apply tw-flex-wrap lg:tw-flex-nowrap #{!important};
+
+      > .wp-block-column {
+        @apply sm:tw-basis-[calc(50%-(20px/2))] lg:tw-basis-[100%] tw-flex-grow-0 #{!important};
+      }
+    }
+
+    &.layout-six-columns > .wp-block-column {
+      @apply md:tw-basis-[calc(33%-(40px/3))] #{!important};
+    }
+  }
+
+  > .spacer-column {
+    @apply tw-min-h-0 tw-p-0 tw-pointer-events-none tw-invisible tw-hidden md:tw-block #{!important};
+  }
+}
+
+.entry-content .wp-block-columns {
+  @apply md:tw-flex-nowrap #{!important};
+}
+
+.outer-container {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) {
+    > .wp-block-column {
+      @media screen and (min-width: 768px) and (max-width: 781px) {
+        &.column-8 {
+          @apply tw-basis-[8%] #{!important};
+        }
+
+        &.column-9 {
+          @apply tw-basis-[9%] #{!important};
+        }
+
+        &.column-33 {
+          @apply tw-basis-[33%] #{!important};
+        }
+
+        &.column-41 {
+          @apply tw-basis-[41%] #{!important};
+        }
+
+        &.column-50 {
+          @apply tw-basis-[50%] #{!important};
+        }
+      }
+    }
+  }
+}
+
+.wp-block-columns {
+  @media (max-width: 767px) {
+    > .wp-block-column.column--has-image {
+      @apply tw-order-[-1] #{!important};
+    }
+  }
+}

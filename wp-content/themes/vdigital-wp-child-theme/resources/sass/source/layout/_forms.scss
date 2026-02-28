@@ -1,0 +1,317 @@
+form[id^="sf_form_salesforce_w2l_lead_"] {
+  .fields {
+    @apply tw-flex tw-flex-wrap tw-gap-y-[15px] tw-justify-between;
+
+    .sf_field {
+      @apply tw-w-full tw-text-sm;
+
+      @media(min-width: 1024px) {
+        @apply tw-text-base;
+      }
+
+      &.sf_type_select {
+        @apply tw-cursor-pointer;
+      }
+
+      &.sf_field_first_name, &.sf_field_industry {
+        //@apply tw-w-[35.80%];
+        @apply tw-w-[46.80%];
+
+        @media screen and (max-width: 600px) {
+          @apply tw-w-full;
+        }
+      }
+
+      &.sf_field_last_name, &.sf_field_employees {
+        //@apply tw-w-[59.96%];
+        @apply tw-w-[49.96%];
+
+        @media screen and (max-width: 600px) {
+          @apply tw-w-full;
+        }
+      }
+
+      &.sf_type_text, &.sf_type_select, &.sf_type_textarea, &.sf_type_email, &.sf_type_date {
+        input, select, textarea {
+          &.invalid {
+            @apply tw-border-red-01;
+            padding-left: 13px;
+          }
+        }
+
+        > textarea {
+          @apply tw-resize-none;
+          min-height: 138px;
+        }
+      }
+
+      &.sf_type_radio {
+        > fieldset {
+          @apply tw-flex tw-flex-wrap tw-gap-x-[50px] tw-gap-y-[10px];
+        }
+      }
+
+      &.sf_field_moreUpdates__c {
+        @apply tw-my-2;
+
+        @media(min-width: 640px) {
+          @apply tw-my-0;
+        }
+      }
+
+      input[name='phone'] {
+        @apply tw-pl-[137px] #{!important};
+
+        &.invalid, &:focus, &:focus-visible, &:active {
+          @apply tw-pl-[137px] #{!important};
+        }
+      }
+    }
+  }
+
+  > .w2lsubmit {
+    @apply tw-py-0 tw-mt-3;
+
+    .w2linput {
+      @apply tw-w-full;
+
+      svg {
+        @apply tw-absolute;
+      }
+    }
+  }
+
+  .sf_field_phone {
+    &:focus-within {
+      .iti__selected-flag, div.iti {
+        @apply tw-border-edge #{!important};
+      }
+    }
+
+    &.error {
+      .iti__flag-container > .iti__selected-flag {
+        @apply tw-border-warning;
+      }
+    }
+
+    .iti:has(.iti__country-list:not(.iti__hide)) {
+      @apply tw-rounded-b-none;
+
+      input[name="phone"] {
+        @apply tw-rounded-b-none;
+      }
+    }
+
+    // When dropdown opens upward
+    .iti:has(.iti__country-list--dropup:not(.iti__hide)) {
+      @apply tw-rounded-b-[25px] tw-rounded-t-none;
+    }
+
+    // Dark theme (default)
+    > div.iti {
+      @apply tw-flex-col font--dm-sans tw-font-light tw-text-[18px] tw-leading-[1.2] tw-h-[60px]
+      tw-border-2 tw-rounded-[25px] focus:placeholder:tw-text-focus focus:tw-outline-none
+      tw-bg-core tw-border-mist focus:tw-border-edge tw-text-focus placeholder:tw-text-[#ffffff80];
+
+      input[name="phone"] {
+        @apply tw-h-full tw-rounded-[23.5px] tw-m-0 tw-text-focus placeholder:tw-text-[#ffffff80] tw-w-full tw-bg-transparent;
+        @apply focus:tw-outline-none focus:tw-pl-[137px] #{!important};
+      }
+
+      .iti__flag-container {
+        @apply tw-w-[128px] tw-whitespace-nowrap;
+
+        ul {
+          @apply tw-rounded-bl-[25px] tw-rounded-br-[25px] tw-list-none tw-pl-0 tw-text-[14px]
+            tw-bg-core tw-border-edge tw-border-2 tw-border-t-0 tw-ml-[-2.8px] lg:tw-ml-[-2.5px];
+
+          // Clip scrollbar to rounded corners
+          clip-path: inset(0 round 0 0 25px 25px);
+
+          &::-webkit-scrollbar {
+            @apply tw-w-1;
+          }
+
+          &::-webkit-scrollbar-track {
+            @apply tw-bg-transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            @apply tw-rounded-[8px] tw-bg-[rgba(255,255,255,0.4)];
+          }
+
+          &::-webkit-scrollbar-button {
+            @apply tw-hidden;
+          }
+        }
+
+        // Dropup styling - rounded corners at top instead of bottom
+        ul.iti__country-list--dropup {
+          @apply tw-rounded-tl-[25px] tw-rounded-tr-[25px] tw-rounded-bl-none tw-rounded-br-none tw-border-t-2 tw-border-b-0;
+
+          // Clip scrollbar to top rounded corners
+          clip-path: inset(0 round 25px 25px 0 0);
+        }
+      }
+
+      .iti__country-list {
+        li {
+          @apply tw-text-[#ffffff80] hover:tw-text-focus hover:tw-bg-transparent tw-py-1 tw-px-[25px];
+
+          > .iti__country-name {
+            @apply tw-max-w-[75%] tw-text-wrap tw-inline-block;
+          }
+
+          > .iti__dial-code, > .iti__country-name {
+            @apply font--dm-sans tw-font-light tw-text-[18px] tw-leading-[1.2] tw-border-[#ffffff80];
+            @apply tw-text-inherit #{!important};
+          }
+
+          &.iti__active {
+            @apply tw-bg-transparent;
+
+            > .iti__dial-code, > .iti__country-name {
+              @apply tw-font-bold;
+              @apply tw-text-focus #{!important};
+            }
+          }
+
+          &.iti__divider {
+            @apply tw-border-mist;
+          }
+        }
+      }
+
+      .iti__selected-flag {
+        @apply tw-bg-transparent tw-border-r-2 tw-border-mist tw-py-[18px] tw-pl-6 tw-pr-3;
+
+        .iti__arrow {
+          @apply tw-border-transparent tw-mr-[9px] tw-w-[17px] tw-ml-auto;
+
+          &:after {
+            @apply tw-content-[""] tw-w-[17px] tw-h-full tw-absolute tw-bg-no-repeat tw-top-0 tw-bg-contain;
+
+            background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/arrow-down.svg");
+            background-position: right center;
+          }
+
+          &.iti__arrow--up {
+            &:after {
+              @apply tw-rotate-180;
+            }
+          }
+        }
+
+        .iti__selected-dial-code {
+          @apply tw-text-[#ffffff80];
+        }
+      }
+    }
+
+    &.error > div.iti {
+      border-color: var(--color-warning) !important;
+    }
+  }
+}
+
+.wp-block-column {
+  form[id^="sf_form_salesforce_w2l_lead_"] {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .fields {
+        @apply tw-flex tw-flex-wrap tw-gap-y-[15px] tw-justify-between;
+
+        .sf_field {
+          @apply tw-w-full tw-text-sm;
+
+          @media(min-width: 1024px) {
+            @apply tw-text-base;
+          }
+
+          &.sf_field_first_name, &.sf_field_industry {
+            @apply tw-w-full;
+          }
+
+          &.sf_field_last_name, &.sf_field_employees {
+            @apply tw-w-full;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Light theme for popups and form blocks with white background
+.salesforce_popup,
+.form-block--light, .block__background--light .form-block--dark {
+  form[id^="sf_form_salesforce_w2l_lead_"] .sf_field_phone > div.iti {
+    @apply tw-bg-white tw-text-core placeholder:tw-text-core-50;
+
+    input[name="phone"] {
+      @apply tw-text-core placeholder:tw-text-core-50 tw-bg-transparent;
+    }
+
+    .iti__flag-container ul {
+      @apply tw-bg-focus;
+
+      &::-webkit-scrollbar-thumb {
+        @apply tw-bg-[rgba(0,0,0,0.4)];
+      }
+    }
+
+    .iti__country-list li {
+      @apply tw-text-core-50 hover:tw-text-core;
+
+      > .iti__dial-code, > .iti__country-name {
+        @apply tw-border-core-50;
+      }
+
+      &.iti__active > .iti__dial-code,
+      &.iti__active > .iti__country-name {
+        @apply tw-text-core #{!important};
+      }
+
+      &.iti__divider {
+        @apply tw-border-core-20;
+      }
+    }
+
+    .iti__selected-flag {
+      .iti__arrow:after {
+        background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/arrow-down-black.svg");
+      }
+
+      .iti__selected-dial-code {
+        @apply tw-text-core-50;
+      }
+    }
+  }
+}
+
+select.salesforce_popup__tabs {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white url('data:image/svg+xml,<svg id="Group_949" data-name="Group 949" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="9.33" viewBox="0 0 16 9.33"><defs><clipPath id="clip-path"><path id="Path_42" data-name="Path 42" d="M16-8.747H0V.583H16Z" transform="translate(0 8.747)" fill="%23004ca8"/></clipPath></defs><g id="Group_186" data-name="Group 186" clip-path="url(%23clip-path)"><g id="Group_185" data-name="Group 185" transform="translate(0 0)"><path id="Path_41" data-name="Path 41" d="M15.69-6.884a.506.506,0,0,1,.16.369.506.506,0,0,1-.16.368L8.219,1.324a.5.5,0,0,1-.737,0L.011-6.147A.5.5,0,0,1-.15-6.515a.5.5,0,0,1,.161-.369l.8-.8a.506.506,0,0,1,.369-.16.506.506,0,0,1,.368.16l6.3,6.3,6.3-6.3a.508.508,0,0,1,.369-.16.51.51,0,0,1,.369.16Z" transform="translate(0.15 7.846)" fill="%23004ca8"/></g></g></svg>') no-repeat right 21px center;
+
+  &::-ms-expand {
+    @apply tw-hidden;
+  }
+}
+
+.salesforce_popup__content .salesforce_w2l_lead .sf_required_fields_msg {
+  @apply tw-hidden;
+}
+
+.iti__divider {
+  @apply tw-h-[1px];
+}
+
+.iti__selected-dial-code--autofilled {
+  @apply tw-text-core #{!important};
+}
+
+
+.iti__arrow--autofilled {
+  &:after {
+    background-image: url("/wp-content/themes/vdigital-wp-child-theme/assets/images/arrow-down-black.svg") #{!important};
+  }
+}

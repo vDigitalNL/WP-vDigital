@@ -1,0 +1,19 @@
+{
+  "name": "acf/accordion",
+  "title": "Accordion",
+  "description": "An accordion block",
+  "icon": "excerpt-view",
+  "style": "ww_accordion",
+  "script": "ww_accordion",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "ancestor": [
+    "core/columns",
+    "acf/background"
+  ]
+}

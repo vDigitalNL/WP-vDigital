@@ -1,0 +1,16 @@
+#wpbody {
+  .block-editor-block-list__block[date-type="dyflexis/banner"],
+  .block-editor-block-list__block[date-type="dyflexis/background"]
+  {
+    > .block__background {
+      @apply tw-bg-cover tw-max-w-full;
+    }
+  }
+
+  .block-editor-block-list__block.wp-block-acf-background {
+    .block__background.break-container-padding {
+      @apply tw-mx-0;
+    }
+  }
+}
+

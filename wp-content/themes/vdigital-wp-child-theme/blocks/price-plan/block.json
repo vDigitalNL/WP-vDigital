@@ -1,0 +1,19 @@
+{
+  "name": "acf/price-plan",
+  "title": "Price plan",
+  "category": "ww-custom-only-background-required",
+  "description": "A price plan block.",
+  "icon": "money",
+  "supports": {
+    "align": false
+  },
+  "style": "ww_price-plan",
+  "script": "ww_price-plan",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "parent":[
+    "acf/background"
+  ]
+}

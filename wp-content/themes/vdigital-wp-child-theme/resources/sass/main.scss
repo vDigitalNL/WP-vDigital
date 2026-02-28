@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'source/base/all';
+@import 'source/vendor/all';
+@import 'source/components/all';
+@import 'source/layout/all';
+@import 'source/utils/all';
+
+// Overwrite of the default admin bar
+html #wpadminbar {
+  @apply tw-overflow-hidden;
+}

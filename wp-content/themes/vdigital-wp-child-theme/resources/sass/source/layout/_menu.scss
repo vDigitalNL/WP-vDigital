@@ -1,0 +1,88 @@
+@layer components {
+    body{
+        &.opened-mobile-menu{
+            @apply tw-overflow-hidden;
+        }
+        #header{
+            transform: scale(1); // make header containing block (https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block)
+            #navbar{
+                @apply tw-border-b tw-border-solid tw-border-transparent tw-transition-colors tw-duration-300;
+                &.opened-mobile-menu{
+                    @media (max-width: 1023px) {
+                        @apply tw-border-mist;
+                    }
+                }
+            }
+            .submenu {
+                &__column {
+                    &__items {
+                        &__item {
+                            &__text {
+                                @apply tw-text-sm tw-text-fog;
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+            
+    
+            .menu--mobile {
+                &__navbar {
+                    padding-left: 0;
+                }
+    
+                .navbar-item--mobile {
+                    a{
+                         @apply tw-text-white hover:tw-text-sky tw-uppercase tw-font-bold;   
+                         line-height: 1;
+                    }
+                    &.secondary {
+                        a, > span{
+                            @apply tw-opacity-60 hover:tw-opacity-100 tw-font-light tw-normal-case tw-text-xs font--dm-sans;
+                        }
+                    }
+    
+                    &:last-child {
+                        @apply tw-border-b-0;
+                    }
+                }
+                .tw-btn{
+                    text-decoration: none;
+                    @apply tw-py-[10px];
+                }
+            }
+            .submenu--mobile{
+                // height: calc(100% - (80px + 4px));
+                .gradient--default-overlay-images{
+                    &:before{
+                        border-radius:  calc(2.5rem - 1px) calc(2.5rem - 1px) 0 0;
+                    }
+                }
+                .menu-language_switch-container{
+                    ul{
+                        padding-left: 0 !important;
+                    }
+                    >ul{
+                        padding-left: 40px !important;
+                    }
+                }
+            }
+        }  
+        &.admin-bar{
+            .menu--mobile {
+                &__navbar{
+                    @apply tw-pt-36;
+                }   
+            }
+            .submenu--mobile {
+                &__tab{
+                    @apply tw-pt-[120px];
+                }   
+            }
+        }
+    }
+     
+
+}

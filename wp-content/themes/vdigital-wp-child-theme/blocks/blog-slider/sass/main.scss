@@ -1,0 +1,60 @@
+@import "../../../../../../node_modules/tiny-slider/src/tiny-slider";
+
+.blog-slider {
+  max-width: 100vw;
+  &__label {
+    border-radius: 10px !important;
+    @apply tw-rounded-[10px] tw-hidden md:tw-block;
+
+    &.label--white {
+      @apply tw-bg-focus tw-text-core;
+    }
+  }
+  &__card {
+    max-width: 100vw;
+    @apply tw-w-full;
+    &__navigation {
+      .dots {
+        @apply tw-overflow-hidden tw-flex tw-justify-center;
+
+        .dot {
+          @apply tw-transition-all tw-duration-300 tw-ease-in-out;
+
+          &:hover {
+            @apply tw-cursor-pointer;
+          }
+
+          &.fade-out {
+            @apply tw-opacity-0 tw-scale-50 tw-w-0 tw-m-0;
+          }
+
+          &.fade-in {
+            @apply tw-opacity-100 tw-scale-100;
+          }
+
+          &.slide-left {
+            @apply tw-opacity-0 tw--translate-x-[100px];
+          }
+
+          &.slide-right {
+            @apply tw-opacity-0 tw-translate-x-[100px];
+          }
+
+          &.tns-nav-active {
+            @apply tw-bg-edge;
+          }
+        }
+      }
+    }
+  }
+
+  &__items {
+    &__item {
+      @apply tw-text-core;
+      padding: 1px; // prevent cutting off borders
+      .title--h2 {
+        @apply tw-text-core tw-text-[32px] md:tw-text-[32px] lg:tw-text-[64px] tw-font-bold #{!important};
+      }
+    }
+  }
+}

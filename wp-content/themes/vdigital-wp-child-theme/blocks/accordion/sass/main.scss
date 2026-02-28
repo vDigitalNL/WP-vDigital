@@ -1,0 +1,78 @@
+body:not(.wp-admin) {
+  .accordion { // Necessary for overrides of the default styles; tw-hidden, colors, backgrounds
+    .accordion__item {
+
+      &__body {
+        
+        @apply tw-text-white;
+        >p {
+          a {
+            @apply tw-underline;
+            @apply tw-text-blue-01;
+
+            &:hover {
+              @apply tw-text-blue-02;
+            }
+          }
+        }
+
+        ul {
+          padding-left: 19px;
+
+          &.checkmark-list {
+            padding-left: 19px;
+          }
+        }
+
+        ol {
+          padding-left: 19px;
+        }
+      }
+
+      button[class*="button--toggle"] {
+        &.tw-hidden {
+          display: none !important;
+        }
+      }
+
+      &__header {
+        &__icon-minus {
+          @apply tw-bg-sky;
+        }
+      }
+    }
+  }
+}
+
+body:not(.wp-admin) {
+  .block__background--light {
+    .accordion__item {
+      
+      @apply tw-border-core;
+      &__body {
+        @apply tw-text-core;
+
+        p,
+        ul,
+        li,
+        a {
+          @apply tw-text-core;
+        }
+      }
+
+      &__header {
+        &__label {
+          @apply tw-text-core;
+        }
+        &__icon-plus {
+          color: var(--color-core) !important;
+          background-color: unset !important;
+        }
+
+        &__icon-minus {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

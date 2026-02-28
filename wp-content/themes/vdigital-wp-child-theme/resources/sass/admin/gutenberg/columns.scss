@@ -1,0 +1,46 @@
+.is-layout-flow.block-editor-block-list__block:not(.is-selected)>.block-list-appender:only-child:after {
+  @apply tw-hidden;
+}
+
+// Styles for empty columns in the admin interface
+.is-root-container {
+  .wp-block-columns {
+    .wp-block-column:not(.spacer-column) {
+      &:empty {
+        @apply tw-min-h-[150px] tw-border-2 tw-border-dashed tw-border-gray-300 tw-relative #{!important};
+      }
+
+      &:not(:has(*:not(.block-list-appender))),
+      &:has(.block-list-appender:only-child) {
+        @apply tw-min-h-[150px] tw-border-2 tw-border-dashed tw-border-gray-300 tw-relative #{!important};
+      }
+    }
+  }
+}
+
+// Hide stretch to fill option only (4th button in vertical alignment menu)
+body.block-editor-page {
+  .components-dropdown-menu__menu[aria-label="Change vertical alignment"] {
+    button.components-dropdown-menu__menu-item:nth-child(4) {
+      @apply tw-hidden #{!important};
+    }
+  }
+  
+  // Hide vertical alignment button when core/columns is selected
+  &[class*="block-editor"] {
+    .interface-interface-skeleton__content {
+      &:has([data-type="core/columns"].is-selected:not([data-type="core/column"])) {
+        .block-editor-block-toolbar__block-controls {
+          button[aria-label="Change vertical alignment"],
+          .components-toolbar-group > .components-toolbar-button[aria-label*="vertical"] {
+            @apply tw-hidden #{!important};
+          }
+        }
+      }
+    }
+  }
+
+  .components-dropdown-menu__menu-item {
+    @apply tw-shadow-none #{!important};
+  }
+}

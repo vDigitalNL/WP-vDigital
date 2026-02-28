@@ -1,0 +1,40 @@
+@import "buttons";
+@tailwind components;
+
+.overview {
+  &__container {
+    grid-auto-rows: 1fr;
+
+    @screen lg {
+      grid-auto-rows: 280px;
+    }
+
+    &__item {
+      position: relative;
+
+      .image {
+        transition: height 0.5s;
+      }
+
+      &__text {
+        transition: height 0.5s;
+      }
+    }
+  }
+  .gradient--default-overlay-images {
+    &::before {
+      // --blue-color: rgba(8, 19, 40, 1);
+
+      border-radius: 20px;
+    }
+  }
+
+  &__filter__item {
+    aspect-ratio: 1.55;
+
+    @screen lg {
+      aspect-ratio: unset;
+    }
+  }
+
+}

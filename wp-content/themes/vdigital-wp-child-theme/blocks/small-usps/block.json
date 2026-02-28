@@ -1,0 +1,16 @@
+{
+  "name": "acf/small-usps",
+  "title": "List",
+  "description": "A list block.",
+  "icon": "list-view",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "parent": [
+    "acf/columns-column"
+  ]
+}

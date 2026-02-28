@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "settings": {
+    "blocks": {
+      "core/image": {
+        "lightbox": {
+          "enabled": false,
+          "allowEditing": false
+        }
+      }
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/image": {
+        "variations": {
+          "rounded-corners": {
+            "border": {
+              "radius": "24px"
+            }
+          }
+        }
+      }
+    }
+  }
+}

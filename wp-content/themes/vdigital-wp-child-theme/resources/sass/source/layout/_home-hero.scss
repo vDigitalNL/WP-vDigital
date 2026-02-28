@@ -1,0 +1,190 @@
+@mixin scroll-btn-zoom($hide-below-height: null) {
+  zoom: clamp(0.5, calc(100vh / var(--scroll-btn-zoom-base)), 1);
+  bottom: 1rem;
+
+  @if $hide-below-height {
+    @media (max-height: #{$hide-below-height}) {
+      display: none;
+    }
+  }
+}
+
+@mixin content-centered($max-width: 80vw) {
+  max-width: $max-width;
+  overflow: visible;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.home:not(.wp-admin) {
+  .home-hero {
+    --scroll-btn-zoom-base: 660%;
+    @media (min-width: 1024px) {
+      background-image: var(--bg-url) !important;
+
+      @media (max-width: 1400px) {
+        height: calc(100vh * 1.33334);
+      }
+    }
+
+    &__intro {
+      @apply tw-text-[40px] #{!important};
+
+      @media (min-width: 375px) and (max-width: 1024px) {
+        --font-size: 10.66vw !important;
+        font-size: var(--font-size) !important;
+        line-height: calc(var(--font-size) * 0.95) !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    &__bigword {
+      @apply tw-leading-[41px] tw-tracking-[-10%] tw-text-[60px] #{!important};
+
+      @media (min-width: 375px) and (max-width: 1024px) {
+        --font-size: 16vw !important;
+        font-size: var(--font-size) !important;
+        line-height: calc(var(--font-size) * 0.68) !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    // Small phones (max-width: 375px)
+    @media (max-width: 375px) {
+      .content {
+        margin-top: -8vw;
+      }
+      .explanation {
+        font-size: clamp(10px, 2.5vh, 16px);
+      }
+
+      #scroll_to_content {
+        @include scroll-btn-zoom(370px);
+        bottom: clamp(0.5rem, 1rem, 2.5rem);
+      }
+    }
+
+    // Prevent text from being too big on small tablets
+    @media (min-width: 376px) and (max-width: 1023px) {
+      // Base styles for tablets in portrait mode
+      @media (min-aspect-ratio: 0.65) and (max-aspect-ratio: 0.8) {
+        #scroll_to_content {
+          @include scroll-btn-zoom(515px);
+        }
+      }
+
+      // Base styles for tablets in squarisch mode
+      @media (min-aspect-ratio: 0.8) and (max-aspect-ratio: 1.4) {
+        .content {
+          margin-top: -8vw;
+        }
+        .explanation {
+          font-size: clamp(12px, 3vh, 16px) !important;
+        }
+
+        &__intro {
+          --font-size: clamp(7vw, 8vw, 40px) !important;
+        }
+        &__bigword {
+          --font-size: clamp(13vw, 15vw, 60px) !important;
+        }
+
+        #scroll_to_content {
+          @include scroll-btn-zoom(508px);
+        }
+      }
+
+      // Wider tablets (ratio 1.4–1.59)
+      @media (min-aspect-ratio: 1.4) and (max-aspect-ratio: 1.59) {
+        .content {
+          @include content-centered(90vw);
+          margin-top: -8vw;
+        }
+
+        &__intro {
+          --font-size: clamp(9vh, 10vh, 40px) !important;
+        }
+
+        .explanation {
+          max-width: 75% !important;
+          font-size: clamp(12px, 14px, 16px) !important;
+
+          @media (max-height: 380px) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+
+        #scroll_to_content {
+          @include scroll-btn-zoom(460px);
+        }
+      }
+
+      // Even wider tablets (ratio 1.59–2)
+      @media (min-aspect-ratio: 1.59) and (max-aspect-ratio: 2) {
+        .content {
+          @include content-centered(80vw);
+          margin-top: -8vw;
+        }
+
+        &__intro {
+          --font-size: 8vh !important;
+        }
+        &__bigword {
+          --font-size: 22vh !important;
+        }
+        .explanation {
+          max-width: 100% !important;
+          font-size: clamp(12px, 14px, 16px) !important;
+        }
+
+        #scroll_to_content {
+          @include scroll-btn-zoom(440px);
+        }
+      }
+
+      // Ultra-wide tablets (ratio 2+)
+      @media (min-aspect-ratio: 2) {
+        .content {
+          @include content-centered(60vw);
+          margin-top: -5vw;
+        }
+
+        &__intro {
+          --font-size: 8vh !important;
+        }
+        &__bigword {
+          --font-size: 22vh !important;
+        }
+        .explanation {
+          max-width: 100% !important;
+          padding: 0;
+          font-size: clamp(12px, 14px, 16px) !important;
+        }
+
+        #scroll_to_content {
+          zoom: 0.4;
+          bottom: 1rem;
+
+          @media (max-height: 870px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.admin-bar.home:not(.wp-admin) {
+  .home-hero {
+    height: calc(100vh - 46px);
+
+    @media (min-width: 1024px) {
+      height: calc(100vh - 32px);
+
+      @media (max-width: 1400px) {
+        height: calc((100vh - 32px) * 1.33334);
+      }
+    }
+  }
+}

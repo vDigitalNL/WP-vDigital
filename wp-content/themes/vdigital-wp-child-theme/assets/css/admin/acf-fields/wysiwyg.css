@@ -1,0 +1,131 @@
+.wysiwyg__content, #tinymce {
+  font-size: 20px;
+  line-height: 1.2;
+}
+.wysiwyg__content .txt--lead, #tinymce .txt--lead {
+  font-size: 20px;
+  font-weight: 500;
+}
+.wysiwyg__content h1, .wysiwyg__content h2, .wysiwyg__content h3, #tinymce h1, #tinymce h2, #tinymce h3 {
+  margin-bottom: 1rem;
+}
+.wysiwyg__content h1, #tinymce h1 {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: bold;
+}
+@media (max-width: 1024px) {
+  .wysiwyg__content h1, #tinymce h1 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+}
+.wysiwyg__content h2, #tinymce h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.wysiwyg__content h3, #tinymce h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.wysiwyg__content p, #tinymce p {
+  margin-bottom: 1rem;
+}
+.wysiwyg__content p:last-child, #tinymce p:last-child {
+  margin-bottom: 0px;
+}
+.wysiwyg__content h3, #tinymce h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.wysiwyg__content a, #tinymce a {
+  color: #004ca8;
+  text-decoration: underline;
+}
+.wysiwyg__content a:hover, #tinymce a:hover {
+  color: rgb(0, 52.9285714286, 117);
+}
+.wysiwyg__content strong, .wysiwyg__content b, #tinymce strong, #tinymce b {
+  font-weight: bold;
+}
+.wysiwyg__content i, .wysiwyg__content em, #tinymce i, #tinymce em {
+  font-style: italic;
+}
+.wysiwyg__content del, #tinymce del {
+  text-decoration: line-through;
+}
+.wysiwyg__content u, #tinymce u {
+  text-decoration: underline;
+}
+.wysiwyg__content hr, #tinymce hr {
+  margin-bottom: 1rem;
+}
+.wysiwyg__content ul:not(.checkmark-list), .wysiwyg__content ol, #tinymce ul:not(.checkmark-list), #tinymce ol {
+  margin-bottom: 1rem;
+  margin-left: 1.25rem;
+}
+.wysiwyg__content ul:not(.checkmark-list) li, .wysiwyg__content ol li, #tinymce ul:not(.checkmark-list) li, #tinymce ol li {
+  text-indent: 4px;
+}
+.wysiwyg__content ul:not(.checkmark-list) li:not(:last-child), .wysiwyg__content ol li:not(:last-child), #tinymce ul:not(.checkmark-list) li:not(:last-child), #tinymce ol li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.wysiwyg__content ul:not(.checkmark-list):last-child, .wysiwyg__content ol:last-child, #tinymce ul:not(.checkmark-list):last-child, #tinymce ol:last-child {
+  margin-bottom: 0px;
+}
+.wysiwyg__content ul:not(.checkmark-list), #tinymce ul:not(.checkmark-list) {
+  list-style: disc;
+}
+.wysiwyg__content ul.checkmark-list, #tinymce ul.checkmark-list {
+  margin-bottom: 1rem;
+}
+.wysiwyg__content ul.checkmark-list:last-child, #tinymce ul.checkmark-list:last-child {
+  margin-bottom: 0px;
+}
+.wysiwyg__content ol, #tinymce ol {
+  list-style: decimal;
+}
+.wysiwyg__content blockquote, #tinymce blockquote {
+  border-left: 4px solid #004ca8;
+  padding-left: 36px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #004ca8;
+}
+
+#tinymce {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+}
+#tinymce h1 {
+  font-size: 28px;
+}
+#tinymce h2 {
+  font-size: 24px;
+}
+#tinymce h3 {
+  font-size: 20px;
+}
+#tinymce p {
+  margin-bottom: 1rem;
+  margin-top: 0px;
+}
+#tinymce p:last-child {
+  margin-bottom: 0px;
+}
+#tinymce .txt--lead {
+  font-size: 18px;
+}
+#tinymce ul:not(.checkmark-list), #tinymce ol {
+  margin-left: 0;
+}
+#tinymce blockquote {
+  margin-left: 0;
+  padding-left: 20px;
+  font-size: 24px;
+}

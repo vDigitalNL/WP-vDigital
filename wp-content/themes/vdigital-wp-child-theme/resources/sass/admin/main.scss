@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../source/base/all';
+@import '../source/vendor/all';
+@import '../source/components/all';
+@import '../source/layout/all';
+@import '../source/utils/all';
+@import 'gutenberg/columns';
+@import 'gutenberg/core';
+@import 'gutenberg/background';
+
+// This is a fix to counter certain styling that has a z-index
+.acf-innerblocks-container {
+  z-index: 20;
+}
+
+.block__navigator {
+  .block-list-appender {
+    z-index: 50;
+    margin-top: 50px;
+  }
+}
+
+#adminmenu .wp-menu-image img {
+  display: inline;
+}
+
+.editor-visual-editor .editor-styles-wrapper {
+  @apply tw-bg-core tw-text-focus #{!important};
+}
+
+// This works with importants a lot since we have to make sure the default style from the child theme is overwritten.
+h1.wp-block.wp-block-post-title {
+  @apply tw-mb-3 tw-tracking-normal tw-normal-case tw-text-[2em] #{!important};
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+p.description {
+  @apply tw-text-[#667085] tw-text-[13px] #{!important};
+}
+
+.editor-header__back-button a {
+  background-color: white !important;
+
+  &:before {
+    box-shadow: none !important;
+  }
+}
+
+.block-editor-block-variation-picker__variations {
+  @apply tw-text-core tw-text-[12px] #{!important};
+}
+
+
+body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor {
+  .acf-block-fields.acf-fields {
+    .acf-notice, .acf-notice > p {
+      @apply tw-text-[13px];
+    }
+
+    .acf-field {
+      .acf-notice.-warning, .acf-notice.-warning p {
+        @apply tw-text-core;
+      }
+
+      .acf-notice.-error, .acf-notice.-error p {
+        @apply tw-text-[#cc2727];
+      }
+
+      .link-wrap > a {
+        @apply tw-text-inherit;
+      }
+
+      .link-wrap > .link-url:hover {
+        @apply tw-text-sky;
+      }
+    }
+
+    .acf-image-uploader p {
+      @apply tw-text-gray-500 tw-text-[13px];
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@layer components {
+  .label {
+    @apply tw-rounded-[15px] tw-bg-transparent tw-border tw-border-focus tw-text-focus tw-inline-block
+      tw-py-2.5 tw-px-5 tw-uppercase font--dm-sans tw-text-[16px] tw-font-bold tw-tracking-[-.48px] tw-leading-[1.2];
+
+    &--dark {
+      @apply label tw-bg-core tw-border-core;
+    }
+  }
+}

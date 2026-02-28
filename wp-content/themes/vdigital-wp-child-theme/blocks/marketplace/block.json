@@ -1,0 +1,17 @@
+{
+  "name": "acf/marketplace",
+  "title": "Marketplace",
+  "category": "ww-custom-no-background-required",
+  "description": "Marketplace overview block.",
+  "style": "ww_marketplace",
+  "script": "ww_marketplace",
+  "icon": "store",
+  "parent": ["core/post-content"],
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../resources/sass/source/utils/variables";
+
+.offset-image {
+  .offset-image__img {
+    object-fit: cover;
+  }
+
+  &.offset-image--rounded {
+    .offset-image__img {
+      @apply tw-rounded-none;
+    }
+
+    &.offset-image--right .offset-image__img {
+      @apply md:tw-rounded-l-[20px];
+    }
+
+    &.offset-image--left {
+      @apply md:tw-translate-x-[-284px];
+
+      .offset-image__img {
+        @apply md:tw-rounded-r-[20px];
+      }
+    }
+
+    @media screen and (min-width: 1134px) and (max-width: 1400px) {
+      &.offset-image--right .offset-image__img ,
+      &.offset-image--left .offset-image__img  {
+        @apply tw-rounded-[20px];
+      }
+    }
+
+    @media screen and (min-width: 1513px) {
+      &.offset-image--right .offset-image__img ,
+      &.offset-image--left .offset-image__img  {
+        @apply tw-rounded-[20px];
+      }
+    }
+  }
+}

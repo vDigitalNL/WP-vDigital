@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlotterGraph - Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        accent: '#22d3ee',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .axis-line {
+            background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.3), transparent);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-200 font-sans grid-bg">
+    <!-- Hero Section -->
+    <div class="min-h-screen flex flex-col relative">
+        <!-- Subtle axis lines -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-px bg-slate-800/50"></div>
+        <div class="absolute top-1/2 left-0 right-0 h-px bg-slate-800/50"></div>
+
+        <!-- Navigation -->
+        <nav class="p-6 relative z-10">
+            <div class="max-w-5xl mx-auto flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 border border-primary/60 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5l6-6 4 4 8-8M13 5h6v6"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-mono font-medium tracking-tight">PlotterGraph</span>
+                        <span class="text-[10px] font-mono text-slate-500">By vDigital</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex gap-8 text-sm text-slate-400 font-mono">
+                    <a href="#features" class="hover:text-primary transition">/features</a>
+                    <a href="#specs" class="hover:text-primary transition">/specs</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <main class="flex-1 flex items-center justify-center px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <!-- Coming Soon Badge -->
+                <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/5 px-4 py-2 mb-10">
+                    <span class="w-2 h-2 bg-primary animate-pulse"></span>
+                    <span class="text-xs font-mono uppercase tracking-widest text-primary">In Development</span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-semibold mb-6 text-white leading-tight tracking-tight">
+                    Precision Plotter<br>Graph Generation
+                </h1>
+                
+                <p class="text-lg text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
+                    Generate mathematically precise SVG paths optimized for pen plotters. 
+                    Transform data into physical art with algorithmic accuracy.
+                </p>
+
+                <!-- Email Signup -->
+                <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-14 max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="email@domain.com" 
+                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-primary font-mono text-sm"
+                    >
+                    <button class="w-full sm:w-auto px-6 py-3 bg-primary text-slate-950 font-mono font-medium text-sm hover:bg-accent transition whitespace-nowrap">
+                        Notify Me
+                    </button>
+                </div>
+
+                <!-- Specs -->
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-mono text-slate-500">
+                    <span class="flex items-center gap-2">
+                        <span class="w-1 h-1 bg-primary"></span>
+                        SVG / HPGL / G-code
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <span class="w-1 h-1 bg-primary"></span>
+                        Path optimization
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <span class="w-1 h-1 bg-primary"></span>
+                        AxiDraw compatible
+                    </span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Coordinate indicator -->
+        <div class="absolute bottom-6 right-6 font-mono text-xs text-slate-600">
+            x: 0.00 y: 0.00
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-6 border-t border-slate-800/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-mono text-xs text-primary uppercase tracking-widest">// Features</span>
+                <h2 class="text-2xl md:text-3xl font-semibold text-white mt-4">
+                    Built for precision
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="border border-slate-800 p-6 hover:border-slate-700 transition bg-slate-900/30">
+                    <div class="w-10 h-10 border border-primary/40 flex items-center justify-center mb-5">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">Visual Editor</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Real-time preview with coordinate display. Design with mathematical precision.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="border border-slate-800 p-6 hover:border-slate-700 transition bg-slate-900/30">
+                    <div class="w-10 h-10 border border-primary/40 flex items-center justify-center mb-5">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">TSP Optimization</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Traveling salesman algorithms minimize pen travel. Reduce plotting time significantly.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="border border-slate-800 p-6 hover:border-slate-700 transition bg-slate-900/30">
+                    <div class="w-10 h-10 border border-primary/40 flex items-center justify-center mb-5">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">Multi-format Export</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Output to SVG, HPGL, or G-code. Compatible with all major plotter hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="py-24 px-6 border-t border-slate-800/50 bg-slate-900/20">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="font-mono text-xs text-primary uppercase tracking-widest">// Technical Specs</span>
+                <h2 class="text-2xl md:text-3xl font-semibold text-white mt-4">
+                    Under the hood
+                </h2>
+            </div>
+            
+            <div class="border border-slate-800 divide-y divide-slate-800 font-mono text-sm">
+                <div class="flex justify-between p-4">
+                    <span class="text-slate-400">output_formats</span>
+                    <span class="text-slate-200">SVG, HPGL, G-code</span>
+                </div>
+                <div class="flex justify-between p-4">
+                    <span class="text-slate-400">path_optimization</span>
+                    <span class="text-slate-200">TSP, greedy, nearest-neighbor</span>
+                </div>
+                <div class="flex justify-between p-4">
+                    <span class="text-slate-400">coordinate_precision</span>
+                    <span class="text-slate-200">0.01mm</span>
+                </div>
+                <div class="flex justify-between p-4">
+                    <span class="text-slate-400">supported_plotters</span>
+                    <span class="text-slate-200">AxiDraw, HP 7475A, generic</span>
+                </div>
+                <div class="flex justify-between p-4">
+                    <span class="text-slate-400">status</span>
+                    <span class="text-primary">coming_soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 border-t border-slate-800/50">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 border border-slate-700 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5l6-6 4 4 8-8M13 5h6v6"></path>
+                    </svg>
+                </div>
+                <span class="font-mono text-sm text-slate-500">PlotterGraph</span>
+            </div>
+            <p class="text-slate-600 text-xs font-mono">
+                &copy; 2026 — Currently in development
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@tailwind base;
+
+.block__background {
+  &.block__background--light {
+    h1, h2, h3, h4, p, .wysiwyg__content, ul li, ol li {
+      @apply tw-text-core;
+    }
+
+    blockquote {
+      @apply tw-border-core;
+    }
+
+    a:not(.btn) {
+      @apply tw-text-sky hover:tw-text-mist;
+    }
+  }
+
+
+  @media screen and (min-width: 1134px) and (max-width: 1400px) {
+    @apply tw-bg-none #{!important};
+
+    .block__background__image {
+      @apply tw-block #{!important};
+
+      &__overlay {
+        @apply tw-block #{!important};
+      }
+    }
+
+    .block__background__overlay {
+      @apply tw-hidden #{!important};
+    }
+  }
+
+  @media screen and (min-width: 1513px) {
+    @apply tw-bg-none #{!important};
+
+    .block__background__image {
+      @apply tw-block #{!important};
+
+      &__overlay {
+        @apply tw-block #{!important};
+      }
+    }
+
+    .block__background__overlay {
+      @apply tw-hidden #{!important};
+    }
+  }
+}
+
+body.wp-admin {
+  .block__background {
+    > .block__background__content {
+      @apply tw-min-h-[150px] tw-border-2 tw-border-dashed tw-border-gray-300 tw-relative tw-py-4 #{!important};
+
+      // Ensure InnerBlocks is visible and droppable when empty
+      > .block-editor-inner-blocks,
+      > .block-editor-block-list__layout {
+        @apply tw-min-h-[100px] tw-w-full;
+      }
+
+      > .block-editor-block-list__layout > .block-list-appender.block-list-appender:not(:only-child) {
+        @apply tw-w-full tw-relative tw-mt-[-100px] tw-flex tw-justify-center;
+      }
+    }
+
+    > h3 {
+      @apply tw-relative tw-z-[20];
+    }
+
+    &.block__background--light {
+      @apply tw-text-core #{!important};
+
+      h1, h2, h3, h4, p, li, .wysiwyg__content, ul li, ol li {
+        @apply tw-text-core #{!important};
+      }
+
+      blockquote {
+        @apply tw-border-core;
+      }
+
+      > .block__background__content {
+        @apply tw-border-core #{!important};
+      }
+
+      a:not(.btn) {
+        @apply tw-text-sky hover:tw-text-mist;
+      }
+    }
+  }
+}

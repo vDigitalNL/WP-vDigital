@@ -1,0 +1,654 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+msgid "Company name is too short"
+msgstr "Unternehmensname ist zu kurz"
+
+msgid "Firstname is too short"
+msgstr "Vorname ist zu kurz"
+
+msgid "Lastname is too short"
+msgstr "Nachname ist zu kurz"
+
+msgid "Phone number is too short"
+msgstr "Telefonnummer ist zu kurz"
+
+msgid "E-mail address is not valid"
+msgstr "E-mail-Adresse ist ungültig"
+
+msgid "Please enter your business email address"
+msgstr "Bitte geben Sie Ihre geschäftliche E-Mail-Adresse ein"
+
+msgid "Dyflexis. All rights reserved."
+msgstr "Dyflexis. Alle Rechte vorbehalten."
+
+msgid "Choose a language"
+msgstr "Wählen Sie eine Sprache"
+
+msgid "Your request has been sent"
+msgstr "Ihre Anfrage wurde verschickt"
+
+msgid "Salutation"
+msgstr "Anrede"
+
+msgid "E-mail"
+msgstr "E-Mail-Adresse"
+
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+msgid "Company name"
+msgstr "Firmenname"
+
+msgid "Sector"
+msgstr "Ihre Branchen"
+
+msgid "Number of employees"
+msgstr "Mitarbeiteranzahl"
+
+msgid "This field is required"
+msgstr "Bitte ausfüllen"
+
+msgid "Load more"
+msgstr "Mehr lesen"
+
+msgid "Filter category"
+msgstr "Filter"
+
+msgid "No results found."
+msgstr "Keine Ergebnisse gefunden."
+
+msgid "Per user / per month"
+msgstr "Pro Benutzer / pro Monat"
+
+msgid "This license contains"
+msgstr "Diese Lizenz enthält"
+
+msgid "from"
+msgstr "aus"
+
+msgid "Pound"
+msgstr "Pfund"
+
+msgid "Popular"
+msgstr "Beliebt"
+
+msgid "Request pricing"
+msgstr "Preisanfrage"
+
+msgid "Search results for"
+msgstr "Suchergebnisse für"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Search by keyword or phrase"
+msgstr "Suche nach Stichwort oder Ausdruck"
+
+msgid "Show all results"
+msgstr "Alle Ergebnisse anzeigen"
+
+msgid "What are you looking for?"
+msgstr "Wonach suchst du?"
+
+msgid "Integration"
+msgstr "Integration"
+
+msgid "Partner"
+msgstr "Partner"
+
+msgid "Review"
+msgstr "Referenz"
+
+msgid "News"
+msgstr "Nachricht"
+
+msgid "Page"
+msgstr "Seite"
+
+msgid "Showing results for \"%s\""
+msgstr "Ergebnisse für \"%s\" anzeigen"
+
+msgid "Dutch"
+msgstr "Niederländisch"
+
+msgid "German"
+msgstr "Deutsch"
+
+msgid "English"
+msgstr "Englisch"
+
+msgid "Login"
+msgstr "Anmelden"
+
+msgid "Log in by entering your system name and navigating to your system where you can log in."
+msgstr "Melden Sie sich an, indem Sie Ihren Systemnamen eingeben und zu Ihrem System gehen, wo Sie sich einloggen können."
+
+msgid "System name (Company name)"
+msgstr "Systemname (Firmenname)"
+
+msgid "To your system"
+msgstr "In dein System"
+
+msgid "Follow us"
+msgstr "Folgen Sie uns über"
+
+msgid "All stories"
+msgstr "Alle Geschichten"
+
+msgid "Other news"
+msgstr "Andere Nachrichten"
+
+msgid "Company"
+msgstr "Unternehmen"
+
+msgid "Hours"
+msgstr "Arbeitszeit"
+
+msgid "Cost"
+msgstr "Kosten"
+
+msgid "Efficiency"
+msgstr "Effizienz"
+
+msgid "Select your Branch:"
+msgstr "Wählen Sie Ihre Branche:"
+
+msgid "Select"
+msgstr "Wählen Sie"
+
+msgid "Production and warehousing"
+msgstr "Produktion"
+
+msgid "Retail & E-Commerce"
+msgstr "Einzelhandel & E-Commerce"
+
+msgid "Healthcare"
+msgstr "Gesundheit- und Sozialwesen"
+
+msgid "Catering industry"
+msgstr "Gastronomie & Hotellerie"
+
+msgid "Recreation"
+msgstr "Freizeitbranche"
+
+msgid "How many locations does your company have?"
+msgstr "Wie viele Niederlassungen hat Ihr Unternehmen?"
+
+msgid "How many workdays per week is your company open?"
+msgstr "Wie viele Arbeitstage pro Woche ist Ihr Unternehmen geöffnet?"
+
+msgid "How many employees does your company have?"
+msgstr "Wie viele Mitarbeiter hat Ihr Unternehmen?"
+
+msgid "How many FTE?"
+msgstr "Wie viele FTE?"
+
+msgid "FTE stands for full-time equivalent. This expresses the size of a position or the number of employees. "
+msgstr "FTE steht für Vollzeitäquivalent. Es ist eine Recheneinheit, mit der die Größe eines Auftrags oder die Anzahl der Mitarbeiter ausgedrückt werden kann. "
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "How many managers are busy with the planning and hour registration? "
+msgstr "Wie viele Manager sind an der Planung und Zeiterfassung beteiligt? "
+
+msgid "How many hours per week does a manager spend on..."
+msgstr "Wie viele Stunden pro Woche verbringt ein Manager mit..."
+
+msgid "Planning?"
+msgstr "Dienstplanung?"
+
+msgid "0 hours"
+msgstr "0 Stunden"
+
+msgid "20 hours"
+msgstr "20 Stunden"
+
+msgid "40 hours"
+msgstr "40 Stunden"
+
+msgid "Leave and absence?"
+msgstr "Urlaub und Fehlzeiten?"
+
+msgid "Hour registration?"
+msgstr "Zeitregistrierung?"
+
+msgid "Payroll?"
+msgstr "Abrechnung?"
+
+msgid "Communication and corrections?"
+msgstr "Kommunikation und Korrekturen?"
+
+msgid "What is the average hourly wage, employer charges incl.?"
+msgstr "Wie hoch ist der durchschnittliche Stundenlohn, inkl. Arbeitgeberkosten?"
+
+msgid "What are your total monthly personnel costs?"
+msgstr "Wie hoch sind Ihre monatlichen Personalkosten?"
+
+msgid "On a scale from 1 to 10, to what extent do you consider budget, forecast and existing overtime during scheduling?"
+msgstr "Auf einer Skala von 1 bis 10, inwieweit berücksichtigen Sie bei der Zeitplanung Budget, Prognose, vorhandene Überstunden und Zeitausgleich?"
+
+msgid "On a scale from 1 to 10, how accurate is your current timekeeping based on clocked work hours, unnecessary overwork and allowances."
+msgstr "Auf einer Skala von 1 bis 10, wie genau ist Ihre derzeitige Zeiterfassung auf der Basis von geleisteten Arbeitsstunden, Überstunden und Zuschlagsstunden?"
+
+msgid "Your company"
+msgstr "Ihr Unternehmen"
+
+msgid "Hours spent by manager per week on "
+msgstr "Stunden, die ein Manager pro Woche aufwendet für "
+
+msgid "Your potential savings"
+msgstr "Ihre potenziellen Einsparungen"
+
+msgid "Savings per month"
+msgstr "Einsparungen pro Monat"
+
+msgid "Savings per year"
+msgstr "Einsparungen pro Jahr"
+
+msgid "Savings per month per location"
+msgstr "Einsparungen pro Monat pro Standort"
+
+msgid "Savings per year per location"
+msgstr "Einsparungen pro Jahr pro Standort"
+
+msgid "Savings per month per FTE"
+msgstr "Einsparungen pro Monat pro FTE"
+
+msgid "Savings per year per FTE"
+msgstr "Einsparungen pro Jahr pro FTE"
+
+msgid "Savings per month per employee"
+msgstr "Einsparungen pro Monat pro Mitarbeiter"
+
+msgid "Savings per year per employee"
+msgstr "Einsparungen pro Jahr pro Mitarbeiter"
+
+msgid "Savings per month per manager"
+msgstr "Einsparungen pro Monat pro Manager"
+
+msgid "Savings per year per manager"
+msgstr "Einsparungen pro Jahr pro Manager"
+
+msgid "Savings per month in % of personnel costs"
+msgstr "Einsparungen pro Monat in % der Personalkosten"
+
+msgid "Savings per year in % of personnel costs"
+msgstr "Einsparungen pro Jahr in % der Personalkosten"
+
+msgid "Savings per month in hours"
+msgstr "Einsparungen pro Monat in Stunden"
+
+msgid "Savings per year in hours"
+msgstr "Einsparungen pro Jahr in Stunden"
+
+msgid "Savings per month in hours per manager"
+msgstr "Einsparungen pro Monat in Stunden pro Manager"
+
+msgid "Savings per year in hours per manager"
+msgstr "Einsparungen pro Jahr in Stunden pro Manager"
+
+msgid "Savings per month in days"
+msgstr "Einsparungen pro Monat in Tagen"
+
+msgid "Savings per year in days"
+msgstr "Einsparungen pro Jahr in Tagen"
+
+msgid "Savings per month in days per manager"
+msgstr "Einsparungen pro Monat in Tagen pro Manager"
+
+msgid "Savings per year in days per manager"
+msgstr "Einsparungen pro Jahr in Tagen pro Manager"
+
+msgid "Your results"
+msgstr "Ihre Ergebnisse"
+
+msgid "Download as PDF"
+msgstr "Als PDF herunterladen"
+
+msgid "Request a demo to see how Dyflexis can help you save"
+msgstr "Fordern Sie eine Demo an, um zu sehen, wie Dyflexis Ihnen beim Sparen helfen kann"
+
+msgid "Request a demo now"
+msgstr "Jetzt eine Demo anfordern"
+
+msgid "Request a demo"
+msgstr "Eine Demo anfordern"
+
+msgid "Request a demo to see how Dyflexis can help you save costs"
+msgstr "Fordern Sie eine Demo an, um zu sehen, wie Dyflexis Ihnen helfen kann, Kosten zu sparen"
+
+msgid "Thank you for your interest in Dyflexis"
+msgstr "Vielen Dank für Ihr Interesse an Dyflexis"
+
+msgid "We will contact you as soon as possible"
+msgstr "Wir werden Sie so schnell wie möglich kontaktieren"
+
+msgid "Back to website"
+msgstr "Zurück zur Website"
+
+msgid "You have calculated the potential cost savings for %s"
+msgstr "Sie haben die potenziellen Kosteneinsparungen für %s berechnet"
+
+msgid "All clientcases"
+msgstr "Alle Kundenfälle"
+
+msgid "Other reviews"
+msgstr "Andere Referenzen"
+
+msgid "Your Savings Potential Report"
+msgstr "Ihr Einsparpotenzial-Bericht"
+
+msgid "Savings potential"
+msgstr "Einsparpotenzial"
+
+msgid "savings potential"
+msgstr "einsparpotenzial"
+
+msgid "Savings potential report"
+msgstr "Bericht zum Einsparungspotenzial"
+
+msgid "Our consultant will be more than happy to explain your savings potential:"
+msgstr "Unser Berater erklärt Ihnen gerne Ihr Einsparpotenzial:"
+
+msgid "Monthly"
+msgstr "Monatliches"
+
+msgid "Yearly"
+msgstr "Jährliches"
+
+msgid "Minimal"
+msgstr "Minimal"
+
+msgid "Maximum"
+msgstr "Maximal"
+
+msgid "About Dyflexis"
+msgstr "Über Dyflexis"
+
+msgid ""
+"Dyflexis is specialized in the development of the most user-friendly software and hardware for workforce management. More than 3200 companies in hospitality, recreation, Retail & E-commerce, production & warehousing and healthcare are using our system daily. "
+"They rate us with 4.8/5 from 400+ reviews on Trustpilot. More information is available in the enclosed brochure: "
+msgstr ""
+"Dyflexis hat sich auf die Entwicklung einer benutzerfreundlichen Software und Hardware für das Workforce Management spezialisiert. Über 3200 Unternehmen aus den Bereichen Gastgewerbe, Freizeit, Einzelhandel, Produktion & Lagerhaltung sowie Pflege & Soziales "
+"nutzen unsere Software. In der beigefügten Broschüre können Sie mehr über Dyflexis erfahren."
+
+msgid "Dyflexis in the"
+msgstr "Dyflexis in"
+
+msgid "This average hourly wage is based on figures from Statistics Netherlands in the sector of your choice"
+msgstr "Der durchschnittliche Stundenlohn ist basiert auf einer Statistischen Schätzung."
+
+msgid "(Source)"
+msgstr "(Herkunft)"
+
+msgid "Fill in and immediately see your advantage. Curious about the entire report? Press the button below."
+msgstr "Wenn Sie das Formular ausfüllen, sehen Sie Ihren Vorteil und können es herunterladen."
+
+msgid "Download full report"
+msgstr "Bericht herunterladen"
+
+msgid "Questions?"
+msgstr "Fragen?"
+
+msgid "Your monthly personnel costs are calculated by multiplying the number of FTEs by the average hourly wage."
+msgstr "Ihre monatlichen Personalkosten ergeben sich aus der Anzahl der FTEs multipliziert mit dem durchschnittlichen Stundenlohn."
+
+msgid "Per month"
+msgstr "Pro Monat"
+
+msgid "Per year"
+msgstr "Pro Jahr"
+
+msgid "Dear"
+msgstr "Beste"
+
+msgid "ISO Certified &nbsp; &nbsp; &nbsp;"
+msgstr "ISO zertifiziert &nbsp; &nbsp; &nbsp"
+
+msgid "Free updates &nbsp; &nbsp; &nbsp;"
+msgstr "Kostenlose Updates &nbsp; &nbsp; &nbsp;"
+
+msgid "always the latest version"
+msgstr "immer die neueste Version"
+
+msgid "Free support &nbsp; &nbsp; &nbsp;"
+msgstr "Kostenloser Support &nbsp; &nbsp; &nbsp;"
+
+msgid "for all your employees"
+msgstr "für alle Ihre Mitarbeiter"
+
+msgid "Rex-O-Matic &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "Rex-O-Matic &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "integrated clock system"
+msgstr "integrierte Stempeluhr"
+
+msgid "25% time savings"
+msgstr "25 % Zeitersparnis  &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "On your administrative burden"
+msgstr "Ihres administrativen Aufwands"
+
+msgid "In 5 languages &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "In 5 Sprachen &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "For you and your employees"
+msgstr "für Sie und Ihre Mitarbeiter"
+
+msgid "3200+ customers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "3200+ Kunden &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "in 5 industries"
+msgstr "in 5 Branchen"
+
+msgid "Trustscore 4.8/5"
+msgstr "Trustscore 4.8/5"
+
+msgid "From 400+ customer reviews"
+msgstr "von 400+ Kundenrezensionen"
+
+msgid "Download your:"
+msgstr "Lade dein herunter:"
+
+msgid "Savings Potential Report"
+msgstr "Bericht zum Einsparungspotenzial"
+
+msgid "Would you like to know more about how this calculation was made"
+msgstr "Möchtest du mehr darüber erfahren, wie diese Berechnung erstellt wurde"
+
+msgid "and"
+msgstr "und"
+
+msgid "Send a response to this email or call us on: +31 (0)880 111 555"
+msgstr "Antworte auf diese E-Mail oder rufe uns an unter: +31 (0)880 111 555"
+
+msgid "Full insight?"
+msgstr "Voller Einblick?"
+
+msgid "Fill out the form and receive the full savings potential report."
+msgstr "Über das Formular erhalten Sie den Einsparpotenzialbericht."
+
+msgid "You will receive the report shortly."
+msgstr "Du erhältst den Bericht in Kürze."
+
+msgid "Calculate your savings yourself"
+msgstr "Berechnen Sie Ihre Ersparnis selbst"
+
+msgid "Show all"
+msgstr "Alles anzeigen"
+
+msgid "Herewith, your download | Dyflexis"
+msgstr "Hier ist Ihr Download | Dyflexis"
+
+msgid "Other"
+msgstr "Divers"
+
+msgid "Required to fill in"
+msgstr "Zum Ausfüllen erforderlich"
+
+msgid "Price request"
+msgstr "Preisgestaltung"
+
+msgid ""
+"Dyflexis is a smart Workforce Management software that helps companies with efficient workforce planning, accurate time registration and error-free payroll. Ideal for organisations with flexible staff in sectors such as retail, hospitality and manufacturing. "
+"Employees always know where they stand via the app, and integrations with HR and payroll systems complete it. Grip, convenience and overview - that is Dyflexis."
+msgstr ""
+"Dyflexis ist eine intelligente Workforce-ManagementSoftware, die Unternehmen bei der effizienten Personalplanung, der genauen Zeiterfassung und der fehlerfreien Lohnabrechnung unterstützt. Ideal für Unternehmen mit flexiblen Mitarbeitern in Branchen wie "
+"Einzelhandel, Gastgewerbe und Produktion. Mitarbeiter wissen über die App immer, wo sie eingeplant sind, und Integrationen mit HR- und Gehaltsabrechnungssystemen garantieren einen kompletten und fehlerfreien Prozess. Kontrolle, Komfort und Übersicht - das ist "
+"Dyflexis."
+
+msgid "20+ countries &nbsp; &nbsp; &nbsp;"
+msgstr "20+ Länder &nbsp; &nbsp; &nbsp;"
+
+msgid "are using Dyflexis"
+msgstr "Nutzen uns täglich"
+
+msgid "Always up to date"
+msgstr "Immer auf dem neuesten <br/> stand"
+
+msgid "following every legislation"
+msgstr "gemäß Gesetzen und Vorschriften"
+
+msgid "Support included &nbsp; &nbsp; &nbsp;"
+msgstr "Inklusive Kundensupport &nbsp; &nbsp; &nbsp;"
+
+msgid "for the entire organization"
+msgstr "für die gesamte Organisation"
+
+msgid "4500+ customers &nbsp; &nbsp; &nbsp; &nbsp;"
+msgstr "4500+ Kunden &nbsp; &nbsp; &nbsp; &nbsp;"
+
+msgid "and growing fast"
+msgstr "und wir wachsen schnell"
+
+msgid "Guaranteed saving"
+msgstr "Garantierte Einsparungen"
+
+msgid "on administrative tasks"
+msgstr "bei administrativen Aufgaben"
+
+msgid "Branch"
+msgstr "Branche"
+
+msgid "Number of locations"
+msgstr "Anzahl der Niederlassungen"
+
+msgid "Workdays per week"
+msgstr "Arbeitstage pro Woche"
+
+msgid "Total number of employees / FTE"
+msgstr "Gesamtzahl der Mitarbeiter/ FTE"
+
+msgid "Number of managers planning & hour registration"
+msgstr "Anzahl der Manager Planung & Zeiterfassung"
+
+msgid "Planning"
+msgstr "Dienstplanung"
+
+msgid "Leave and absence"
+msgstr "Urlaub und Fehlzeiten"
+
+msgid "Hour registration"
+msgstr "Zeitregistrierung"
+
+msgid "Payroll"
+msgstr "Abrechnung"
+
+msgid "Communication and corrections"
+msgstr "Kommunikation und Korrekturen"
+
+msgid "Average hourly wage, employer charges incl."
+msgstr "Ø Stundenlohn inkl. Arbeitgeberkosten"
+
+msgid "Total monthly personal costs"
+msgstr "Gesamte monatliche Personalkosten"
+
+msgid "Of current planning"
+msgstr "Ausgehend vom auktuellen Dienstplan"
+
+msgid "Of current hour registration"
+msgstr "Ausgehend von der aktuellen Zeiterfassung"
+
+msgid "It looks like you have been editing something. If you leave before saving, your changes will be lost."
+msgstr "Es sieht so aus, als ob Sie etwas bearbeiten wollten. Wenn Sie vor dem Speichern verlassen, gehen Ihre Aktionen verloren."
+
+msgid "Unknown system name"
+msgstr "Systemname unbekannt"
+
+msgid "Try again or ask your manager for the correct system name"
+msgstr "Versuchen Sie es erneut oder fragen Sie Ihren Manager nach dem richtigen Systemnamen"
+
+msgid "System name not filled in"
+msgstr "Systemname nicht ausgefüllt"
+
+msgid "A system name must be entered."
+msgstr "Es muss ein Systemname eingegeben werden."
+
+msgid "Logo showcase"
+msgstr "Logo showcase"
+
+msgid "Logo Gallery"
+msgstr "Logo-Galerie"
+
+msgid "For best results, upload logos with transparent backgrounds. Logos will be displayed with a maximum resolution of 112px x 40px so landscape orientation is recommended. When possible, use SVG format for optimal clarity."
+msgstr "Für optimale Ergebnisse laden Sie Logos mit transparentem Hintergrund hoch. Logos werden mit einer maximalen Auflösung von 112 px x 40 px angezeigt, daher wird ein Querformat empfohlen. Wenn möglich, verwenden Sie das SVG-Format für optimale Schärfe."
+
+msgid "Logo Showcase Block Fields"
+msgstr "Logo-Showcase-Blockfelder"
+
+msgid "Header (optional)"
+msgstr "Überschrift (optional)"
+
+msgid "If left empty, the title of the selected logo showcase will be used."
+msgstr "Wenn das Feld leer bleibt, wird der Titel des ausgewählten Logo-Showcase verwendet."
+
+msgid "Select Logo Showcase"
+msgstr "Logo-Showcase auswählen"
+
+msgid "Logo showcases"
+msgstr "Logo-Showcases"
+
+msgid "Add New"
+msgstr "Neu hinzufügen"
+
+msgid "The video was not found."
+msgstr "Das Video wurde nicht gefunden."
+
+msgid "404<br/>Browser says no"
+msgstr "404<br/>Browser sagt nein"
+
+msgid "We can't find the page that you're looking for :("
+msgstr "Wir können die gesuchte Seite nicht finden :("
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Client cases"
+msgstr "Kundenberichte"
+
+msgid "System name"
+msgstr "Systemname"
+
+msgid "Once a month, we send our customers the Release Radar. In this, we announce the most important updates for the coming month. This way, you’ll immediately know how to work smarter in Dyflexis and can inform your colleagues."
+msgstr "Einmal im Monat senden wir unseren Kunden den Release Radar. Darin kündigen wir die wichtigsten Updates des kommenden Monats an. So erfährst du sofort, wie du in Dyflexis smarter arbeitest, und kannst deine Kollegen informieren."
+
+msgid "The complete workforce management system. Enterprise power mixed with human simplicity. The complete workforce management system, which ensures the right person, with the right skills in the right place."
+msgstr "Das vollständige Workforce-Management-System. Enterprise-Power kombiniert mit menschlicher Einfachheit. Das vollständige Workforce-Management-System, das sicherstellt, dass die richtige Person mit den richtigen Fähigkeiten am richtigen Ort eingesetzt wird."
+
+msgid "Show by role"
+msgstr "Nach Position filtern"
+
+msgid "Show by sector"
+msgstr "Nach Branche filtern"

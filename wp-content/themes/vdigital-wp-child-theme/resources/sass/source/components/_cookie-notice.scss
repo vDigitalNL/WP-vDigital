@@ -1,0 +1,81 @@
+body div#CybotCookiebotDialog > div:not(.CybotCookiebotDialogContentWrapper), #CybotCookiebotDialogPoweredbyCybot {
+  display: none !important;
+}
+
+#CybotCookiebotDialog[data-template="bottom"] {
+  border-radius: 0 !important;
+}
+
+#CybotCookiebotDialogBodyUnderlay {
+  background-color: var(--color-core-80) !important;
+  opacity: 1 !important;
+}
+
+.CybotCookiebotDialogBodyButton {
+  @extend button;
+  @extend .btn;
+
+  font-size: 18px !important;
+  height: 60px !important;
+  padding: {
+    left: 0 !important;
+    right: 0 !important;
+  }
+  opacity: 1 !important;
+}
+
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll {
+  @apply tw-border-0 #{!important};
+  @extend button;
+  @extend .button--blue;
+
+  &:hover {
+    @apply tw-bg-white tw-text-core #{!important};
+  }
+}
+
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection {
+  @apply tw-border-0 #{!important};
+
+  &:hover {
+    @apply tw-bg-sky tw-text-white #{!important};
+  }
+}
+
+.CybotCookiebotDialogBodyButton#CybotCookiebotDialogBodyLevelButtonCustomize, .CybotCookiebotDialogBodyButton#CybotCookiebotDialogBodyButtonDecline {
+  @extend .button--white_outline;
+  @apply tw-border-2 tw-text-white tw-border-white tw-bg-transparent #{!important};
+
+  &:hover {
+    @apply tw-bg-sky tw-text-white tw-border-sky #{!important};
+  }
+
+  > .CybotCookiebotDialogArrow {
+    @apply tw-hidden #{!important};
+  }
+}
+
+#CybotCookiebotDialog.CybotEdge #CybotCookiebotDialogBodyEdgeMoreDetails a {
+  @extend .blue;
+
+  &:after {
+    @apply tw-border-sky #{!important};
+  }
+
+  &:hover {
+    @apply tw-text-white #{!important};
+
+    &:after {
+      @apply tw-border-white #{!important};
+    }
+  }
+}
+
+#CybotCookiebotDialog * {
+  @apply font--dm-sans tw-text-base #{!important};
+  @apply tw-leading-[120%] #{!important};
+}
+
+#CybotCookiebotDialogBodyContent {
+  @apply tw-overflow-hidden #{!important};
+}

@@ -1,0 +1,9 @@
+body:not(.wp-admin):not(.block-editor-page) {
+  .wp-block-image {
+    pointer-events: none;
+  }
+}
+
+.wp-lightbox-overlay {
+  display: none;
+}
