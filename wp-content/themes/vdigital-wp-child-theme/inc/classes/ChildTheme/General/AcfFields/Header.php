@@ -108,9 +108,7 @@ final class Header extends AbstractClass
 								'instructions' => baseTheme()->__('The call-to-action button displayed on the right side of the navigation'),
 								'sub_fields'   => [
 									...Buttons::getFields(
-										'hero_navbar_cta_',
-										false,
-										[]
+										'hero_navbar_cta_'
 									),
 								],
 							],
@@ -124,6 +122,14 @@ final class Header extends AbstractClass
 						'type'       => 'group',
 						'instructions' => baseTheme()->__('Only desktop content can be edited. The texts and image for the mobile version cannot be modified through these settings due to effects and animations that are specifically tailored to the corresponding text.'),
 						'sub_fields' => [
+							[
+								'key'   => 'badge_text',
+								'label' => baseTheme()->__('Badge text'),
+								'name'  => 'badge_text',
+								'type'  => 'text',
+								'instructions' => baseTheme()->__('Text shown in the badge above the title (e.g. "10+ Years of Excellence in Software Development")'),
+								'default_value' => '10+ Years of Excellence in Software Development',
+							],
 							[
 								'key'   => 'intro_line',
 								'label' => baseTheme()->__('Title introduction'),
@@ -158,9 +164,7 @@ final class Header extends AbstractClass
 								'button_label' => baseTheme()->__( 'Add button' ),
 								'sub_fields'   => [
 									...Buttons::getFields(
-										'hero_content_buttons_',
-										false,
-										[]
+										'hero_content_buttons_'
 									),
 								],
 							],

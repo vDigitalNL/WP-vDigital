@@ -1,25 +1,26 @@
 <?php
-$url    = $args['url'] ?? '#';
-$target = $args['target'] ?? '_self';
-$isDemoButton = $args['demoButton'] ?? false;
-$title  = $isDemoButton ? $args['formButtonTitle'] : $args['title'] ?? '';
-$template = $args['formTemplate'] ?? null;
-$templateTab = $args['formTemplateTab'] ?? "";
-$classes = $args['classes'] ?? [];
-$attributes = $args['attributes'] ?? [];
-$attributes = implode(' ', array_map(function ($key, $value) {
+$url           = $args['url'] ?? '#';
+$target        = $args['target'] ?? '_self';
+$title         = $args['title'] ?? '';
+$classes       = $args['classes'] ?? [];
+$openFormPopup = $args['openFormPopup'] ?? false;
+$formId        = $args['formId'] ?? '';
+$popupTitle    = $args['popupTitle'] ?? '';
+$attributes    = $args['attributes'] ?? [];
+$attributes    = implode(' ', array_map(function ($key, $value) {
     return $key . '="' . esc_attr( $value ) . '"';
 }, array_keys($attributes), $attributes));
 
 ?>
 
-<a data-dyflexis-popup-btn="<?php echo $isDemoButton ? 'true' : 'false'; ?>"
-   <?php if ( $isDemoButton && ! empty( $template ) ): ?>
-   data-dyflexis-popup-tab="<?php echo esc_attr( $templateTab ); ?>"
-   data-dyflexis-popup-id="<?php echo esc_attr( $template ); ?>"
-   data-dyflexis-popup-settings='<?php echo json_encode($args['settings'] ?? []); ?>'
+<a <?php if ( $openFormPopup && ! empty( $formId ) ): ?>
+   data-form-popup="true"
+   data-form-id="<?php echo esc_attr( $formId ); ?>"
+   data-popup-title="<?php echo esc_attr( $popupTitle ); ?>"
+   href="#"
+   <?php else: ?>
+   href="<?php echo esc_url( $url ); ?>" target="<?php echo esc_attr( $target ); ?>"
    <?php endif; ?>
-   href="<?php echo $url; ?>" target="<?php echo $target; ?>"
    class="btn <?php echo implode(' ', $classes); ?>"
    <?php echo $attributes; ?>
 >

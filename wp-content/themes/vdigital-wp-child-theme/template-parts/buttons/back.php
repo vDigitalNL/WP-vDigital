@@ -2,7 +2,7 @@
 
 $url    = $args['url'] ?? '#';
 $target = $args['target'] ?? '_self';
-$title  = $args['title'] ?? baseTheme()->__('Terug naar alle pagina\'s');
+$title  = $args['title'] ?? baseTheme()->__('Back');
 $class = $args['class'] ?? '';
 
 ?>

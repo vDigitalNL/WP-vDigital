@@ -12,6 +12,7 @@ use Theme\BaseTheme\AbstractClass;
  *
  * @property-read PostTypes\Review  $Review
  * @property-read PostTypes\PortalPosts  $PortalPosts
+ * @property-read PostTypes\Cases  $Cases
  */
 final class PostTypes extends AbstractClass {
 	use ThemeFlexClassTrait;
@@ -20,77 +21,33 @@ final class PostTypes extends AbstractClass {
 		$this->register();
 		$this->Review->init();
 		$this->PortalPosts->init();
+		$this->Cases->init();
 		$this->addAdminHooks();
 	}
 
 	private function register(): void {
-		$this->portalPosts();
-		$this->customerReviews();
-		$this->apiConnections();
+		$this->cases();
 	}
 
-	private function portalPosts(): void
-    {
-        register_post_type('partner_portal_posts',
-            [
-                'labels'             => [
-                    'name'          => __('Partner Portal', 'webwhales-multiple-themes'),
-                    'all_items'     => __('All Posts', 'webwhales-multiple-themes'),
-                    'singular_name' => __('Post', 'webwhales-multiple-themes'),
-                    'add_new'       => __('Add New', 'webwhales-multiple-themes'),
-                    'add_new_item'  => __('Add New', 'webwhales-multiple-themes'),
-                ],
-                'public'             => true,
-                'publicly_queryable' => false,
-                'show_in_rest'       => true,
-                'menu_icon'          => 'dashicons-groups',
-                'has_archive'        => false,
-                'supports'           => ['title', 'editor'],
-                'rewrite'            => ['slug' => 'partner-portal-posts', 'with_front' => false],
-            ]
-        );
-    }
-
-	private function customerReviews(): void {
-		register_post_type( 'ww_customer_reviews',
+	private function cases(): void {
+		register_post_type( 'cases',
 			[
 				'labels'       => [
-					'name'          => $this->baseTheme->__( 'Client cases' ),
-					'singular_name' => $this->baseTheme->__( 'Client case' ),
+					'name'          => $this->baseTheme->__( 'Cases' ),
+					'singular_name' => $this->baseTheme->__( 'Case' ),
 					'add_new'       => $this->baseTheme->__( 'Add New' ),
-					'add_new_item'  => $this->baseTheme->__( 'Add New' ),
+					'add_new_item'  => $this->baseTheme->__( 'Add New Case' ),
+					'edit_item'     => $this->baseTheme->__( 'Edit Case' ),
+					'view_item'     => $this->baseTheme->__( 'View Case' ),
+					'all_items'     => $this->baseTheme->__( 'All Cases' ),
 				],
 				'show_in_menu' => true,
 				'show_in_rest' => true,
 				'public'       => true,
-				'menu_icon'    => 'dashicons-star-filled',
-				'has_archive'  => false,
-				'supports'     => [ 'title', 'editor', 'thumbnail', 'editor' ],
-				'rewrite'      => [ 'slug' => 'reviews', 'with_front' => false ],
-			]
-		);
-	}
-
-	private function apiConnections(): void {
-		$slug = match ( get_current_blog_id() ) {
-			4 => 'marktplatz',
-			default => 'marketplace',
-		};
-
-		register_post_type( 'ww_api_connections',
-			[
-				'show_in_menu' => true,
-				'show_in_rest' => true,
-				'labels'       => [
-					'name'          => $this->baseTheme->__( 'Marketplace' ),
-					'singular_name' => $this->baseTheme->__( 'Marketplace' ),
-					'add_new'       => $this->baseTheme->__( 'Add New' ),
-					'add_new_item'  => $this->baseTheme->__( 'Add New' ),
-				],
-				'public'       => true,
-				'menu_icon'    => 'dashicons-plugins-checked',
-				'supports'     => [ 'title', 'thumbnail', 'editor' ],
-				'rewrite'      => [ 'slug' => $slug, 'with_front' => false ],
+				'menu_icon'    => 'dashicons-portfolio',
+				'has_archive'  => true,
+				'supports'     => [ 'title', 'editor', 'thumbnail' ],
+				'rewrite'      => [ 'slug' => 'cases', 'with_front' => false ],
 			]
 		);
 	}

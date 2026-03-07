@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/cases",
+  "title": "Cases",
+  "category": "text",
+  "description": "A portfolio/cases showcase block with project cards.",
+  "icon": "portfolio",
+  "script": "ww_cases",
+  "editorScript": "ww_cases",
+  "style": "ww_cases",
+  "editorStyle": "ww_cases",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

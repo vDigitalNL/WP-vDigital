@@ -19,7 +19,6 @@ final class Assets extends AbstractClass {
 		add_action( 'init', [ $this, 'sendDataToScript' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'removeJQuery' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueueVimeoPlayerApi' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueueTrustpilot' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueueIntlTelInput' ] );
 	}
 
@@ -55,19 +54,6 @@ final class Assets extends AbstractClass {
                 ]
             );
         }
-	}
-
-	public function enqueueTrustpilot(): void {
-		wp_enqueue_script(
-			'trustpilot-widget',
-			'https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',
-			[],
-			null,
-			[
-				'in_footer' => true,
-				'strategy'  => 'defer',
-			]
-		);
 	}
 
 	public function sendDataToScript(): void {

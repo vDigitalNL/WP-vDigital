@@ -1,0 +1,13 @@
+{
+  "name": "acf/stats",
+  "title": "Stats",
+  "description": "A statistics/numbers block with multiple stat items.",
+  "icon": "chart-bar",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

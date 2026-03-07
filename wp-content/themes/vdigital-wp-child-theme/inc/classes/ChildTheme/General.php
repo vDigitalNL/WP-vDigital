@@ -38,12 +38,10 @@
 	 * @property-read Multisite $Multisite
      * @property-read Taxonomy $Taxonomy
      * @property-read RecaptchaV3 $RecaptchaV3
-     * @property-read Salesforce $Salesforce
      * @property-read InfiniteScroll $InfiniteScroll
      * @property-read Menu $Menu
 	 * @property-read RSSFeed $RSSFeed
 	 * @property-read TinyMCE $TinyMCE
-     * @property-read FormTemplates $FormTemplates
      * @property-read PostTypes $PostTypes
      * @property-read Search $Search
      * @property-read Popup $Popup
@@ -69,7 +67,6 @@
 			$this->GutenbergBlocks->init();
 			$this->Multisite->init();
 			$this->RecaptchaV3->init();
-			$this->Salesforce->init();
 			$this->InfiniteScroll->init();
 			$this->Menu->init();
 			$this->RSSFeed->init();

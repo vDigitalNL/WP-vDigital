@@ -125,7 +125,7 @@ class GutenbergBlocks extends AbstractClass {
 	}
 
 	private function addFilters(): void {
-		add_filter( 'allowed_block_types_all', [ $this, 'disableDefaultBlocks' ] );
+//		add_filter( 'allowed_block_types_all', [ $this, 'disableDefaultBlocks' ] );
 		add_filter( 'wp_theme_json_get_style_nodes', [ $this, 'disableThemeJsonStyle' ] );
 		add_filter( 'tiny_mce_before_init', [ $this, 'loadAcfWysiwygStyle' ] );
 		add_filter( 'register_block_type_args', [ $this, 'modifyCoreColumnsCategory' ], 10, 2 );
@@ -154,7 +154,7 @@ class GutenbergBlocks extends AbstractClass {
 	public function disableDefaultBlocks(): array {
 		return [...array_map( function ( $block ) {
 			return $block['blockName'];
-		}, $this->blocks ), 'core/image', 'core/columns', 'core/html'];
+		}, $this->blocks ), 'core/image', 'core/paragraph', 'core/columns', 'core/html'];
 	}
 
 	public function enqueueScripts(): void {

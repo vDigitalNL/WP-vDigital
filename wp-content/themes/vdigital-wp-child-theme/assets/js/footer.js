@@ -2,225 +2,9 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/accordion/sass/main.scss"
-/*!***********************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/accordion/sass/main.scss ***!
-  \***********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/background/sass/main.scss"
-/*!************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/background/sass/main.scss ***!
-  \************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/banner/sass/main.scss"
-/*!********************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/banner/sass/main.scss ***!
-  \********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/sass/main.scss"
-/*!*************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/sass/main.scss ***!
-  \*************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/sass/main.scss"
-/*!**************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/sass/main.scss ***!
-  \**************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/form/sass/main.scss"
-/*!******************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/form/sass/main.scss ***!
-  \******************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/infocard/sass/main.scss"
-/*!**********************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/infocard/sass/main.scss ***!
-  \**********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/location/sass/main.scss"
-/*!**********************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/location/sass/main.scss ***!
-  \**********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/sass/main.scss"
-/*!***************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/sass/main.scss ***!
-  \***************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/sass/main.scss"
-/*!*************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/sass/main.scss ***!
-  \*************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/sass/main.scss"
-/*!**************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/sass/main.scss ***!
-  \**************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/overview/sass/main.scss"
-/*!**********************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/overview/sass/main.scss ***!
-  \**********************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/sass/main.scss"
-/*!************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/sass/main.scss ***!
-  \************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/references/sass/main.scss"
-/*!************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/references/sass/main.scss ***!
-  \************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/sass/main.scss"
-/*!*************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/sass/main.scss ***!
-  \*************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/sass/main.scss"
-/*!*******************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/sass/main.scss ***!
-  \*******************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/steps/sass/main.scss"
+/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/cases/sass/main.scss"
 /*!*******************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/steps/sass/main.scss ***!
-  \*******************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/sass/main.scss"
-/*!************************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/sass/main.scss ***!
-  \************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ },
-
-/***/ "./wp-content/themes/vdigital-wp-child-theme/blocks/video/sass/main.scss"
-/*!*******************************************************************************!*\
-  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/video/sass/main.scss ***!
+  !*** ./wp-content/themes/vdigital-wp-child-theme/blocks/cases/sass/main.scss ***!
   \*******************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -3384,26 +3168,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			"/wp-content/themes/vdigital-wp-child-theme/assets/js/footer": 0,
 /******/ 			"wp-content/themes/vdigital-wp-child-theme/assets/css/main": 0,
 /******/ 			"wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main": 0,
-/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main": 0
+/******/ 			"wp-content/themes/vdigital-wp-child-theme/blocks/cases/dist/main": 0,
+/******/ 			"wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -3453,29 +3219,11 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/js/footer.js")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/sass/admin/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/sass/admin/acf-fields/wysiwyg.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/accordion/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/background/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/banner/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/form/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/infocard/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/location/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/overview/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/references/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/steps/sass/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/sass/main.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/background/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/accordion/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg","wp-content/themes/vdigital-wp-child-theme/blocks/video/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/text-panel/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/steps/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/solution-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/servicecard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/references/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/price-plan/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/overview/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/offset-image/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/marketplace/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/logo-showcase/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/location/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/infocard/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/form/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/feature-card/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/blog-slider/dist/main","wp-content/themes/vdigital-wp-child-theme/blocks/banner/dist/main"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/video/sass/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/cases/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/js/footer.js")))
+/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/cases/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/sass/admin/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/cases/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/sass/admin/acf-fields/wysiwyg.scss")))
+/******/ 	__webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/cases/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/resources/sass/main.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["wp-content/themes/vdigital-wp-child-theme/assets/css/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/main","wp-content/themes/vdigital-wp-child-theme/blocks/cases/dist/main","wp-content/themes/vdigital-wp-child-theme/assets/css/admin/acf-fields/wysiwyg"], () => (__webpack_require__("./wp-content/themes/vdigital-wp-child-theme/blocks/cases/sass/main.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

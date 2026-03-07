@@ -16,35 +16,47 @@ class Buttons {
 	}
 
 	public static function getFields( string $baseKey, bool $allowFormButton = true, array $excludedButtonTypes = [], $includeDownload = true ): array {
-		$formTypes = [];
 		$keyPrefix = str_starts_with( $baseKey, 'field_' ) ? '' : 'field_';
 
 		$buttonTypes = array_diff_key( self::getButtonTypes(), array_flip( $excludedButtonTypes ) );
 
-		foreach ( Salesforce::$formTypes as $formType ) {
-			$formTypes[ $formType['key'] ] = $formType['label'];
-		}
-
-		$notAlwaysAllowedFields = [];
+		$formButtonFields = [];
 		if ( $allowFormButton ) {
-			$notAlwaysAllowedFields = [
+			$formButtonFields = [
 				[
-					'key'   => $keyPrefix . $baseKey . 'demo',
-					'label' => baseTheme()->__( 'Form button' ),
-					'name'  => $baseKey . 'demo',
-					'type'  => 'true_false',
-					'ui'    => 1,
+					'key'          => $keyPrefix . $baseKey . 'open_form_popup',
+					'label'        => baseTheme()->__( 'Open contact form popup' ),
+					'name'         => $baseKey . 'open_form_popup',
+					'type'         => 'true_false',
+					'ui'           => 1,
+					'instructions' => baseTheme()->__( 'When enabled, clicking this button will open a popup with a contact form instead of navigating to a URL.' ),
 				],
 				[
-					'key'               => $keyPrefix . $baseKey . 'template',
-					'label'             => baseTheme()->__( 'Form template' ),
-					'name'              => $baseKey . 'template',
-					'type'              => 'select',
-					'choices'           => [],
+					'key'               => $keyPrefix . $baseKey . 'form_id',
+					'label'             => baseTheme()->__( 'Form ID' ),
+					'name'              => $baseKey . 'form_id',
+					'type'              => 'text',
+					'instructions'      => baseTheme()->__( 'Enter the form shortcode ID (e.g. "123" for [wpforms id="123"] or [gravityform id="123"])' ),
 					'conditional_logic' => [
 						[
 							[
-								'field'    => $keyPrefix . $baseKey . 'demo',
+								'field'    => $keyPrefix . $baseKey . 'open_form_popup',
+								'operator' => '==',
+								'value'    => '1',
+							],
+						],
+					],
+				],
+				[
+					'key'               => $keyPrefix . $baseKey . 'popup_title',
+					'label'             => baseTheme()->__( 'Popup title' ),
+					'name'              => $baseKey . 'popup_title',
+					'type'              => 'text',
+					'instructions'      => baseTheme()->__( 'Title shown at the top of the popup (optional)' ),
+					'conditional_logic' => [
+						[
+							[
+								'field'    => $keyPrefix . $baseKey . 'open_form_popup',
 								'operator' => '==',
 								'value'    => '1',
 							],
@@ -60,7 +72,7 @@ class Buttons {
 					'conditional_logic' => [
 						[
 							[
-								'field'    => $keyPrefix . $baseKey . 'demo',
+								'field'    => $keyPrefix . $baseKey . 'open_form_popup',
 								'operator' => '==',
 								'value'    => '1',
 							],
@@ -78,22 +90,22 @@ class Buttons {
 				'type'    => 'select',
 				'choices' => $buttonTypes,
 			],
-			...$notAlwaysAllowedFields,
+			...$formButtonFields,
 			[
 				'key'               => $keyPrefix . $baseKey . 'button_link',
 				'label'             => baseTheme()->__( 'Button text & link' ),
 				'name'              => $baseKey . 'button_link',
 				'type'              => 'link',
 				'required'          => 1,
-				'conditional_logic' => [
+				'conditional_logic' => $allowFormButton ? [
 					[
 						[
-							'field'    => $keyPrefix . $baseKey . 'demo',
-							'operator' => '==',
-							'value'    => '0',
+							'field'    => $keyPrefix . $baseKey . 'open_form_popup',
+							'operator' => '!=',
+							'value'    => '1',
 						],
 					],
-				],
+				] : [],
 			],
 			 ...$downloadBtns,
 		];
@@ -177,22 +189,44 @@ class Buttons {
 	}
 
 	public static function render( array $data, string $baseKey ) {
-		$buttonLink = $data[ $baseKey . 'button_link' ] ?: [];
+		$openFormPopup   = $data[ $baseKey . 'open_form_popup' ] ?? false;
+		$buttonLink      = $data[ $baseKey . 'button_link' ] ?? [];
 		$formButtonTitle = $data[ $baseKey . 'form_button_title' ] ?? '';
+		$formId          = $data[ $baseKey . 'form_id' ] ?? '';
+		$popupTitle      = $data[ $baseKey . 'popup_title' ] ?? '';
 
-		// If demo button is checked, but no template or form is selected, don't render the button
-		if ( empty( $buttonLink ) ) {
-			return false;
+		// If form popup is enabled, use form button title; otherwise use link
+		if ( $openFormPopup ) {
+			if ( empty( $formButtonTitle ) ) {
+				return false;
+			}
+			$arguments = [
+				'url'            => '#',
+				'target'         => '_self',
+				'title'          => $formButtonTitle,
+				'openFormPopup'  => true,
+				'formId'         => $formId,
+				'popupTitle'     => $popupTitle,
+				'classes'        => [self::getButtonClass( $data[ $baseKey . 'button_type' ] )],
+				'subtitle'       => $data[ $baseKey . 'button_subtitle' ] ?? '',
+				'icon'           => $data[ $baseKey . 'button_icon' ] ?? '',
+				'fullWidth'      => $data[ $baseKey . 'button_full_width' ] ?? false,
+			];
+		} else {
+			if ( empty( $buttonLink ) ) {
+				return false;
+			}
+			$arguments = [
+				...$buttonLink,
+				'openFormPopup'  => false,
+				'formId'         => '',
+				'popupTitle'     => '',
+				'classes'        => [self::getButtonClass( $data[ $baseKey . 'button_type' ] )],
+				'subtitle'       => $data[ $baseKey . 'button_subtitle' ] ?? '',
+				'icon'           => $data[ $baseKey . 'button_icon' ] ?? '',
+				'fullWidth'      => $data[ $baseKey . 'button_full_width' ] ?? false,
+			];
 		}
-
-		$arguments = [
-			...$buttonLink,
-			'formButtonTitle' => $formButtonTitle,
-			'classes'         => [self::getButtonClass( $data[ $baseKey . 'button_type' ] )],
-			'subtitle'        => $data[ $baseKey . 'button_subtitle' ] ?? '',
-			'icon'            => $data[ $baseKey . 'button_icon' ] ?? '',
-			'fullWidth'       => $data[ $baseKey . 'button_full_width' ] ?? false,
-		];
 
 		return get_template_part( 'template-parts/buttons/button-default', null, $arguments );
 	}

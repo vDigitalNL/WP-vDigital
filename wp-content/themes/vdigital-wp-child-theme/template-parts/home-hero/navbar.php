@@ -15,12 +15,15 @@ $homeUrl = get_home_url();
 
 ?>
 
-<nav id="home_hero_navbar" class="navbar-new font--jakarta tw-fixed tw-top-0 tw-left-0 tw-right-0 tw-z-50 tw-py-6 tw-px-8 tw-transition-all tw-duration-300">
+<?php $navbarBgClass = is_front_page() ? '' : 'tw-bg-core tw-shadow-lg tw-py-6'; ?>
+<?php $navbarPyClass = is_front_page() ? 'tw-py-6' : ''; ?>
+<?php $adminBarOffset = is_admin_bar_showing() ? 'tw-top-8' : 'tw-top-0'; ?>
+<nav id="home_hero_navbar" class="navbar-new font--jakarta tw-fixed <?php echo $adminBarOffset; ?> tw-left-0 tw-right-0 tw-z-50 <?php echo $navbarPyClass; ?> tw-px-8 tw-transition-all tw-duration-300 <?php echo $navbarBgClass; ?>">
     <div class="tw-mx-auto tw-max-w-[1200px] tw-flex tw-justify-between tw-items-center">
         <!-- Logo -->
         <?php if ( ! empty( $logoUrl ) ) : ?>
             <a href="<?php echo esc_url($homeUrl); ?>" class="tw-flex tw-items-center">
-                <img src="<?php echo esc_url($logoUrl); ?>" alt="vDigital" class="tw-h-14 tw-block" />
+                <img src="<?php echo esc_url($logoUrl); ?>" alt="vDigital" class="tw-h-12 tw-block" />
             </a>
         <?php endif; ?>
 
@@ -53,9 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('home_hero_navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            navbar.classList.add('tw-bg-core-90', 'tw-backdrop-blur-xl', 'tw-border-b', 'tw-border-shade');
+            navbar.classList.add('tw-bg-core', 'tw-shadow-lg', 'tw-py-4');
+            navbar.classList.remove('tw-py-6');
         } else {
-            navbar.classList.remove('tw-bg-core-90', 'tw-backdrop-blur-xl', 'tw-border-b', 'tw-border-shade');
+            navbar.classList.remove('tw-bg-core', 'tw-shadow-lg', 'tw-py-4');
+            navbar.classList.add('tw-py-6');
         }
     });
 });

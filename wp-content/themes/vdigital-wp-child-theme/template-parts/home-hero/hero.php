@@ -3,6 +3,7 @@
 use ChildTheme\ChildTheme\Helpers\Acf\Buttons;
 
 $contentOptions   = get_field('homehero_content', 'option') ?? [];
+$badgeText = $contentOptions['badge_text'] ?? '10+ Years of Excellence in Software Development';
 $heroTitle = $contentOptions['intro_line'] ?? 'We Build Custom Software That Drives Your Business Forward';
 $heroDescription = $contentOptions['explanation_text'] ?? 'Transform your ideas into powerful web applications. We partner with ambitious companies to design, develop, and deploy scalable software solutions.';
 $backgroundImage = $contentOptions['background_image'] ?? null;
@@ -35,7 +36,7 @@ if ( ! empty( $backgroundImage ) && is_numeric( $backgroundImage ) ) {
         <!-- Badge -->
         <div class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-white/10 tw-border tw-border-white/20 tw-rounded-full tw-px-5 tw-py-2 tw-mb-8">
             <span class="tw-w-2 tw-h-2 tw-bg-growth tw-rounded-full tw-animate-pulse"></span>
-            <span class="tw-text-focus tw-text-sm tw-font-medium">10+ Years of Excellence in Software Development</span>
+            <span class="tw-text-focus tw-text-sm tw-font-medium"><?php echo esc_html( $badgeText ); ?></span>
         </div>
         
         <!-- Title -->

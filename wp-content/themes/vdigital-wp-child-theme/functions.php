@@ -9,6 +9,47 @@ add_filter( 'upload_size_limit', function( $size ) {
     return 64 * 1024 * 1024; // 64MB
 }, 999 );
 
+// AJAX handler for loading form shortcodes in popup
+add_action( 'wp_ajax_get_form_shortcode', 'vdigital_get_form_shortcode' );
+add_action( 'wp_ajax_nopriv_get_form_shortcode', 'vdigital_get_form_shortcode' );
+function vdigital_get_form_shortcode() {
+    $form_id = isset( $_GET['form_id'] ) ? sanitize_text_field( $_GET['form_id'] ) : '';
+    
+    if ( empty( $form_id ) ) {
+        echo '<p class="tw-text-gray-02 tw-text-center">No form ID provided.</p>';
+        wp_die();
+    }
+    
+    // Get the home URL for form action
+    $home_url = home_url( '/' );
+    
+    // Try WPForms first
+    if ( function_exists( 'wpforms' ) ) {
+        // Get form HTML
+        $form_html = do_shortcode( '[wpforms id="' . $form_id . '"]' );
+        // Fix the form action URL to point to the home page (WPForms handles submission there)
+        $form_html = preg_replace( '/action="[^"]*"/', 'action="' . esc_url( $home_url ) . '"', $form_html );
+        echo $form_html;
+        wp_die();
+    }
+    
+    // Try Gravity Forms
+    if ( class_exists( 'GFForms' ) ) {
+        echo do_shortcode( '[gravityform id="' . $form_id . '" title="false" description="false" ajax="true"]' );
+        wp_die();
+    }
+    
+    // Try Contact Form 7
+    if ( class_exists( 'WPCF7' ) ) {
+        echo do_shortcode( '[contact-form-7 id="' . $form_id . '"]' );
+        wp_die();
+    }
+    
+    // Fallback - try generic shortcode
+    echo do_shortcode( '[contact-form id="' . $form_id . '"]' );
+    wp_die();
+}
+
 //Define the base theme and child theme root
 define( 'WP_BASE_THEME_DIR_ROOT', get_template_directory() . DS );
 define( 'WP_CHILD_THEME_DIR_ROOT', get_stylesheet_directory() . DS );

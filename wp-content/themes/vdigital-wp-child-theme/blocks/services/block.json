@@ -1,0 +1,13 @@
+{
+  "name": "acf/services",
+  "title": "Services",
+  "description": "A services block with white card container and service cards grid.",
+  "icon": "grid-view",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

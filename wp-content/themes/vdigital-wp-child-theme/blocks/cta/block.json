@@ -1,0 +1,13 @@
+{
+  "name": "acf/cta",
+  "title": "CTA",
+  "description": "A call-to-action block with gradient background.",
+  "icon": "megaphone",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

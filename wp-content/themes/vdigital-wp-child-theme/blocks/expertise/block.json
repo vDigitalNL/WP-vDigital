@@ -1,0 +1,13 @@
+{
+  "name": "acf/expertise",
+  "title": "Expertise",
+  "description": "An expertise/about section with text content and tech stack card.",
+  "icon": "awards",
+  "supports": {
+    "align": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  }
+}

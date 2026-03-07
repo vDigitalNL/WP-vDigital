@@ -4,6 +4,8 @@
             ?>
         </footer>
 
+        <?php get_template_part( 'template-parts/form-popup' ); ?>
+
 		<?php wp_footer(); ?>
 
         <?php if (! defined('WW_DEV_SITE') || ! WW_DEV_SITE) : ?>

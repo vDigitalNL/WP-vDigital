@@ -63,10 +63,10 @@ module.exports = {
       mist: "#526fa6",
       horizon: "#f1f2ff",
       edge: {
-        DEFAULT: "#018fdc",
+        DEFAULT: "#0195E8",
         hover: "#0376B8",
       },
-      sky: "#018fdc",
+      sky: "#0195E8",
       growth: {
         DEFAULT: "#44ac17",
         hover: "#2C6F1E",
