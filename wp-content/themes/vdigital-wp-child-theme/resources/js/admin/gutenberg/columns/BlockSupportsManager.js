@@ -6,7 +6,7 @@ export class BlockSupportsManager {
   init() {
     wp.hooks.addFilter(
       "blocks.registerBlockType",
-      "dyflexis/column-supports",
+      "vdigital/column-supports",
       this.modifySupports.bind(this),
     );
   }

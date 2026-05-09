@@ -1,0 +1,278 @@
+/**
+Used on multiple pages for example cart and order pages
+ */
+$shop-table-border-color: $gray-400;
+
+.shop_table {
+	width: 100%;
+
+	thead {
+		border-bottom: 1px solid $shop-table-border-color;
+
+		th {
+			font-weight: normal;
+			font-size: 13px;
+
+			&.product-name {
+			}
+
+			&.product-price {
+			}
+
+			&.product-quantity {
+			}
+
+			&.product-subtotals {
+			}
+
+			&.product-remove {
+			}
+
+			&.woocommerce-orders-table__header-order-actions {
+				text-align: right;
+			}
+		}
+	}
+
+	tbody {
+
+		tr.cart_item {
+
+			td {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				border-bottom: 1px solid $shop-table-border-color;
+
+				&.product-name {
+					a {
+						color: $body-color;
+					}
+				}
+
+				&.product-price {
+					font-weight: bold;
+				}
+
+				&.product-quantity {
+					.screen-reader-text {
+						display: none;
+					}
+
+					.qty {
+						width: 45px;
+						text-align: center;
+						padding: 6px 2px 5px 5px;
+					}
+				}
+
+				&.product-subtotal {
+					font-weight: bold;
+				}
+
+				&.product-remove {
+				}
+			}
+		}
+
+		tr {
+			td {
+				&.woocommerce-orders-table__cell-order-actions {
+					.button {
+						padding: 3px 6px;
+						font-size: 12px;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+
+
+	tr {
+		&.cart-discount, &.tax-total {
+			td {
+				text-align: right;
+			}
+		}
+
+		&.cart-subtotal {
+			td, th {
+				border-bottom: 1px solid $cart-table-border-color;
+				padding-bottom: 8px;
+			}
+		}
+
+		&.order-total {
+			td, th {
+				border-top: 1px solid $cart-table-border-color;
+				padding-top: 8px;
+			}
+		}
+
+		&.cart-subtotal,
+		&.order-total {
+			td {
+				width: 50%;
+				text-align: right;
+			}
+		}
+
+		&.shipping {
+			display: flex;
+			flex-direction: column;
+
+			td, th {
+				width: 200%;
+			}
+
+			th {
+				padding-top: 8px;
+			}
+
+			td {
+				padding-bottom: 8px;
+			}
+
+			.woocommerce-shipping-methods {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					position: relative;
+					display: flex;
+
+					input {
+						margin-right: 8px;
+						position: relative;
+						top: 4px;
+					}
+
+					label {
+						width: calc(100% - 20px);
+						margin: 0;
+					}
+
+					span.woocommerce-Price-amount.amount {
+						float: right;
+					}
+				}
+			}
+
+			.woocommerce-shipping-destination {
+				font-size: 13px;
+				margin: 0;
+			}
+		}
+	}
+
+	.actions {
+		[name="update_cart"] {
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+		}
+
+		.coupon {
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	.attachment-woocommerce_thumbnail {
+		max-width: 90px;
+		height: auto;
+		border: 1px solid $shop-table-border-color;
+		margin-right: 20px;
+		border-radius: 3px;
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+
+}
+
+// md: 768px desktop.css -
+// ==================================================
+@include media-breakpoint-down(sm) {
+
+	.shop_table {
+
+		&.cart {
+			thead {
+				display: none;
+			}
+
+			tbody {
+				tr.cart_item {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					border-top: 1px solid $shop-table-border-color;
+					padding: 15px 30px 15px 95px;
+					position: relative;
+
+					td {
+						border: 0;
+						padding: 0;
+					}
+
+					a.product-thumbnail {
+						position: absolute;
+						left: 0;
+
+						img {
+							max-width: 85px;
+						}
+					}
+
+					td.product-price {
+						display: none;
+					}
+
+					td.product-quantity {
+						margin-top: 12px;
+					}
+
+					td.product-remove {
+						position: absolute;
+						right: 0;
+						top: 15px;
+					}
+
+					td.product-subtotal {
+						position: absolute;
+						right: 0;
+						bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+	.shop_table {
+		.attachment-woocommerce_thumbnail {
+			max-width: 130px;
+		}
+	}
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

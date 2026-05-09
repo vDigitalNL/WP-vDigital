@@ -1,0 +1,53 @@
+/**
+Used on multiple pages for example cart and product page
+ */
+.quantity {
+	display: flex;
+
+	input.qty {
+		font-weight: bold;
+	}
+
+	input[type=button] {
+		background: transparent;
+		font-size: 24px;
+		font-weight: normal;
+		width: 32px;
+		height: auto;
+		padding: 0;
+		border: 1px solid #ced4da;
+
+		&.minus {
+			border-right: 0;
+		}
+
+		&.plus {
+			border-left: 0;
+		}
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

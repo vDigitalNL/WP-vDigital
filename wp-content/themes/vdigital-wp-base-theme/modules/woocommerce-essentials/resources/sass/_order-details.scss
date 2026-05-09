@@ -1,0 +1,128 @@
+/**
+Order details
+used on multple pages for example thank you page and order page in dashboard
+ */
+.woocommerce-order-details {
+	box-shadow: $box-shadow-sm;
+	padding: 20px;
+
+	.shop_table {
+
+		th {
+			font-weight: bold;
+		}
+
+		td:nth-child(2) {
+			text-align: right;
+		}
+
+		thead {
+			th:nth-child(2) {
+				text-align: right;
+			}
+		}
+
+		tbody {
+			th, td {
+				padding: 8px 0;
+				border-bottom: 1px solid $shop-table-border-color;
+			}
+
+			tr {
+				&:last-child {
+					th, td {
+						padding-bottom: 18px;
+					}
+				}
+			}
+		}
+
+		tfoot {
+			tr {
+				&:first-child {
+					th, td {
+						padding-top: 18px;
+					}
+				}
+
+				&:nth-last-child(2) {
+					th, td {
+						padding-bottom: 18px;
+					}
+				}
+
+				&:last-child {
+					th, td {
+						padding: 8px 0;
+						border-top: 1px solid $shop-table-border-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+// md: 768px desktop.css -
+// ==================================================
+@include media-breakpoint-down(sm) {
+	.woocommerce-order-details {
+		.shop_table {
+			td:nth-child(2) {
+				text-align: left;
+			}
+
+			thead {
+				display: none;
+			}
+
+			tbody, tfoot {
+				tr {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					position: relative;
+				}
+			}
+
+			tbody {
+				tr {
+					td:first-child {
+						border-bottom: 0;
+						padding-bottom: 0;
+					}
+				}
+			}
+
+			tfoot {
+				tr {
+					&:first-child {
+						th {
+							padding-top: 18px;
+						}
+
+						td {
+							padding-top: 0;
+						}
+					}
+
+					&:nth-last-child(2) {
+						th {
+							padding-bottom: 0;
+						}
+
+						td {
+							padding-bottom: 18px;
+						}
+					}
+
+					&:last-child {
+						td {
+							border-top: 0;
+							padding-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

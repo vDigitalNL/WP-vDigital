@@ -1,0 +1,5 @@
+{
+  "name": "Content Divider",
+  "description": "This module is used for applying empty space in between flexible content elements, this way modules don't need to have margin top/bottoms defined. This makes it possible to have more freedom with the spacing regarding the flexible content elements.",
+  "version": "1.0"
+}

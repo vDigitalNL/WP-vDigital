@@ -1,0 +1,209 @@
+/**
+My account, counts for all pages in the dashboard
+ */
+body {
+	&.woocommerce-account {
+
+		/**
+		Header
+		 */
+		.entry-header {
+			text-align: center;
+			margin: 0 0 30px;
+		}
+
+		// Content
+		.entry-content {
+			.woocommerce {
+
+				// navigation
+				nav.woocommerce-MyAccount-navigation {
+					text-align: center;
+					width: 100%;
+
+					ul {
+						list-style: none;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						margin: 0;
+						padding: 0;
+
+						li {
+							margin: 0 15px 10px;
+
+							a {
+								color: $body-color;
+								font-weight: normal;
+							}
+
+							// active state
+							&.is-active {
+								a {
+									font-weight: 700;
+								}
+							}
+						}
+					}
+				}
+
+				// Inner content
+				.woocommerce-MyAccount-content {
+					width: 100%;
+					margin-top: 40px;
+				}
+
+				// Sidebar
+				.woocommerce-MyAccount-sidebar {
+					background: $gray-300;
+					padding: 20px;
+
+					p {
+						margin: 0;
+					}
+
+					.woocommerce-MyAccount-sidebar__avatar {
+						border-radius: 50%;
+						width: 80px;
+						margin: 0 auto 20px;
+						text-align: center;
+						position: relative;
+						display: block;
+					}
+
+					.woocommerce-MyAccount-sidebar__edit-profile {
+						text-align: center;
+						margin-top: 20px;
+						display: block;
+
+						a {
+							text-decoration: underline;
+							color: $body-color;
+						}
+					}
+				}
+			}
+		}
+
+		// Form rules for 'edit address' and 'edit account' forms
+		&.woocommerce-edit-address,
+		&.woocommerce-edit-account {
+			.woocommerce-MyAccount-content {
+				form h3 {
+					border-bottom: 1px solid $hr-border-color;
+					text-align: center;
+					padding-bottom: 10px;
+					margin-bottom: 30px;
+				}
+
+				.woocommerce-address-fields,
+				.woocommerce-EditAccountForm {
+					max-width: 650px;
+					margin: 0 auto;
+
+					button.button {
+						width: 100%;
+						text-align: center;
+						margin-top: 20px;
+					}
+				}
+
+				.woocommerce-EditAccountForm {
+					.form-row {
+						margin: 0 0 14px;
+						width: 100%;
+
+						&.form-row-wide {
+							flex-direction: column;
+						}
+					}
+
+					fieldset {
+						margin-top: 30px;
+					}
+
+					em {
+						margin-top: 3px;
+						display: block;
+						font-size: 13px;
+						color: $text-muted;
+					}
+				}
+			}
+		}
+
+		&.woocommerce-view-order {
+			.woocommerce-MyAccount-content {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.woocommerce-MyAccount-content > p {
+				margin-bottom: 30px;
+				width: 100%;
+				padding-bottom: 20px;
+			}
+
+			section.woocommerce-order-details {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			section.woocommerce-customer-details {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+
+}
+
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+	body {
+		&.woocommerce-account {
+			// Content
+			.entry-content {
+				.woocommerce {
+					// navigation
+					nav.woocommerce-MyAccount-navigation {
+
+					}
+				}
+			}
+		}
+	}
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+	body {
+		&.woocommerce-account {
+			&.woocommerce-view-order {
+				section.woocommerce-order-details {
+					width: 45%;
+				}
+
+				section.woocommerce-customer-details {
+					width: 55%;
+					padding-left: 50px;
+				}
+			}
+		}
+
+	}
+
+}

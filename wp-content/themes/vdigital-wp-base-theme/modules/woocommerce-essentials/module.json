@@ -1,0 +1,13 @@
+{
+  "name": "WooCommerce Essentials",
+  "description": "This module offers multiple functions to WooCommerce.",
+  "version": "1.0",
+  "dependencies": {
+    "plugins" : [
+      "woocommerce"
+    ],
+    "node_modules" : [
+      "slick-carousel"
+    ]
+  }
+}

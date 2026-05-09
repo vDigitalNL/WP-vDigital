@@ -11,7 +11,7 @@ $logoLink = $linkLogoToHeader && is_front_page() ? $homeUrl . '#header' : $homeU
           as="image"
           href="<?php echo $logoUrl ?>">
     <img width="343" height="58" class="tw-hidden lg:tw-block skip-lazy-load" src="<?php echo $logoUrl; ?>"
-         alt="Logo Dyflexis"/>
+         alt="Logo vdigital"/>
     <img width="195" height="32" class="tw-block lg:tw-hidden skip-lazy-load" src="<?php echo $logoUrl; ?>"
-         alt="Logo Dyflexis"/>
+         alt="Logo vdigital"/>
 </a>

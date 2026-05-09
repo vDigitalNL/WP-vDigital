@@ -1,0 +1,11 @@
+{
+  "name" : "Logo Carousel",
+  "description" : "This module offers the functionality of logo carousels",
+  "version" : "1.0",
+  "dependencies" : {
+	"node_modules" : [
+	  "slick-carousel"
+	],
+	"plugins" : []
+  }
+}

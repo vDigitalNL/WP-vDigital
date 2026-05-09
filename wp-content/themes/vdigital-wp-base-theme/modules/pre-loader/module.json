@@ -1,0 +1,5 @@
+{
+  "name": "Pre loader",
+  "description": "This module enables the option of adding a pre-loader.",
+  "version": "1.0"
+}

@@ -1,0 +1,50 @@
+/**
+Used on multiple pages for example user dashboard and thank-you page
+ */
+.woocommerce-Addresses,
+.woocommerce-columns--addresses {
+	display: block;
+	width: 100%;
+	margin: 30px 0 30px;
+	padding: 0;
+
+	.woocommerce-Address,
+	.woocommerce-column {
+		width: 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		display: block;
+		padding: 0;
+		margin: 0 0 30px;
+
+		h3, .woocommerce-column__title {
+			text-transform: uppercase;
+			font-weight: normal;
+			font-size: 17px;
+			margin-bottom: 17px;
+		}
+
+		a {
+			color: $body-color;
+			text-decoration: underline;
+		}
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+	.woocommerce-Addresses,
+	.woocommerce-columns--addresses {
+		display: flex;
+
+		.woocommerce-Address,
+		.woocommerce-column {
+			width: 50%;
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+}

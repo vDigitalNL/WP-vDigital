@@ -18,19 +18,19 @@ if ( ! empty( $backgroundImage ) && is_numeric( $backgroundImage ) ) {
 
 ?>
 
-<!-- Navbar (fixed, outside hero flow) -->
+<!-- Navbar (fixed) -->
 <?php get_template_part('template-parts/home-hero/navbar'); ?>
 
 <!-- Hero Section -->
-<section id="home-hero" class="hero-section font--jakarta tw-relative tw-h-screen tw-flex tw-items-center tw-justify-center tw-overflow-hidden tw-py-32 tw-px-8">
+<section id="home-hero" class="hero-section font--jakarta tw-relative tw-min-h-screen tw-flex tw-items-center tw-justify-center tw-overflow-hidden tw-pt-32 tw-pb-16 tw-px-8" style="padding-top: max(8rem, 15vh);">
     <!-- Background Image -->
     <?php if ( ! empty( $backgroundImageUrl ) ) : ?>
         <div class="tw-absolute tw-inset-0 tw-bg-cover tw-bg-center tw-bg-no-repeat" style="background-image: url('<?php echo esc_url($backgroundImageUrl); ?>');"></div>
     <?php endif; ?>
-    
+
     <!-- Gradient Overlay (matching design: linear-gradient 135deg from core 92% to primary 85%) -->
     <div class="tw-absolute tw-inset-0" style="background: linear-gradient(135deg, rgba(8, 19, 40, 0.92) 0%, rgba(0, 76, 168, 0.85) 100%);"></div>
-    
+
     <!-- Hero Content -->
     <div class="tw-relative tw-z-10 tw-max-w-[900px] tw-mx-auto tw-text-center">
         <!-- Badge -->
@@ -38,17 +38,17 @@ if ( ! empty( $backgroundImage ) && is_numeric( $backgroundImage ) ) {
             <span class="tw-w-2 tw-h-2 tw-bg-growth tw-rounded-full tw-animate-pulse"></span>
             <span class="tw-text-focus tw-text-sm tw-font-medium"><?php echo esc_html( $badgeText ); ?></span>
         </div>
-        
+
         <!-- Title -->
         <h1 class="tw-text-focus tw-text-4xl md:tw-text-5xl lg:tw-text-[3.5rem] tw-font-extrabold tw-leading-tight tw-tracking-tight tw-mb-6 tw-normal-case">
             <?php echo wp_kses($heroTitle, wp_kses_allowed_html('post')); ?>
         </h1>
-        
+
         <!-- Description -->
         <p class="tw-text-white/80 tw-text-lg md:tw-text-xl tw-leading-relaxed tw-max-w-[700px] tw-mx-auto tw-mb-10 tw-font-normal">
             <?php echo wp_kses($heroDescription, wp_kses_allowed_html('post')); ?>
         </p>
-        
+
         <!-- Buttons -->
         <?php if ( ! empty( $heroButtons ) ) : ?>
             <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-4">

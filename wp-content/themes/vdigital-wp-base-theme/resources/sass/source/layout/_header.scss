@@ -1,0 +1,33 @@
+@include media-breakpoint-up(xs) {
+	#site-header {
+		&.has-fixed-top-navbar {
+			padding-top: 85px;
+		}
+	}
+}
+
+@include media-breakpoint-between(xs, lg) {
+	@media screen and ( max-width: 782px ) {
+		#site-header {
+			nav.navbar {
+				&.fixed-top {
+					body.admin-bar & {
+						top: 46px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	#site-header {
+		nav.navbar {
+			&.fixed-top {
+				body.admin-bar & {
+					top: 32px;
+				}
+			}
+		}
+	}
+}

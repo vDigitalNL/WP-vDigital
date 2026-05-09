@@ -1,0 +1,10 @@
+{
+  "name": "WooCommerce B2B",
+  "description": "This module offers B2B discounts for WooCommerce",
+  "version": "1.0",
+  "dependencies": {
+    "plugins" : [
+      "woocommerce"
+    ]
+  }
+}

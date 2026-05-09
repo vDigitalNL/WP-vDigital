@@ -1,0 +1,110 @@
+@import "~slick-carousel/slick/slick.scss";
+
+.logo-carousel {
+	@include media-breakpoint-down(xs) {
+		padding-right : 30px;
+		padding-left  : 30px;
+	}
+
+	.slick-slide {
+		display         : flex !important;
+		flex-direction  : column;
+		justify-content : center;
+		height          : inherit !important;
+	}
+
+	.slick-track {
+		display : flex !important;
+	}
+
+	.slick-arrow {
+		position         : absolute;
+		z-index          : 1;
+		top              : calc(50% - 18.5px);
+		visibility       : visible;
+		width            : 35px;
+		height           : 35px;
+		transition       : visibility .4s, background-color .3s;
+		border           : none;
+		border-radius    : 50%;
+		background-color : $primary;
+
+		&:hover {
+			cursor : pointer;
+		}
+
+		&:before {
+			position     : absolute;
+			top          : calc(50% - 6px);
+			display      : inline-block;
+			padding      : 5px;
+			content      : '';
+			border       : solid $light;
+			border-width : 0 2px 2px 0;
+		}
+
+		&.next-arrow {
+			right : -60px;
+
+			@media(max-width : 1300px) {
+				right : -40px;
+			}
+
+			@media(max-width : 1250px) {
+				right : -30px;
+			}
+
+			@include media-breakpoint-down(xs) {
+				right : -25px;
+			}
+
+			&:before {
+				left              : calc(50% - 8px);
+				-webkit-transform : rotate(-45deg);
+				transform         : rotate(-45deg);
+			}
+		}
+
+		&.prev-arrow {
+			left : -60px;
+
+			@media(max-width : 1300px) {
+				left : -40px;
+			}
+
+			@media(max-width : 1250px) {
+				left : -30px;
+			}
+
+			@include media-breakpoint-down(xs) {
+				left : -25px;
+			}
+
+			&:before {
+				left              : calc(50% - 4px);
+				-webkit-transform : rotate(135deg);
+				transform         : rotate(135deg);
+			}
+		}
+
+		&.slick-disabled {
+			visibility : hidden;
+		}
+	}
+
+	.logo {
+		display         : flex !important;
+		flex-direction  : column;
+		justify-content : center;
+		height          : 100%;
+
+		&-image {
+			img {
+				width      : auto;
+				max-width  : 100%;
+				max-height : 59px;
+				margin     : 0 auto;
+			}
+		}
+	}
+}

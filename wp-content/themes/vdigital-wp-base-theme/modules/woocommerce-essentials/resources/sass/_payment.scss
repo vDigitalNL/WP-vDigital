@@ -1,0 +1,103 @@
+/**
+WooCommerce payment methods used on checkout page and single payment page
+ */
+.payment_box {
+	display: none !important;
+}
+
+ul.wc_payment_methods {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: calc(100% + 20px);
+
+	li.wc_payment_method {
+		position: relative;
+		padding: 10px 20px 10px 0;
+		width: 50%;
+
+		input {
+			position: absolute;
+			top: 15px;
+			left: 5px;
+
+			&:checked + label {
+				border: 2px solid $primary;
+			}
+		}
+
+		label {
+			border: 2px solid #B5B5B5;
+			border-radius: 5px;
+			font-size: 12px;
+			width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+			min-height: 66px;
+
+			a {
+				display: none;
+			}
+		}
+	}
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+	ul.wc_payment_methods {
+		width: calc(100% - 20px);
+
+		li.wc_payment_method {
+			padding: 15px 0 15px 20px;
+			width: 50%;
+
+			input {
+				top: 25px;
+				left: 30px;
+			}
+		}
+	}
+}
+
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+	ul.wc_payment_methods {
+		width: 100%;
+
+		li.wc_payment_method {
+			padding: 0 0 0 20px;
+			width: 33%;
+
+			input {
+				top: 5px;
+				left: 25px;
+			}
+
+			label {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 5px;
+				min-height: 66px;
+			}
+		}
+	}
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

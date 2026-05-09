@@ -99,8 +99,8 @@ class Tabs {
     this.#toggleMobileDropdown(tab);
 
     const urlParams = new URLSearchParams(window.location.search);
-    const formSettings = urlParams.get("dyflexis_popup_forms");
-    const formTab = urlParams.get("dyflexis_popup_tab");
+    const formSettings = urlParams.get("vdigital_popup_forms");
+    const formTab = urlParams.get("vdigital_popup_tab");
 
     if (!formSettings || formTab.length < 1) {
       return;
@@ -108,10 +108,10 @@ class Tabs {
 
     if (dispatchEvent) {
       window.dispatchEvent(
-        new CustomEvent("dyflexisFormInteraction", {
+        new CustomEvent("vdigitalFormInteraction", {
           detail: {
             category: "switch",
-            formTemplateId: urlParams.get("dyflexis_popup_id"),
+            formTemplateId: urlParams.get("vdigital_popup_id"),
             salesforceFormId: Object.values(
               JSON.parse(formSettings)[formTab],
             )[0],
@@ -123,8 +123,8 @@ class Tabs {
 
   #setActive() {
     if (
-      this.urlParams.has("dyflexis_popup") === false &&
-      this.urlParams.has("dyflexis_submit") === false
+      this.urlParams.has("vdigital_popup") === false &&
+      this.urlParams.has("vdigital_submit") === false
     ) {
       return;
     }
@@ -139,7 +139,7 @@ class Tabs {
     this.formContents.forEach((content) => {
       if (
         content.dataset.key === key &&
-        this.urlParams.has("dyflexis_submit") === false
+        this.urlParams.has("vdigital_submit") === false
       ) {
         content.classList.add("active");
         content.classList.remove("tw-hidden");
@@ -155,11 +155,11 @@ class Tabs {
   setUrlParams(tab, isInteger) {
     const currentUrl = new URL(window.location.href);
     const tabParameter = isInteger ? tab : tab.dataset.key;
-    currentUrl.searchParams.set("dyflexis_popup", "true");
-    currentUrl.searchParams.set("dyflexis_popup_id", this.popupId);
-    currentUrl.searchParams.set("dyflexis_popup_tab", tabParameter);
+    currentUrl.searchParams.set("vdigital_popup", "true");
+    currentUrl.searchParams.set("vdigital_popup_id", this.popupId);
+    currentUrl.searchParams.set("vdigital_popup_tab", tabParameter);
     currentUrl.searchParams.set(
-      "dyflexis_popup_forms",
+      "vdigital_popup_forms",
       JSON.stringify(this.forms),
     );
     history.pushState({}, null, currentUrl);
@@ -174,7 +174,7 @@ class Tabs {
 
   #getActive() {
     const activeTab = Array.from(this.tabs).find(
-      (tab) => tab.dataset.key === this.urlParams.get("dyflexis_popup_tab"),
+      (tab) => tab.dataset.key === this.urlParams.get("vdigital_popup_tab"),
     );
 
     return activeTab || this.tabs[0];

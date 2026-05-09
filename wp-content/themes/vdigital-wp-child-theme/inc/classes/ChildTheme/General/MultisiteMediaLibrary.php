@@ -26,11 +26,11 @@ class MultisiteMediaLibrary extends AbstractClass {
 	}
 
 	public function switchBlogToUseMediaLibraryOfMainSite(): int {
-		return 1;
+		return 2;
 	}
 
 	public function handleFeaturedImageInsertion( $response, array $handler, \WP_REST_Request $request ) {
-		if ( ! function_exists( 'is_media_site' ) || is_media_site() ) {
+		if ( ! function_exists( '\Network_Media_Library\is_media_site' ) || is_media_site() ) {
 			return $response;
 		}
 

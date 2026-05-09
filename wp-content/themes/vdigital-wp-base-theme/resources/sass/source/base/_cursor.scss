@@ -1,0 +1,7 @@
+@include media-breakpoint-up(md) {
+	.cursor-pointer {
+		@media all, handheld {
+			cursor: pointer;
+		}
+	}
+}

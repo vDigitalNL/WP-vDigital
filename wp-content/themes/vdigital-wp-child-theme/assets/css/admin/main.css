@@ -439,14 +439,14 @@ video {
     --color-primary: #004ca8;
     --color-turquoise: #007D7D;
     --color-spring: #32aa00;
-    --color-core: #081328;
+    --color-core: #071226;
     --color-core-20: rgba(8, 19, 40, 0.2);
     --color-core-50: rgba(8, 19, 40, 0.5);
     --color-core-80: rgba(8, 19, 40, 0.8);
     --color-shade: #212b3e;
     --color-mist: #526fa6;
     --color-horizon: #f1f2ff;
-    --color-edge: #0195E8;
+    --color-edge: #04a0f7;
     --color-edge-hover: #0376B8;
     --color-sky: #0195E8;
     --color-growth: #44ac17;
@@ -495,7 +495,7 @@ body:not(.wp-admin) h1, body:not(.wp-admin) h2, body:not(.wp-admin) h3, body:not
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 body:not(.wp-admin) h1, body:not(.wp-admin) h2, body:not(.wp-admin) h3, body:not(.wp-admin) .title--h1, body:not(.wp-admin) .title--h2, body:not(.wp-admin) .title--h3, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor h1, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor h2, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor h3, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .title--h1, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .title--h2, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .title--h3 {
-    font-family: "Big Shoulders Display", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     line-height: .95;
   }
 body:not(.wp-admin) h1, body:not(.wp-admin) .title--h1, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor h1, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .title--h1{
@@ -767,14 +767,8 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-relative{
   position: relative;
 }
-.tw--inset-1{
-  inset: -0.25rem;
-}
 .tw-inset-0{
   inset: 0px;
-}
-.\!tw-top-\[370px\]{
-  top: 370px !important;
 }
 .tw--bottom-4{
   bottom: -1rem;
@@ -800,8 +794,14 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-left-0{
   left: 0px;
 }
+.tw-left-1\/2{
+  left: 50%;
+}
 .tw-right-0{
   right: 0px;
+}
+.tw-right-1\/2{
+  right: 50%;
 }
 .tw-right-4{
   right: 1rem;
@@ -898,6 +898,12 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   margin-top: auto;
   margin-bottom: auto;
 }
+.tw--ml-\[50vw\]{
+  margin-left: -50vw;
+}
+.tw--mr-\[50vw\]{
+  margin-right: -50vw;
+}
 .tw--mt-\[1px\]{
   margin-top: -1px;
 }
@@ -949,12 +955,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-mr-1{
   margin-right: 0.25rem;
 }
-.tw-mr-2{
-  margin-right: 0.5rem;
-}
-.tw-mr-2\.5{
-  margin-right: 0.625rem;
-}
 .tw-mr-28{
   margin-right: 7rem;
 }
@@ -999,9 +999,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-mt-8{
   margin-top: 2rem;
-}
-.tw-mt-\[-1px\]{
-  margin-top: -1px;
 }
 .tw-mt-\[46px\]{
   margin-top: 46px;
@@ -1090,14 +1087,8 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-h-\[100vh\]{
   height: 100vh;
 }
-.tw-h-\[200px\]{
-  height: 200px;
-}
 .tw-h-\[300px\]{
   height: 300px;
-}
-.tw-h-\[40px\]{
-  height: 40px;
 }
 .tw-h-\[93px\]{
   height: 93px;
@@ -1107,9 +1098,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-h-full{
   height: 100%;
-}
-.tw-h-screen{
-  height: 100vh;
 }
 .tw-max-h-\[300px\]{
   max-height: 300px;
@@ -1131,6 +1119,9 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-min-h-\[500px\]{
   min-height: 500px;
+}
+.tw-min-h-screen{
+  min-height: 100vh;
 }
 .tw-w-1\/2{
   width: 50%;
@@ -1171,6 +1162,9 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-w-3\/5{
   width: 60%;
 }
+.tw-w-32{
+  width: 8rem;
+}
 .tw-w-4{
   width: 1rem;
 }
@@ -1183,30 +1177,24 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-w-8{
   width: 2rem;
 }
+.tw-w-\[100vw\]{
+  width: 100vw;
+}
 .tw-w-\[19\%\]{
   width: 19%;
 }
-.tw-w-\[40px\]{
-  width: 40px;
-}
 .tw-w-\[43\%\]{
   width: 43%;
-}
-.tw-w-auto{
-  width: auto;
-}
-.tw-w-full{
-  width: 100%;
 }
 .tw-w-fit{
   width: -moz-fit-content;
   width: fit-content;
 }
+.tw-w-full{
+  width: 100%;
+}
 .tw-min-w-\[140px\]{
   min-width: 140px;
-}
-.\!tw-max-w-\[140px\]{
-  max-width: 140px !important;
 }
 .tw-max-w-24{
   max-width: 6rem;
@@ -1241,9 +1229,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-max-w-\[900px\]{
   max-width: 900px;
 }
-.tw-max-w-full{
-  max-width: 100%;
-}
 .tw-max-w-none{
   max-width: none;
 }
@@ -1251,6 +1236,9 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   flex: 1 1 0%;
 }
 .tw-flex-shrink-0{
+  flex-shrink: 0;
+}
+.tw-shrink-0{
   flex-shrink: 0;
 }
 .tw-flex-grow{
@@ -1295,9 +1283,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-animate-spin{
   animation: tw-spin 1s linear infinite;
-}
-.tw-cursor-default{
-  cursor: default;
 }
 .tw-cursor-pointer{
   cursor: pointer;
@@ -1347,6 +1332,9 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-gap-2{
   gap: 0.5rem;
 }
+.tw-gap-2\.5{
+  gap: 0.625rem;
+}
 .tw-gap-3{
   gap: 0.75rem;
 }
@@ -1371,16 +1359,9 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-gap-\[25px\]{
   gap: 25px;
 }
-.tw-gap-2\.5{
-  gap: 0.625rem;
-}
 .tw-gap-x-5{
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
-}
-.tw-gap-x-\[49px\]{
-  -moz-column-gap: 49px;
-       column-gap: 49px;
 }
 .tw-gap-y-10{
   row-gap: 2.5rem;
@@ -1533,7 +1514,7 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
 }
 .tw-border-edge\/30{
-  border-color: rgb(1 149 232 / 0.3);
+  border-color: rgb(4 160 247 / 0.3);
 }
 .tw-border-gray-300{
   --tw-border-opacity: 1;
@@ -1570,10 +1551,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   --tw-border-opacity: 1;
   border-color: rgb(33 43 62 / var(--tw-border-opacity, 1));
 }
-.tw-border-sky{
-  --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
-}
 .tw-border-transparent{
   border-color: transparent;
 }
@@ -1585,15 +1562,15 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   --tw-border-opacity: 1;
   border-color: rgb(220 1 45 / var(--tw-border-opacity, 1));
 }
-.tw-border-white\/20{
-  border-color: rgb(255 255 255 / 0.2);
-}
-.tw-border-focus\/20{
-  border-color: rgb(255 255 255 / 0.2);
-}
 .tw-border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+.tw-border-white\/10{
+  border-color: rgb(255 255 255 / 0.1);
+}
+.tw-border-white\/20{
+  border-color: rgb(255 255 255 / 0.2);
 }
 .tw-border-t-transparent{
   border-top-color: transparent;
@@ -1612,20 +1589,20 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-bg-core{
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
 }
 .tw-bg-core-80{
   background-color: rgba(8, 19, 40, 0.8);
 }
 .tw-bg-core\/90{
-  background-color: rgb(8 19 40 / 0.9);
+  background-color: rgb(7 18 38 / 0.9);
 }
 .tw-bg-edge{
   --tw-bg-opacity: 1;
-  background-color: rgb(1 149 232 / var(--tw-bg-opacity, 1));
+  background-color: rgb(4 160 247 / var(--tw-bg-opacity, 1));
 }
 .tw-bg-edge\/20{
-  background-color: rgb(1 149 232 / 0.2);
+  background-color: rgb(4 160 247 / 0.2);
 }
 .tw-bg-focus{
   --tw-bg-opacity: 1;
@@ -1691,23 +1668,16 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-bg-white\/10{
   background-color: rgb(255 255 255 / 0.1);
 }
-.tw-bg-focus\/10{
-  background-color: rgb(255 255 255 / 0.1);
-}
-.tw-bg-sky{
-  --tw-bg-opacity: 1;
-  background-color: rgb(1 149 232 / var(--tw-bg-opacity, 1));
-}
 .tw-bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 .tw-from-edge\/20{
-  --tw-gradient-from: rgb(1 149 232 / 0.2) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(1 149 232 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: rgb(4 160 247 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(4 160 247 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .tw-to-edge\/5{
-  --tw-gradient-to: rgb(1 149 232 / 0.05) var(--tw-gradient-to-position);
+  --tw-gradient-to: rgb(4 160 247 / 0.05) var(--tw-gradient-to-position);
 }
 .tw-bg-cover{
   background-size: cover;
@@ -1738,9 +1708,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-p-10{
   padding: 2.5rem;
 }
-.tw-p-12{
-  padding: 3rem;
-}
 .tw-p-2{
   padding: 0.5rem;
 }
@@ -1762,10 +1729,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-px-0{
   padding-left: 0px;
   padding-right: 0px;
-}
-.tw-px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 .tw-px-11{
   padding-left: 2.75rem;
@@ -1827,6 +1790,10 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   padding-left: 12.5rem;
   padding-right: 12.5rem;
 }
+.tw-px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .tw-px-7{
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -1850,18 +1817,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-px-\[15px\]{
   padding-left: 15px;
   padding-right: 15px;
-}
-.tw-px-\[25px\]{
-  padding-left: 25px;
-  padding-right: 25px;
-}
-.tw-px-\[30px\]{
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.tw-px-\[40px\]{
-  padding-left: 40px;
-  padding-right: 40px;
 }
 .tw-py-0{
   padding-top: 0px;
@@ -1903,10 +1858,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.tw-py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
 .tw-py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1935,10 +1886,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.tw-px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
 .\!tw-pl-0{
   padding-left: 0px !important;
 }
@@ -1953,6 +1900,9 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-pb-12{
   padding-bottom: 3rem;
+}
+.tw-pb-16{
+  padding-bottom: 4rem;
 }
 .tw-pb-17{
   padding-bottom: 4.375rem;
@@ -1998,12 +1948,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-pb-\[14px\]{
   padding-bottom: 14px;
-}
-.tw-pb-\[60px\]{
-  padding-bottom: 60px;
-}
-.tw-pb-\[80px\]{
-  padding-bottom: 80px;
 }
 .tw-pl-2{
   padding-left: 0.5rem;
@@ -2067,9 +2011,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-pt-\[108px\]{
   padding-top: 108px;
-}
-.tw-pt-\[60px\]{
-  padding-top: 60px;
 }
 .tw-text-left{
   text-align: left;
@@ -2211,15 +2152,7 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .\!tw-text-core{
   --tw-text-opacity: 1 !important;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
-}
-.\!tw-text-sky{
-  --tw-text-opacity: 1 !important;
-  color: rgb(1 149 232 / var(--tw-text-opacity, 1)) !important;
-}
-.tw-text-black-00{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1)) !important;
 }
 .tw-text-black-01{
   --tw-text-opacity: 1;
@@ -2239,11 +2172,11 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-text-core{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .tw-text-edge{
   --tw-text-opacity: 1;
-  color: rgb(1 149 232 / var(--tw-text-opacity, 1));
+  color: rgb(4 160 247 / var(--tw-text-opacity, 1));
 }
 .tw-text-focus{
   --tw-text-opacity: 1;
@@ -2319,9 +2252,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 .tw-text-white\/80{
   color: rgb(255 255 255 / 0.8);
 }
-.tw-underline{
-  text-decoration-line: underline;
-}
 .tw-no-underline{
   text-decoration-line: none;
 }
@@ -2336,9 +2266,6 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 }
 .tw-decoration-teal{
   text-decoration-color: #015971;
-}
-.tw-underline-offset-2{
-  text-underline-offset: 2px;
 }
 .tw-placeholder-red-01::-moz-placeholder{
   --tw-placeholder-opacity: 1;
@@ -2370,6 +2297,11 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.tw-shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .tw-backdrop-blur-md{
   --tw-backdrop-blur: blur(12px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -2398,15 +2330,13 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.tw-transition-shadow{
-  transition-property: box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .tw-transition-transform{
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.tw-duration-200{
+  transition-duration: 200ms;
 }
 .tw-duration-300{
   transition-duration: 300ms;
@@ -2439,7 +2369,7 @@ body:not(.wp-admin) blockquote > cite, body.block-editor-page .interface-interfa
 
 body:not(.wp-admin){
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
 }
 
 body{
@@ -2533,20 +2463,6 @@ body.disable-hyphens .hyphenated {
   font-style: normal;
   font-display: swap;
   src: url("/wp-content/themes/vdigital-wp-child-theme/resources/fonts/Syne/Syne-ExtraBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Big Shoulders Display";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("/wp-content/themes/vdigital-wp-child-theme/resources/fonts/BigShoulders/big-shoulders-display.medium.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Big Shoulders Display";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("/wp-content/themes/vdigital-wp-child-theme/resources/fonts/BigShoulders/big-shoulders-display.bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "DM Sans";
@@ -2765,7 +2681,7 @@ body div#CybotCookiebotDialog > div:not(.CybotCookiebotDialogContentWrapper), #C
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1)) !important;
 }
 
 #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection{
@@ -2847,7 +2763,7 @@ body:not(.wp-admin) button.btn, body:not(.wp-admin) .btn#CybotCookiebotDialogBod
     font-weight: 300;
     line-height: 1.2;
     --tw-text-opacity: 1;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+    color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   }
 body:not(.wp-admin) button.btn:hover, body:not(.wp-admin) .btn#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .CybotCookiebotDialogBodyButton:hover,
   body:not(.wp-admin) a.btn:hover,
@@ -2904,10 +2820,10 @@ body:not(.wp-admin) button.btn.button--dark_outline, body:not(.wp-admin) .btn.bu
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--dark_outline{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(8 19 40 / var(--tw-border-opacity, 1));
+  border-color: rgb(7 18 38 / var(--tw-border-opacity, 1));
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 body:not(.wp-admin) button.btn.button--dark_outline:hover, body:not(.wp-admin) .btn.button--dark_outline#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .button--dark_outline.CybotCookiebotDialogBodyButton:hover,
   body:not(.wp-admin) a.btn.button--dark_outline:hover,
@@ -2984,7 +2900,7 @@ body:not(.wp-admin) button.btn.button--blue, body:not(.wp-admin) .btn#CybotCooki
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .CybotCookiebotDialogBodyButton#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--blue{
   --tw-bg-opacity: 1;
-  background-color: rgb(1 149 232 / var(--tw-bg-opacity, 1));
+  background-color: rgb(4 160 247 / var(--tw-bg-opacity, 1));
 }
 body:not(.wp-admin) button.btn.button--blue:hover, body:not(.wp-admin) .btn#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .button--blue.CybotCookiebotDialogBodyButton:hover, body:not(.wp-admin) .CybotCookiebotDialogBodyButton#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover,
   body:not(.wp-admin) a.btn.button--blue:hover,
@@ -3118,7 +3034,7 @@ body:not(.wp-admin) button.btn.button--toggle, body:not(.wp-admin) .btn.button--
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .button--toggle.CybotCookiebotDialogBodyButton,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--toggle{
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   --tw-ring-opacity: 1;
@@ -3142,7 +3058,7 @@ body:not(.wp-admin) button.btn.button--toggle--white, body:not(.wp-admin) .btn.b
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(1 149 232 / var(--tw-ring-opacity, 1));
 }
@@ -3167,7 +3083,7 @@ body:not(.wp-admin) button.btn.button--navigate, body:not(.wp-admin) .btn.button
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   font-size: 18px;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(1 149 232 / var(--tw-ring-opacity, 1));
 }
@@ -3225,7 +3141,7 @@ body:not(.wp-admin) button.btn.button--close, body:not(.wp-admin) .btn.button--c
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
     --tw-text-opacity: 1;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+    color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   }
     body:not(.wp-admin) button.btn.button--close.alternative:hover, body:not(.wp-admin) .btn.button--close.alternative#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .button--close.alternative.CybotCookiebotDialogBodyButton:hover,
     body:not(.wp-admin) a.btn.button--close.alternative:hover,
@@ -3262,12 +3178,12 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .button--play.CybotCookiebotDialogBodyButton:hover,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--play:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
 }
 .btn, .CybotCookiebotDialogBodyButton {
     font-family: "DM Sans", sans-serif;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 20px;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
     padding-top: 0.625rem;
@@ -3278,7 +3194,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
     font-weight: 300;
     line-height: 1.2;
     --tw-text-opacity: 1;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+    color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   }
 .btn:hover, .CybotCookiebotDialogBodyButton:hover{
   --tw-bg-opacity: 1;
@@ -3289,7 +3205,6 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 @media (min-width: 768px){
   .btn, .CybotCookiebotDialogBodyButton{
     height: 60px;
-    border-radius: 20px;
     padding-left: 35px;
     padding-right: 35px;
     font-size: 20px;
@@ -3305,7 +3220,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .button--outline{
   border-width: 1px;
@@ -3322,10 +3237,10 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 .button--dark_outline{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(8 19 40 / var(--tw-border-opacity, 1));
+  border-color: rgb(7 18 38 / var(--tw-border-opacity, 1));
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .button--dark_outline:hover{
   --tw-border-opacity: 1;
@@ -3388,9 +3303,9 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
     --tw-border-opacity: 1;
-    border-color: rgb(8 19 40 / var(--tw-border-opacity, 1));
+    border-color: rgb(7 18 38 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
-    background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+    background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
   }
 body:not(.wp-admin) a.btn, body:not(.wp-admin) a.CybotCookiebotDialogBodyButton,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn,
@@ -3419,7 +3334,7 @@ body:not(.wp-admin) button.btn, body:not(.wp-admin) .btn#CybotCookiebotDialogBod
     font-weight: 300;
     line-height: 1.2;
     --tw-text-opacity: 1;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+    color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   }
 body:not(.wp-admin) button.btn:hover, body:not(.wp-admin) .btn#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .CybotCookiebotDialogBodyButton:hover, body:not(.wp-admin) #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll.CybotCookiebotDialogBodyButton:hover,
   body:not(.wp-admin) a.btn:hover,
@@ -3481,10 +3396,10 @@ body:not(.wp-admin) button.btn.button--dark_outline, body:not(.wp-admin) .btn.bu
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--dark_outline{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(8 19 40 / var(--tw-border-opacity, 1));
+  border-color: rgb(7 18 38 / var(--tw-border-opacity, 1));
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 body:not(.wp-admin) button.btn.button--dark_outline:hover, body:not(.wp-admin) .btn.button--dark_outline#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .button--dark_outline.CybotCookiebotDialogBodyButton:hover, body:not(.wp-admin) .button--dark_outline#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll.CybotCookiebotDialogBodyButton:hover,
   body:not(.wp-admin) a.btn.button--dark_outline:hover,
@@ -3564,7 +3479,7 @@ body:not(.wp-admin) button.btn.button--blue, body:not(.wp-admin) .button--blue.C
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .CybotCookiebotDialogBodyButton#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--blue{
   --tw-bg-opacity: 1;
-  background-color: rgb(1 149 232 / var(--tw-bg-opacity, 1));
+  background-color: rgb(4 160 247 / var(--tw-bg-opacity, 1));
 }
 body:not(.wp-admin) button.btn.button--blue:hover, body:not(.wp-admin) .button--blue.CybotCookiebotDialogBodyButton:hover, body:not(.wp-admin) .btn#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .CybotCookiebotDialogBodyButton#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover,
   body:not(.wp-admin) a.btn.button--blue:hover,
@@ -3712,7 +3627,7 @@ body:not(.wp-admin) button.btn.button--toggle, body:not(.wp-admin) .btn.button--
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .button--toggle#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll.CybotCookiebotDialogBodyButton,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--toggle{
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   --tw-ring-opacity: 1;
@@ -3738,7 +3653,7 @@ body:not(.wp-admin) button.btn.button--toggle--white, body:not(.wp-admin) .btn.b
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(1 149 232 / var(--tw-ring-opacity, 1));
 }
@@ -3765,7 +3680,7 @@ body:not(.wp-admin) button.btn.button--navigate, body:not(.wp-admin) .btn.button
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   font-size: 18px;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(1 149 232 / var(--tw-ring-opacity, 1));
 }
@@ -3828,7 +3743,7 @@ body:not(.wp-admin) button.btn.button--close, body:not(.wp-admin) .btn.button--c
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
     --tw-text-opacity: 1;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+    color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   }
     body:not(.wp-admin) button.btn.button--close.alternative:hover, body:not(.wp-admin) .btn.button--close.alternative#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:hover, body:not(.wp-admin) .button--close.alternative.CybotCookiebotDialogBodyButton:hover, body:not(.wp-admin) .button--close.alternative#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll.CybotCookiebotDialogBodyButton:hover,
     body:not(.wp-admin) a.btn.button--close.alternative:hover,
@@ -3868,12 +3783,12 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .button--play#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll.CybotCookiebotDialogBodyButton:hover,
   body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor a.btn.button--play:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
 }
 .btn, .CybotCookiebotDialogBodyButton {
     font-family: "DM Sans", sans-serif;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 20px;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
     padding-top: 0.625rem;
@@ -3884,7 +3799,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
     font-weight: 300;
     line-height: 1.2;
     --tw-text-opacity: 1;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+    color: rgb(7 18 38 / var(--tw-text-opacity, 1));
   }
 .btn:hover, .CybotCookiebotDialogBodyButton:hover{
   --tw-bg-opacity: 1;
@@ -3895,7 +3810,6 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 @media (min-width: 768px){
   .btn, .CybotCookiebotDialogBodyButton{
     height: 60px;
-    border-radius: 20px;
     padding-left: 35px;
     padding-right: 35px;
     font-size: 20px;
@@ -3911,7 +3825,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .button--outline{
   border-width: 1px;
@@ -3928,10 +3842,10 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 .button--dark_outline{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(8 19 40 / var(--tw-border-opacity, 1));
+  border-color: rgb(7 18 38 / var(--tw-border-opacity, 1));
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .button--dark_outline:hover{
   --tw-border-opacity: 1;
@@ -3969,7 +3883,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
     --tw-border-opacity: 1;
     border-color: rgb(82 111 166 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
-    background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+    background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-top: 19px;
@@ -3988,7 +3902,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 }
 .input__field > input:focus, .sf_type_text > input:focus, .sf_field_email > input:focus, .input__field > textarea:focus, .sf_type_text > textarea:focus, .sf_field_email > textarea:focus, .input__field > select:focus, .sf_type_text > select:focus, .sf_field_email > select:focus, .input__field .select-selected:focus, .sf_type_text .select-selected:focus, .sf_field_email .select-selected:focus, .input__field--radio > input:focus, .sf_type_radio fieldset > div > input:focus, .input__field--radio > textarea:focus, .sf_type_radio fieldset > div > textarea:focus, .input__field--radio > select:focus, .sf_type_radio fieldset > div > select:focus, .input__field--radio .select-selected:focus, .sf_type_radio fieldset > div .select-selected:focus, .input__field--checkbox > input:focus, .sf_type_checkbox > input:focus, .input__field--checkbox > textarea:focus, .sf_type_checkbox > textarea:focus, .input__field--checkbox > select:focus, .sf_type_checkbox > select:focus, .input__field--checkbox .select-selected:focus, .sf_type_checkbox .select-selected:focus, .input__select > input:focus, .sf_type_select > input:focus, .input__select > textarea:focus, .sf_type_select > textarea:focus, .input__select > select:focus, .sf_type_select > select:focus, .input__select .select-selected:focus, .sf_type_select .select-selected:focus, .input__textarea > input:focus, .sf_type_textarea > input:focus, .input__textarea > textarea:focus, .sf_type_textarea > textarea:focus, .input__textarea > select:focus, .sf_type_textarea > select:focus, .input__textarea .select-selected:focus, .sf_type_textarea .select-selected:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -4077,7 +3991,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea > label,
   .form-block--light .sf_type_textarea > label, .block__background--light .form-block--dark .input__textarea.sf_type_text > label, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea > label, .block__background--light .form-block--dark .input__textarea.sf_field_email > label, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea > label, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea > label, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > label, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox > label, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea > label, .block__background--light .form-block--dark .input__textarea.sf_type_textarea > label, .block__background--light .form-block--dark .sf_type_textarea > label{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .input__field.on_white > input, .on_white.sf_type_text > input, .on_white.sf_field_email > input, .salesforce_popup .input__field.sf_type_text > input, .salesforce_popup .sf_type_text > input, .salesforce_popup .sf_type_text.sf_field_email > input, .salesforce_popup .input__field.sf_field_email > input, .salesforce_popup .sf_field_email.sf_type_text > input, .salesforce_popup .sf_field_email > input, .salesforce_popup .sf_type_radio fieldset > div.input__field > input, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > input, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > input, .salesforce_popup .input__field.sf_type_checkbox > input, .salesforce_popup .sf_type_checkbox.sf_type_text > input, .salesforce_popup .sf_type_checkbox.sf_field_email > input, .salesforce_popup .input__field.sf_type_textarea > input, .salesforce_popup .sf_type_textarea.sf_type_text > input, .salesforce_popup .sf_type_textarea.sf_field_email > input,
   .form-block--light .input__field.sf_type_text > input,
@@ -4321,7 +4235,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   --tw-border-opacity: 1;
   border-color: rgb(82 111 166 / var(--tw-border-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .input__field.on_white > input::-moz-placeholder, .on_white.sf_type_text > input::-moz-placeholder, .on_white.sf_field_email > input::-moz-placeholder, .salesforce_popup .input__field.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_text.sf_field_email > input::-moz-placeholder, .salesforce_popup .input__field.sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > input::-moz-placeholder, .salesforce_popup .input__field.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_field_email > input::-moz-placeholder, .salesforce_popup .input__field.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_field_email > input::-moz-placeholder, .form-block--light .input__field.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_text.sf_field_email > input::-moz-placeholder, .form-block--light .input__field.sf_field_email > input::-moz-placeholder, .form-block--light .sf_field_email.sf_type_text > input::-moz-placeholder, .form-block--light .sf_field_email > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email > input::-moz-placeholder, .form-block--light .input__field.sf_type_checkbox > input::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_field_email > input::-moz-placeholder, .form-block--light .input__field.sf_type_textarea > input::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_textarea.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_field_email > input::-moz-placeholder, .input__field.on_white > select::-moz-placeholder, .on_white.sf_type_text > select::-moz-placeholder, .on_white.sf_field_email > select::-moz-placeholder, .salesforce_popup .input__field.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_text.sf_field_email > select::-moz-placeholder, .salesforce_popup .input__field.sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > select::-moz-placeholder, .salesforce_popup .input__field.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_field_email > select::-moz-placeholder, .salesforce_popup .input__field.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_field_email > select::-moz-placeholder, .form-block--light .input__field.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_text.sf_field_email > select::-moz-placeholder, .form-block--light .input__field.sf_field_email > select::-moz-placeholder, .form-block--light .sf_field_email.sf_type_text > select::-moz-placeholder, .form-block--light .sf_field_email > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email > select::-moz-placeholder, .form-block--light .input__field.sf_type_checkbox > select::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_field_email > select::-moz-placeholder, .form-block--light .input__field.sf_type_textarea > select::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_textarea.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_field_email > select::-moz-placeholder, .input__field.on_white > textarea::-moz-placeholder, .on_white.sf_type_text > textarea::-moz-placeholder, .on_white.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .input__field.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_text.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .input__field.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .input__field.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .input__field.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_field_email > textarea::-moz-placeholder, .form-block--light .input__field.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_text.sf_field_email > textarea::-moz-placeholder, .form-block--light .input__field.sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_field_email.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email > textarea::-moz-placeholder, .form-block--light .input__field.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_field_email > textarea::-moz-placeholder, .form-block--light .input__field.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_textarea.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_field_email > textarea::-moz-placeholder, .input__field.on_white .select-selected::-moz-placeholder, .on_white.sf_type_text .select-selected::-moz-placeholder, .on_white.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .input__field.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_text.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .input__field.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .input__field.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .input__field.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_field_email .select-selected::-moz-placeholder, .form-block--light .input__field.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_text.sf_field_email .select-selected::-moz-placeholder, .form-block--light .input__field.sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_field_email.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email .select-selected::-moz-placeholder, .form-block--light .input__field.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_field_email .select-selected::-moz-placeholder, .form-block--light .input__field.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_textarea.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_field_email .select-selected::-moz-placeholder, .input__field--radio.on_white > input::-moz-placeholder, .sf_type_radio fieldset > div.on_white > input::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > input::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_text > input::-moz-placeholder, .salesforce_popup .input__field--radio.sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > input::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--radio > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div > input::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox > input::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea > input::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_textarea > input::-moz-placeholder, .form-block--light .input__field--radio.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text > input::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_text > input::-moz-placeholder, .form-block--light .input__field--radio.sf_field_email > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email > input::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_field_email > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--radio > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div > input::-moz-placeholder, .form-block--light .input__field--radio.sf_type_checkbox > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox > input::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_checkbox > input::-moz-placeholder, .form-block--light .input__field--radio.sf_type_textarea > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea > input::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text > input::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email > input::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--radio > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox > input::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > input::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_textarea > input::-moz-placeholder, .input__field--radio.on_white > select::-moz-placeholder, .sf_type_radio fieldset > div.on_white > select::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > select::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_text > select::-moz-placeholder, .salesforce_popup .input__field--radio.sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > select::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--radio > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div > select::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox > select::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea > select::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_textarea > select::-moz-placeholder, .form-block--light .input__field--radio.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text > select::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_text > select::-moz-placeholder, .form-block--light .input__field--radio.sf_field_email > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email > select::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_field_email > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--radio > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div > select::-moz-placeholder, .form-block--light .input__field--radio.sf_type_checkbox > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox > select::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_checkbox > select::-moz-placeholder, .form-block--light .input__field--radio.sf_type_textarea > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea > select::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text > select::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email > select::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--radio > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox > select::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > select::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_textarea > select::-moz-placeholder, .input__field--radio.on_white > textarea::-moz-placeholder, .sf_type_radio fieldset > div.on_white > textarea::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text > textarea::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .input__field--radio.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email > textarea::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--radio > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div > textarea::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .input__field--radio.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text > textarea::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_text > textarea::-moz-placeholder, .form-block--light .input__field--radio.sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email > textarea::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--radio > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div > textarea::-moz-placeholder, .form-block--light .input__field--radio.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .input__field--radio.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text > textarea::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email > textarea::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--radio > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .input__field--radio.on_white .select-selected::-moz-placeholder, .sf_type_radio fieldset > div.on_white .select-selected::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text .select-selected::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .input__field--radio.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email .select-selected::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--radio .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div .select-selected::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .input__field--radio.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .sf_type_radio .salesforce_popup fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .input__field--radio.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_text .select-selected::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_text .select-selected::-moz-placeholder, .form-block--light .input__field--radio.sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_field_email .select-selected::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--radio .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div .select-selected::-moz-placeholder, .form-block--light .input__field--radio.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .input__field--radio.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .sf_type_radio .form-block--light fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_text .select-selected::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_field_email .select-selected::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--radio .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--radio.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .input__field--checkbox.on_white > input::-moz-placeholder, .on_white.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_checkbox > input::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_text.sf_type_checkbox > input::-moz-placeholder, .form-block--light .input__field--checkbox.sf_field_email > input::-moz-placeholder, .form-block--light .sf_field_email.sf_type_checkbox > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--checkbox > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox > input::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_checkbox > input::-moz-placeholder, .form-block--light .sf_type_checkbox > input::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_textarea > input::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_checkbox > input::-moz-placeholder, .input__field--checkbox.on_white > select::-moz-placeholder, .on_white.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_checkbox > select::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_text.sf_type_checkbox > select::-moz-placeholder, .form-block--light .input__field--checkbox.sf_field_email > select::-moz-placeholder, .form-block--light .sf_field_email.sf_type_checkbox > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--checkbox > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox > select::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_checkbox > select::-moz-placeholder, .form-block--light .sf_type_checkbox > select::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_textarea > select::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_checkbox > select::-moz-placeholder, .input__field--checkbox.on_white > textarea::-moz-placeholder, .on_white.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_text.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .input__field--checkbox.sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_field_email.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_checkbox > textarea::-moz-placeholder, .input__field--checkbox.on_white .select-selected::-moz-placeholder, .on_white.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__field--checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .input__field--checkbox.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_text.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .input__field--checkbox.sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_field_email.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__field--checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .input__field--checkbox.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__field--checkbox.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_checkbox .select-selected::-moz-placeholder, .input__select.on_white > input::-moz-placeholder, .on_white.sf_type_select > input::-moz-placeholder, .salesforce_popup .input__select.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_select > input::-moz-placeholder, .salesforce_popup .input__select.sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_select > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__select > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_select > input::-moz-placeholder, .salesforce_popup .input__select.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_select > input::-moz-placeholder, .salesforce_popup .input__select.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_select > input::-moz-placeholder, .form-block--light .input__select.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_text.sf_type_select > input::-moz-placeholder, .form-block--light .input__select.sf_field_email > input::-moz-placeholder, .form-block--light .sf_field_email.sf_type_select > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__select > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_select > input::-moz-placeholder, .form-block--light .input__select.sf_type_checkbox > input::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_select > input::-moz-placeholder, .form-block--light .input__select.sf_type_textarea > input::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_select > input::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_select > input::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_select > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__select > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_select > input::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_select > input::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_select > input::-moz-placeholder, .input__select.on_white > select::-moz-placeholder, .on_white.sf_type_select > select::-moz-placeholder, .salesforce_popup .input__select.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_select > select::-moz-placeholder, .salesforce_popup .input__select.sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_select > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__select > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_select > select::-moz-placeholder, .salesforce_popup .input__select.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_select > select::-moz-placeholder, .salesforce_popup .input__select.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_select > select::-moz-placeholder, .form-block--light .input__select.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_text.sf_type_select > select::-moz-placeholder, .form-block--light .input__select.sf_field_email > select::-moz-placeholder, .form-block--light .sf_field_email.sf_type_select > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__select > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_select > select::-moz-placeholder, .form-block--light .input__select.sf_type_checkbox > select::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_select > select::-moz-placeholder, .form-block--light .input__select.sf_type_textarea > select::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_select > select::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_select > select::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_select > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__select > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_select > select::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_select > select::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_select > select::-moz-placeholder, .input__select.on_white > textarea::-moz-placeholder, .on_white.sf_type_select > textarea::-moz-placeholder, .salesforce_popup .input__select.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_select > textarea::-moz-placeholder, .salesforce_popup .input__select.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_select > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__select > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_select > textarea::-moz-placeholder, .salesforce_popup .input__select.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_select > textarea::-moz-placeholder, .salesforce_popup .input__select.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_select > textarea::-moz-placeholder, .form-block--light .input__select.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_text.sf_type_select > textarea::-moz-placeholder, .form-block--light .input__select.sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_field_email.sf_type_select > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__select > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_select > textarea::-moz-placeholder, .form-block--light .input__select.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_select > textarea::-moz-placeholder, .form-block--light .input__select.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_select > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_select > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_select > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__select > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_select > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_select > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_select > textarea::-moz-placeholder, .input__select.on_white .select-selected::-moz-placeholder, .on_white.sf_type_select .select-selected::-moz-placeholder, .salesforce_popup .input__select.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_select .select-selected::-moz-placeholder, .salesforce_popup .input__select.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_select .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__select .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_select .select-selected::-moz-placeholder, .salesforce_popup .input__select.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_select .select-selected::-moz-placeholder, .salesforce_popup .input__select.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_textarea.sf_type_select .select-selected::-moz-placeholder, .form-block--light .input__select.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_text.sf_type_select .select-selected::-moz-placeholder, .form-block--light .input__select.sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_field_email.sf_type_select .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__select .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_select .select-selected::-moz-placeholder, .form-block--light .input__select.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_select .select-selected::-moz-placeholder, .form-block--light .input__select.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_textarea.sf_type_select .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_select .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_select .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__select .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_select .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_select .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__select.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea.sf_type_select .select-selected::-moz-placeholder, .input__textarea.on_white > input::-moz-placeholder, .on_white.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_text > input::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .input__textarea.sf_field_email > input::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__textarea > input::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_checkbox > input::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_textarea > input::-moz-placeholder, .salesforce_popup .sf_type_textarea > input::-moz-placeholder, .form-block--light .input__textarea.sf_type_text > input::-moz-placeholder, .form-block--light .sf_type_text.sf_type_textarea > input::-moz-placeholder, .form-block--light .input__textarea.sf_field_email > input::-moz-placeholder, .form-block--light .sf_field_email.sf_type_textarea > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__textarea > input::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea > input::-moz-placeholder, .form-block--light .input__textarea.sf_type_checkbox > input::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_textarea > input::-moz-placeholder, .form-block--light .input__textarea.sf_type_textarea > input::-moz-placeholder, .form-block--light .sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_text > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_field_email > input::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_textarea > input::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea > input::-moz-placeholder, .input__textarea.on_white > select::-moz-placeholder, .on_white.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_text > select::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .input__textarea.sf_field_email > select::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__textarea > select::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_checkbox > select::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_textarea > select::-moz-placeholder, .salesforce_popup .sf_type_textarea > select::-moz-placeholder, .form-block--light .input__textarea.sf_type_text > select::-moz-placeholder, .form-block--light .sf_type_text.sf_type_textarea > select::-moz-placeholder, .form-block--light .input__textarea.sf_field_email > select::-moz-placeholder, .form-block--light .sf_field_email.sf_type_textarea > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__textarea > select::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea > select::-moz-placeholder, .form-block--light .input__textarea.sf_type_checkbox > select::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_textarea > select::-moz-placeholder, .form-block--light .input__textarea.sf_type_textarea > select::-moz-placeholder, .form-block--light .sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_text > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_field_email > select::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_textarea > select::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea > select::-moz-placeholder, .input__textarea.on_white > textarea::-moz-placeholder, .on_white.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_text > textarea::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .input__textarea.sf_field_email > textarea::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_checkbox > textarea::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_textarea > textarea::-moz-placeholder, .salesforce_popup .sf_type_textarea > textarea::-moz-placeholder, .form-block--light .input__textarea.sf_type_text > textarea::-moz-placeholder, .form-block--light .sf_type_text.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .input__textarea.sf_field_email > textarea::-moz-placeholder, .form-block--light .sf_field_email.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__textarea > textarea::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .input__textarea.sf_type_checkbox > textarea::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .input__textarea.sf_type_textarea > textarea::-moz-placeholder, .form-block--light .sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_text > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_field_email > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_textarea > textarea::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea > textarea::-moz-placeholder, .input__textarea.on_white .select-selected::-moz-placeholder, .on_white.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_text .select-selected::-moz-placeholder, .salesforce_popup .sf_type_text.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .input__textarea.sf_field_email .select-selected::-moz-placeholder, .salesforce_popup .sf_field_email.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.input__textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_radio fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_checkbox .select-selected::-moz-placeholder, .salesforce_popup .sf_type_checkbox.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .input__textarea.sf_type_textarea .select-selected::-moz-placeholder, .salesforce_popup .sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .input__textarea.sf_type_text .select-selected::-moz-placeholder, .form-block--light .sf_type_text.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .input__textarea.sf_field_email .select-selected::-moz-placeholder, .form-block--light .sf_field_email.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.input__textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_radio fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .input__textarea.sf_type_checkbox .select-selected::-moz-placeholder, .form-block--light .sf_type_checkbox.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .input__textarea.sf_type_textarea .select-selected::-moz-placeholder, .form-block--light .sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-selected::-moz-placeholder, .block__background--light .form-block--dark .sf_type_textarea .select-selected::-moz-placeholder{
   color: rgba(8, 19, 40, 0.5);
@@ -4803,7 +4717,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea .select-selected:focus,
   .form-block--light .sf_type_textarea .select-selected:focus, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-selected:focus, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-selected:focus, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-selected:focus, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-selected:focus, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-selected:focus, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-selected:focus, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-selected:focus, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-selected:focus, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-selected:focus, .block__background--light .form-block--dark .sf_type_textarea .select-selected:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .input__field.on_white .select-selected, .on_white.sf_type_text .select-selected, .on_white.sf_field_email .select-selected, .salesforce_popup .input__field.sf_type_text .select-selected, .salesforce_popup .sf_type_text .select-selected, .salesforce_popup .sf_type_text.sf_field_email .select-selected, .salesforce_popup .input__field.sf_field_email .select-selected, .salesforce_popup .sf_field_email.sf_type_text .select-selected, .salesforce_popup .sf_field_email .select-selected, .salesforce_popup .sf_type_radio fieldset > div.input__field .select-selected, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text .select-selected, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email .select-selected, .salesforce_popup .input__field.sf_type_checkbox .select-selected, .salesforce_popup .sf_type_checkbox.sf_type_text .select-selected, .salesforce_popup .sf_type_checkbox.sf_field_email .select-selected, .salesforce_popup .input__field.sf_type_textarea .select-selected, .salesforce_popup .sf_type_textarea.sf_type_text .select-selected, .salesforce_popup .sf_type_textarea.sf_field_email .select-selected,
   .form-block--light .input__field.sf_type_text .select-selected,
@@ -4928,7 +4842,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea .select-selected.select-selected--has-value,
   .form-block--light .sf_type_textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-selected.select-selected--has-value, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-selected.select-selected--has-value, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-selected.select-selected--has-value, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-selected.select-selected--has-value, .block__background--light .form-block--dark .sf_type_textarea .select-selected.select-selected--has-value{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .input__field.on_white .select-selected:after, .on_white.sf_type_text .select-selected:after, .on_white.sf_field_email .select-selected:after, .salesforce_popup .input__field.sf_type_text .select-selected:after, .salesforce_popup .sf_type_text .select-selected:after, .salesforce_popup .sf_type_text.sf_field_email .select-selected:after, .salesforce_popup .input__field.sf_field_email .select-selected:after, .salesforce_popup .sf_field_email.sf_type_text .select-selected:after, .salesforce_popup .sf_field_email .select-selected:after, .salesforce_popup .sf_type_radio fieldset > div.input__field .select-selected:after, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text .select-selected:after, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email .select-selected:after, .salesforce_popup .input__field.sf_type_checkbox .select-selected:after, .salesforce_popup .sf_type_checkbox.sf_type_text .select-selected:after, .salesforce_popup .sf_type_checkbox.sf_field_email .select-selected:after, .salesforce_popup .input__field.sf_type_textarea .select-selected:after, .salesforce_popup .sf_type_textarea.sf_type_text .select-selected:after, .salesforce_popup .sf_type_textarea.sf_field_email .select-selected:after,
   .form-block--light .input__field.sf_type_text .select-selected:after,
@@ -5053,7 +4967,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea .select-selected.select-arrow-active,
   .form-block--light .sf_type_textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-selected.select-arrow-active, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-selected.select-arrow-active, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-selected.select-arrow-active, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-selected.select-arrow-active, .block__background--light .form-block--dark .sf_type_textarea .select-selected.select-arrow-active{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .input__field.on_white .select-selected.select-arrow-active + .select-items, .on_white.sf_type_text .select-selected.select-arrow-active + .select-items, .on_white.sf_field_email .select-selected.select-arrow-active + .select-items, .salesforce_popup .input__field.sf_type_text .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_text .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_text.sf_field_email .select-selected.select-arrow-active + .select-items, .salesforce_popup .input__field.sf_field_email .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_field_email.sf_type_text .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_field_email .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_radio fieldset > div.input__field .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email .select-selected.select-arrow-active + .select-items, .salesforce_popup .input__field.sf_type_checkbox .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_checkbox.sf_type_text .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_checkbox.sf_field_email .select-selected.select-arrow-active + .select-items, .salesforce_popup .input__field.sf_type_textarea .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_textarea.sf_type_text .select-selected.select-arrow-active + .select-items, .salesforce_popup .sf_type_textarea.sf_field_email .select-selected.select-arrow-active + .select-items,
   .form-block--light .input__field.sf_type_text .select-selected.select-arrow-active + .select-items,
@@ -5116,7 +5030,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea .select-selected.select-arrow-active + .select-items,
   .form-block--light .sf_type_textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-selected.select-arrow-active + .select-items, .block__background--light .form-block--dark .sf_type_textarea .select-selected.select-arrow-active + .select-items{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .input__field.on_white .select-selected.select-arrow-active + .select-items > div, .on_white.sf_type_text .select-selected.select-arrow-active + .select-items > div, .on_white.sf_field_email .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .input__field.sf_type_text .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_text .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_text.sf_field_email .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .input__field.sf_field_email .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_field_email.sf_type_text .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_field_email .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_radio fieldset > div.input__field .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_radio fieldset > div.sf_type_text .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_radio fieldset > div.sf_field_email .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .input__field.sf_type_checkbox .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_checkbox.sf_type_text .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_checkbox.sf_field_email .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .input__field.sf_type_textarea .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_textarea.sf_type_text .select-selected.select-arrow-active + .select-items > div, .salesforce_popup .sf_type_textarea.sf_field_email .select-selected.select-arrow-active + .select-items > div,
   .form-block--light .input__field.sf_type_text .select-selected.select-arrow-active + .select-items > div,
@@ -5564,7 +5478,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea .select-items,
   .form-block--light .sf_type_textarea .select-items, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-items, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-items, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-items, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-items, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-items, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-items, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-items, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-items, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-items, .block__background--light .form-block--dark .sf_type_textarea .select-items{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
@@ -5692,7 +5606,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__textarea.sf_type_textarea .select-items > div:hover,
   .form-block--light .sf_type_textarea .select-items > div:hover, .block__background--light .form-block--dark .input__textarea.sf_type_text .select-items > div:hover, .block__background--light .form-block--dark .sf_type_text.sf_type_textarea .select-items > div:hover, .block__background--light .form-block--dark .input__textarea.sf_field_email .select-items > div:hover, .block__background--light .form-block--dark .sf_field_email.sf_type_textarea .select-items > div:hover, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__textarea .select-items > div:hover, .block__background--light .form-block--dark .sf_type_radio fieldset > div.sf_type_textarea .select-items > div:hover, .block__background--light .form-block--dark .input__textarea.sf_type_checkbox .select-items > div:hover, .block__background--light .form-block--dark .sf_type_checkbox.sf_type_textarea .select-items > div:hover, .block__background--light .form-block--dark .input__textarea.sf_type_textarea .select-items > div:hover, .block__background--light .form-block--dark .sf_type_textarea .select-items > div:hover{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .input__field.error > input, .error.sf_type_text > input, .error.sf_field_email > input, .input__field.error > select, .error.sf_type_text > select, .error.sf_field_email > select, .input__field.error > textarea, .error.sf_type_text > textarea, .error.sf_field_email > textarea, .input__field.error .select-selected, .error.sf_type_text .select-selected, .error.sf_field_email .select-selected, .input__field.error .select-items, .error.sf_type_text .select-items, .error.sf_field_email .select-items, .input__field--radio.error > input, .sf_type_radio fieldset > div.error > input, .input__field--radio.error > select, .sf_type_radio fieldset > div.error > select, .input__field--radio.error > textarea, .sf_type_radio fieldset > div.error > textarea, .input__field--radio.error .select-selected, .sf_type_radio fieldset > div.error .select-selected, .input__field--radio.error .select-items, .sf_type_radio fieldset > div.error .select-items, .input__field--checkbox.error > input, .error.sf_type_checkbox > input, .input__field--checkbox.error > select, .error.sf_type_checkbox > select, .input__field--checkbox.error > textarea, .error.sf_type_checkbox > textarea, .input__field--checkbox.error .select-selected, .error.sf_type_checkbox .select-selected, .input__field--checkbox.error .select-items, .error.sf_type_checkbox .select-items, .input__select.error > input, .error.sf_type_select > input, .input__select.error > select, .error.sf_type_select > select, .input__select.error > textarea, .error.sf_type_select > textarea, .input__select.error .select-selected, .error.sf_type_select .select-selected, .input__select.error .select-items, .error.sf_type_select .select-items, .input__textarea.error > input, .error.sf_type_textarea > input, .input__textarea.error > select, .error.sf_type_textarea > select, .input__textarea.error > textarea, .error.sf_type_textarea > textarea, .input__textarea.error .select-selected, .error.sf_type_textarea .select-selected, .input__textarea.error .select-items, .error.sf_type_textarea .select-items {
     border-color: var(--color-warning) !important;
@@ -5731,7 +5645,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
           appearance: none;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
   background-color: transparent;
   padding: 0px;
 }
@@ -5739,7 +5653,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
-  background-color: rgb(1 149 232 / var(--tw-bg-opacity, 1));
+  background-color: rgb(4 160 247 / var(--tw-bg-opacity, 1));
     background: var(--color-edge) content-box;
 }
 .input__field--radio.on_white > input, .sf_type_radio fieldset > div.on_white > input, .salesforce_popup .input__field--radio.sf_type_text > input, .sf_type_radio .salesforce_popup fieldset > div.sf_type_text > input, .salesforce_popup .input__field--radio.sf_field_email > input, .sf_type_radio .salesforce_popup fieldset > div.sf_field_email > input, .salesforce_popup .sf_type_radio fieldset > div > input, .salesforce_popup .input__field--radio.sf_type_textarea > input, .sf_type_radio .salesforce_popup fieldset > div.sf_type_textarea > input,
@@ -5785,7 +5699,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .sf_type_checkbox > label,
   .form-block--light .input__field--checkbox.sf_type_textarea > label, .block__background--light .form-block--dark .input__field--checkbox.sf_type_text > label, .block__background--light .form-block--dark .input__field--checkbox.sf_field_email > label, .block__background--light .form-block--dark .sf_type_checkbox > label, .block__background--light .form-block--dark .input__field--checkbox.sf_type_textarea > label{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .input__field--radio > input[type=radio], .sf_type_radio fieldset > div > input[type=radio]{
   padding: 3px;
@@ -5818,7 +5732,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .input__field--radio.sf_type_textarea > input[type=radio]:checked,
   .sf_type_radio .form-block--light fieldset > div.sf_type_textarea > input[type=radio]:checked, .block__background--light .form-block--dark .input__field--radio.sf_type_text > input[type=radio]:checked, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_text > input[type=radio]:checked, .block__background--light .form-block--dark .input__field--radio.sf_field_email > input[type=radio]:checked, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_field_email > input[type=radio]:checked, .block__background--light .form-block--dark .sf_type_radio fieldset > div > input[type=radio]:checked, .block__background--light .form-block--dark .input__field--radio.sf_type_checkbox > input[type=radio]:checked, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_checkbox > input[type=radio]:checked, .block__background--light .form-block--dark .input__field--radio.sf_type_textarea > input[type=radio]:checked, .sf_type_radio .block__background--light .form-block--dark fieldset > div.sf_type_textarea > input[type=radio]:checked{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(1 149 232 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(4 160 247 / var(--tw-bg-opacity, 1)) !important;
 }
 .input__field--checkbox, .sf_type_checkbox{
   display: flex;
@@ -5864,7 +5778,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   .form-block--light .sf_type_checkbox > input:checked::after,
   .form-block--light .input__field--checkbox.sf_type_textarea > input:checked::after, .block__background--light .form-block--dark .input__field--checkbox.sf_type_text > input:checked::after, .block__background--light .form-block--dark .input__field--checkbox.sf_field_email > input:checked::after, .block__background--light .form-block--dark .sf_type_radio fieldset > div.input__field--checkbox > input:checked::after, .block__background--light .form-block--dark .sf_type_checkbox > input:checked::after, .block__background--light .form-block--dark .input__field--checkbox.sf_type_textarea > input:checked::after{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .input__field--checkbox.error span, .error.sf_type_checkbox span{
   width: 100%;
@@ -5901,7 +5815,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
   border-bottom-right-radius: 0px;
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .input__select .select-selected.select-arrow-active:after, .sf_type_select .select-selected.select-arrow-active:after{
   right: 16px;
@@ -5910,7 +5824,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 }
 .input__select .select-selected.select-arrow-active + .select-items, .sf_type_select .select-selected.select-arrow-active + .select-items{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .input__select .select-selected.select-arrow-active + .select-items > div, .sf_type_select .select-selected.select-arrow-active + .select-items > div{
   --tw-border-opacity: 1;
@@ -5927,9 +5841,9 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
     border-width: 2px;
     border-top-width: 0px;
     --tw-border-opacity: 1;
-    border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+    border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
-    background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+    background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-top: 9px;
@@ -6009,9 +5923,9 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
     border-width: 2px;
     border-top-width: 0px;
     --tw-border-opacity: 1;
-    border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+    border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
-    background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+    background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-top: 9px;
@@ -6059,7 +5973,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 }
 .select-items.select-items--light{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
@@ -6072,7 +5986,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 }
 .select-items.select-items--light > div:hover{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .select-items.select-items--open-up-top{
   border-top-left-radius: 25px;
@@ -6098,7 +6012,7 @@ body:not(.wp-admin) button.btn.button--play:hover, body:not(.wp-admin) .btn.butt
 }
 .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text h1, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text h2, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text h3, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text h4, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text h5, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text h6, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text p, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text li, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content h1, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content h2, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content h3, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content h4, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content h5, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content h6, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content p, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content li{
   --tw-text-opacity: 1 !important;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1)) !important;
 }
 .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text p, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text li, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_popup__wrapper__left__text a, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content p, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content li, .salesforce_popup .salesforce_popup__wrapper__left .salesforce_submit_content a{
   font-size: 20px !important;
@@ -6353,7 +6267,7 @@ form[id^=sf_form_salesforce_w2l_lead_] > .w2lsubmit .w2linput svg{
 }
 form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone:focus-within .iti__selected-flag, form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone:focus-within div.iti{
   --tw-border-opacity: 1 !important;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1)) !important;
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1)) !important;
 }
 form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone.error .iti__flag-container > .iti__selected-flag{
   --tw-border-opacity: 1;
@@ -6382,7 +6296,7 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti {
     --tw-border-opacity: 1;
     border-color: rgb(82 111 166 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
-    background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+    background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
     font-size: 18px;
     font-weight: 300;
     line-height: 1.2;
@@ -6397,7 +6311,7 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti::placeholder{
 }
 form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -6441,9 +6355,9 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__flag-cont
   border-width: 2px;
   border-top-width: 0px;
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1));
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1));
   padding-left: 0px;
   font-size: 14px;
 }
@@ -6586,7 +6500,7 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone.error > div.iti {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 
 .salesforce_popup form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti::-moz-placeholder, .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti::-moz-placeholder, .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti::-moz-placeholder{
@@ -6601,7 +6515,7 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone.error > div.iti {
 .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti input[name=phone], .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti input[name=phone]{
   background-color: transparent;
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .salesforce_popup form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti input[name=phone]::-moz-placeholder, .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti input[name=phone]::-moz-placeholder, .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti input[name=phone]::-moz-placeholder{
   color: rgba(8, 19, 40, 0.5);
@@ -6626,7 +6540,7 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone.error > div.iti {
 .salesforce_popup form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li:hover,
 .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li:hover, .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li:hover{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 .salesforce_popup form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li > .iti__dial-code, .salesforce_popup form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li > .iti__country-name,
 .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li > .iti__dial-code,
@@ -6637,7 +6551,7 @@ form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone.error > div.iti {
 .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__active > .iti__dial-code,
 .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__active > .iti__country-name, .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__active > .iti__dial-code, .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__active > .iti__country-name{
   --tw-text-opacity: 1 !important;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1)) !important;
 }
 .salesforce_popup form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__divider,
 .form-block--light form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__divider, .block__background--light .form-block--dark form[id^=sf_form_salesforce_w2l_lead_] .sf_field_phone > div.iti .iti__country-list li.iti__divider{
@@ -6671,7 +6585,7 @@ select.salesforce_popup__tabs::-ms-expand{
 
 .iti__selected-dial-code--autofilled{
   --tw-text-opacity: 1 !important;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1)) !important;
 }
 
 .iti__arrow--autofilled:after {
@@ -6683,7 +6597,7 @@ select.salesforce_popup__tabs::-ms-expand{
   letter-spacing: -1px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-family: "Big Shoulders Display", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     line-height: .95;
     font-size: 32px;
     font-weight: 700;
@@ -6720,7 +6634,7 @@ footer .statement__first{
     letter-spacing: -1px;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-family: "Big Shoulders Display", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     line-height: .95;
     font-size: 40px;
     font-weight: 700;
@@ -7480,7 +7394,7 @@ body.block-editor-page .components-dropdown-menu__menu-item{
 
 .editor-visual-editor .editor-styles-wrapper{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(8 19 40 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(7 18 38 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -7509,7 +7423,7 @@ p.description{
 .block-editor-block-variation-picker__variations{
   font-size: 12px !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1)) !important;
 }
 
 body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .acf-block-fields.acf-fields .acf-notice, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .acf-block-fields.acf-fields .acf-notice > p{
@@ -7517,7 +7431,7 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
 }
 body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .acf-block-fields.acf-fields .acf-field .acf-notice.-warning, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .acf-block-fields.acf-fields .acf-field .acf-notice.-warning p{
   --tw-text-opacity: 1;
-  color: rgb(8 19 40 / var(--tw-text-opacity, 1));
+  color: rgb(7 18 38 / var(--tw-text-opacity, 1));
 }
 body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .acf-block-fields.acf-fields .acf-field .acf-notice.-error, body.block-editor-page .interface-interface-skeleton__content > .editor-visual-editor .acf-block-fields.acf-fields .acf-field .acf-notice.-error p{
   --tw-text-opacity: 1;
@@ -7546,25 +7460,28 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
 }
-.last-of-type\:tw-mb-0:last-of-type{
-  margin-bottom: 0px;
-}
-.last-of-type\:tw-mb-2\.5:last-of-type{
-  margin-bottom: 0.625rem;
+.hover\:tw--translate-y-0\.5:hover{
+  --tw-translate-y: -0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:tw--translate-y-1:hover{
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.hover\:tw--translate-y-0\.5:hover{
-  --tw-translate-y: -0.125rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.hover\:tw-border-\[\#25D366\]:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 211 102 / var(--tw-border-opacity, 1));
 }
-.hover\:tw-gap-3:hover{
-  gap: 0.75rem;
+.hover\:tw-border-edge:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .hover\:tw-border-edge\/50:hover{
-  border-color: rgb(1 149 232 / 0.5);
+  border-color: rgb(4 160 247 / 0.5);
+}
+.hover\:tw-bg-\[\#25D366\]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 211 102 / var(--tw-bg-opacity, 1));
 }
 .hover\:tw-bg-blue-01:hover{
   --tw-bg-opacity: 1;
@@ -7573,6 +7490,13 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
 .hover\:tw-bg-blue-04:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(0 140 220 / var(--tw-bg-opacity, 1));
+}
+.hover\:tw-bg-edge:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 160 247 / var(--tw-bg-opacity, 1));
+}
+.hover\:tw-bg-edge\/90:hover{
+  background-color: rgb(4 160 247 / 0.9);
 }
 .hover\:tw-bg-green-01:hover{
   --tw-bg-opacity: 1;
@@ -7586,13 +7510,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   --tw-bg-opacity: 1;
   background-color: rgb(0 125 125 / var(--tw-bg-opacity, 1));
 }
-.hover\:tw-bg-edge\/90:hover{
-  background-color: rgb(1 149 232 / 0.9);
-}
-.hover\:\!tw-text-white:hover{
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
-}
 .hover\:tw-text-blue-01:hover{
   --tw-text-opacity: 1;
   color: rgb(0 76 168 / var(--tw-text-opacity, 1));
@@ -7603,19 +7520,11 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
 }
 .hover\:tw-text-edge:hover{
   --tw-text-opacity: 1;
-  color: rgb(1 149 232 / var(--tw-text-opacity, 1));
-}
-.hover\:tw-text-focus:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(4 160 247 / var(--tw-text-opacity, 1));
 }
 .hover\:tw-text-green-01:hover{
   --tw-text-opacity: 1;
   color: rgb(50 170 0 / var(--tw-text-opacity, 1));
-}
-.hover\:tw-text-growth:hover{
-  --tw-text-opacity: 1;
-  color: rgb(68 172 23 / var(--tw-text-opacity, 1));
 }
 .hover\:tw-text-primary:hover{
   --tw-text-opacity: 1;
@@ -7642,12 +7551,12 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .hover\:tw-shadow-edge\/20:hover{
-  --tw-shadow-color: rgb(1 149 232 / 0.2);
+  --tw-shadow-color: rgb(4 160 247 / 0.2);
   --tw-shadow: var(--tw-shadow-colored);
 }
 .focus\:tw-border-edge:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(1 149 232 / var(--tw-border-opacity, 1));
+  border-color: rgb(4 160 247 / var(--tw-border-opacity, 1));
 }
 .focus\:tw-outline-none:focus{
   outline: 2px solid transparent;
@@ -7661,17 +7570,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-.tw-group\/menu:hover .group-hover\/menu\:tw-block{
-  display: block;
-}
-.tw-group:hover .group-hover\:tw-translate-x-1{
-  --tw-translate-x: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.tw-group:hover .group-hover\:tw--translate-x-0\.5{
-  --tw-translate-x: -0.125rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .tw-group:hover .group-hover\:tw--translate-y-0\.5{
   --tw-translate-y: -0.125rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -7680,35 +7578,26 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   --tw-translate-x: 0.125rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.tw-group:hover .group-hover\:tw-translate-x-1{
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .tw-group:hover .group-hover\:tw-scale-105{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.tw-group:hover .group-hover\:tw-border-focus\/30{
-  border-color: rgb(255 255 255 / 0.3);
-}
-.tw-group:hover .group-hover\:tw-bg-focus\/20{
-  background-color: rgb(255 255 255 / 0.2);
-}
-.tw-group\/lang-item:hover .group-hover\/lang-item\:tw-text-edge{
-  --tw-text-opacity: 1;
-  color: rgb(1 149 232 / var(--tw-text-opacity, 1));
-}
-.tw-group\/nav-item:hover .group-hover\/nav-item\:tw-text-sky{
-  --tw-text-opacity: 1;
-  color: rgb(1 149 232 / var(--tw-text-opacity, 1));
-}
 .tw-group:hover .group-hover\:tw-text-edge{
   --tw-text-opacity: 1;
-  color: rgb(1 149 232 / var(--tw-text-opacity, 1));
+  color: rgb(4 160 247 / var(--tw-text-opacity, 1));
 }
 .tw-group:hover .group-hover\:tw-text-focus{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-.tw-group\/lang-item:hover .group-hover\/lang-item\:tw-underline{
-  text-decoration-line: underline;
+.tw-group:hover .group-hover\:tw-text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 @media (min-width: 376px){
   .sm\:tw-mx-0{
@@ -7787,9 +7676,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .sm\:tw-min-h-\[400px\]{
     min-height: 400px;
   }
-  .sm\:tw-grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .sm\:tw-flex-row{
     flex-direction: row;
   }
@@ -7808,10 +7694,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .sm\:tw-px-0{
     padding-left: 0px;
     padding-right: 0px;
-  }
-  .sm\:tw-px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
   .sm\:tw-px-11{
     padding-left: 2.75rem;
@@ -7876,10 +7758,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .sm\:tw-px-8{
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-  .sm\:tw-px-\[60px\]{
-    padding-left: 60px;
-    padding-right: 60px;
   }
   .sm\:tw-py-1\.5{
     padding-top: 0.375rem;
@@ -8038,9 +7916,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .md\:tw-mb-\[20px\]{
     margin-bottom: 20px;
   }
-  .md\:tw-mb-\[25px\]{
-    margin-bottom: 25px;
-  }
   .md\:tw-mr-0{
     margin-right: 0px;
   }
@@ -8074,14 +7949,11 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .md\:tw-h-32{
     height: 8rem;
   }
+  .md\:tw-h-40{
+    height: 10rem;
+  }
   .md\:tw-h-64{
     height: 16rem;
-  }
-  .md\:tw-h-\[238px\]{
-    height: 238px;
-  }
-  .md\:tw-h-\[400px\]{
-    height: 400px;
   }
   .md\:tw-max-h-\[90vh\]{
     max-height: 90vh;
@@ -8092,23 +7964,17 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .md\:tw-min-h-\[251px\]{
     min-height: 251px;
   }
-  .md\:tw-min-h-\[600px\]{
-    min-height: 600px;
-  }
   .md\:tw-min-h-\[760px\]{
     min-height: 760px;
   }
-  .md\:tw-w-1\/2{
-    width: 50%;
+  .md\:tw-w-40{
+    width: 10rem;
   }
   .md\:tw-w-5\/12{
     width: 41.666667%;
   }
   .md\:tw-w-7\/12{
     width: 58.333333%;
-  }
-  .md\:tw-w-\[438px\]{
-    width: 438px;
   }
   .md\:tw-max-w-\[400px\]{
     max-width: 400px;
@@ -8122,9 +7988,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
   .md\:tw-grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .md\:tw-grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .md\:tw-grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -8149,6 +8012,9 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
   .md\:tw-p-10{
     padding: 2.5rem;
+  }
+  .md\:tw-p-12{
+    padding: 3rem;
   }
   .md\:tw-p-16{
     padding: 4rem;
@@ -8228,10 +8094,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
     padding-top: 170px;
     padding-bottom: 170px;
   }
-  .md\:tw-py-\[82px\]{
-    padding-top: 82px;
-    padding-bottom: 82px;
-  }
   .md\:tw-pb-0{
     padding-bottom: 0px;
   }
@@ -8276,9 +8138,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
   .md\:tw-pb-8{
     padding-bottom: 2rem;
-  }
-  .md\:tw-pb-\[170px\]{
-    padding-bottom: 170px;
   }
   .md\:tw-pb-\[98px\]{
     padding-bottom: 98px;
@@ -8331,12 +8190,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .md\:tw-pt-8{
     padding-top: 2rem;
   }
-  .md\:tw-pt-\[200px\]{
-    padding-top: 200px;
-  }
-  .md\:tw-pt-\[80px\]{
-    padding-top: 80px;
-  }
   .md\:tw-text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -8370,20 +8223,8 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
 }
 @media (min-width: 1024px){
-  @media (min-width: 768px){
-    .lg\:md\:tw-px-0{
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-  }
   .lg\:tw-invisible{
     visibility: hidden;
-  }
-  .lg\:tw-absolute{
-    position: absolute;
-  }
-  .lg\:tw-left-\[unset\]{
-    left: unset;
   }
   .lg\:tw-right-\[-60px\]{
     right: -60px;
@@ -8407,10 +8248,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
-  .lg\:tw-mx-auto{
-    margin-left: auto;
-    margin-right: auto;
-  }
   .lg\:tw-mb-0{
     margin-bottom: 0px;
   }
@@ -8425,9 +8262,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
   .lg\:tw-mb-6{
     margin-bottom: 1.5rem;
-  }
-  .lg\:tw-ml-\[-35px\]{
-    margin-left: -35px;
   }
   .lg\:tw-mt-0{
     margin-top: 0px;
@@ -8449,9 +8283,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
   .lg\:tw-block{
     display: block;
-  }
-  .lg\:tw-inline-block{
-    display: inline-block;
   }
   .lg\:tw-flex{
     display: flex;
@@ -8477,9 +8308,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .lg\:tw-h-\[600px\]{
     height: 600px;
   }
-  .lg\:tw-h-full{
-    height: 100%;
-  }
   .lg\:tw-max-h-\[350px\]{
     max-height: 350px;
   }
@@ -8489,8 +8317,11 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .lg\:tw-w-1\/2{
     width: 50%;
   }
-  .lg\:tw-w-\[216px\]{
-    width: 216px;
+  .lg\:tw-w-1\/3{
+    width: 33.333333%;
+  }
+  .lg\:tw-w-2\/3{
+    width: 66.666667%;
   }
   .lg\:tw-max-w-none{
     max-width: none;
@@ -8507,8 +8338,11 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .lg\:tw-flex-row{
     flex-direction: row;
   }
-  .lg\:tw-items-center{
-    align-items: center;
+  .lg\:tw-justify-start{
+    justify-content: flex-start;
+  }
+  .lg\:tw-gap-12{
+    gap: 3rem;
   }
   .lg\:tw-gap-16{
     gap: 4rem;
@@ -8522,10 +8356,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .lg\:tw-overflow-y-auto{
     overflow-y: auto;
   }
-  .lg\:tw-rounded-b-\[20px\]{
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
   .lg\:tw-rounded-bl-none{
     border-bottom-left-radius: 0px;
   }
@@ -8536,12 +8366,11 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
     --tw-border-opacity: 1;
     border-color: rgb(0 76 168 / var(--tw-border-opacity, 1));
   }
-  .lg\:tw-bg-white{
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-  }
   .lg\:tw-p-14{
     padding: 3.5rem;
+  }
+  .lg\:tw-p-16{
+    padding: 4rem;
   }
   .lg\:tw-p-20{
     padding: 5rem;
@@ -8617,24 +8446,9 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .lg\:tw-px-\[25px\]{
-    padding-left: 25px;
-    padding-right: 25px;
-  }
   .lg\:tw-py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-  .lg\:tw-py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-  .lg\:tw-py-\[10px\]{
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .lg\:\!tw-pl-0{
-    padding-left: 0px !important;
   }
   .lg\:tw-pb-0{
     padding-bottom: 0px;
@@ -8683,12 +8497,6 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   }
   .lg\:tw-pl-8{
     padding-left: 2rem;
-  }
-  .lg\:tw-pl-\[114px\]{
-    padding-left: 114px;
-  }
-  .lg\:tw-pr-\[94px\]{
-    padding-right: 94px;
   }
   .lg\:tw-pt-0{
     padding-top: 0px;
@@ -8744,6 +8552,9 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .lg\:tw-pt-\[57px\]{
     padding-top: 57px;
   }
+  .lg\:tw-text-left{
+    text-align: left;
+  }
   .lg\:tw-text-3-1\/2xl{
     font-size: 2rem;
   }
@@ -8761,22 +8572,13 @@ body.block-editor-page .interface-interface-skeleton__content > .editor-visual-e
   .lg\:tw-leading-10{
     line-height: 2.5rem;
   }
-  .lg\:\!tw-text-core{
-    --tw-text-opacity: 1 !important;
-    color: rgb(8 19 40 / var(--tw-text-opacity, 1)) !important;
-  }
-  .lg\:tw-text-black-00{
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-  }
   .lg\:tw-text-gray-02{
     --tw-text-opacity: 1;
     color: rgb(90 104 114 / var(--tw-text-opacity, 1));
   }
-  .lg\:tw-shadow-lg{
-    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  .lg\:container-padding-desktop{
+    padding-left: 80px;
+    padding-right: 80px;
   }
   .lg\:hover\:tw-scale-\[1\.05\]:hover{
     --tw-scale-x: 1.05;

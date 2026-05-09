@@ -1,0 +1,105 @@
+/**
+WooCommerce notices and messages
+ */
+body.single-product {
+	.woocommerce-notices-wrapper {
+		margin: 10px auto 50px;
+		max-width: 1110px;
+	}
+
+	.woocommerce-message {
+		margin: 10px auto 50px;
+		max-width: 1110px;
+	}
+}
+
+.woocommerce-NoticeGroup,
+.woocommerce-notices-wrapper {
+	background: $gray-300;
+	margin: 0 0 20px;
+
+	.woocommerce-message,
+	ul {
+		padding: 12px 18px;
+	}
+
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+
+	.woocommerce-message,
+	.woocommerce-error,
+	.woocommerce-info {
+		border-top: 3px solid;
+
+		&:not(.woocommerce-message) {
+			padding: 12px 18px;
+		}
+	}
+
+	.woocommerce-message,
+	.woocommerce-info {
+		border-color: $info;
+	}
+
+	.woocommerce-error {
+		border-color: $danger;
+	}
+}
+
+/**
+woocommerce-message is a separate wrapper
+ */
+.woocommerce-Message {
+	background: $gray-300;
+	margin: 0 0 20px;
+	padding: 12px 18px;
+	border-top: 3px solid;
+	color: $text-muted;
+
+	&.woocommerce-info {
+		border-color: $info;
+	}
+}
+
+/**
+Buttons inside notices
+ */
+.woocommerce-Message,
+.woocommerce-NoticeGroup,
+.woocommerce-notices-wrapper {
+	.woocommerce-Button,
+	.button {
+		float: right;
+		padding: 4px 20px;
+		font-size: 13px;
+		position: relative;
+		top: -4px;
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

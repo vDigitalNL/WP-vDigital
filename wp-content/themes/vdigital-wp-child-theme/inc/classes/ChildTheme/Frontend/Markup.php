@@ -39,7 +39,7 @@ final class Markup extends AbstractClass {
 			$softwareApplicationSchema = [
 				'@context'               => 'https://schema.org',
 				'@type'                  => 'SoftwareApplication',
-				'name'                   => 'Dyflexis',
+				'name'                   => 'vdigital',
 				'applicationCategory'    => 'BusinessApplication',
 				'applicationSubCategory' => 'workforce management',
 				'operatingSystem'        => [ 'web', 'iOS', 'Android' ],

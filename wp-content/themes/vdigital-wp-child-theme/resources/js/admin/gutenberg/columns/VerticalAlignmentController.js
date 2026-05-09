@@ -44,7 +44,7 @@ export class VerticalAlignmentController {
   setDefaultColumnAlignment() {
     wp.hooks.addFilter(
       "editor.BlockEdit",
-      "dyflexis/custom-column-alignment",
+      "vdigital/custom-column-alignment",
       wp.compose.createHigherOrderComponent((BlockEdit) => {
         return (props) => {
           if (props.name !== "core/column") {

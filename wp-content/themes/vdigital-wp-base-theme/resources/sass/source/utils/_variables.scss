@@ -1,0 +1,61 @@
+//
+// Base
+//
+
+// Colors
+$body-bg: null !default;
+$text-color: #636b6f !default;
+
+// Roundings
+$enable-rounded: false !default;
+
+
+//
+// Forms
+//
+
+// Buttons
+$btn-active-box-shadow: 0 !default;
+$btn-default-color: $text-color !default;
+$btn-focus-box-shadow: 0 !default;
+$btn-focus-width: 0 !default;
+
+//Inputs
+$input-border: lighten($text-color, 40%) !default;
+$input-border-focus: lighten($text-color, 25%) !default;
+$input-box-shadow: 0 !default;
+$input-color-placeholder: lighten($text-color, 30%) !default;
+$input-focus-box-shadow: 0 !default;
+
+
+//
+// Navigation
+//
+
+//Navbar
+$navbar-default-bg: #fff !default;
+
+//Pagination
+$pagination-focus-box-shadow: 0 !default;
+$pagination-focus-outline: 0 !default;
+
+
+//
+// Text
+//
+
+// Font sizes
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$html-font-size: 14px !default;
+$line-height-base: 1.6 !default;
+
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.8 !default;
+$h3-font-size: $font-size-base * 1.6 !default;
+$h4-font-size: $font-size-base * 1.4 !default;
+$h5-font-size: $font-size-base * 1.2 !default;
+
+// Typography
+$headings-font-weight: 700 !default;
+$subheadings-font-weight: 600 !default;
+$font-family-sans-serif: Montserrat, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;

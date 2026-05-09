@@ -1,7 +1,7 @@
 function salesforceFormFilled() {
   const urlParams = new URLSearchParams(window.location.search);
-  const salesforceSubmit = urlParams.get("dyflexis_submit");
-  const salesforcePopup = urlParams.get("dyflexis_popup");
+  const salesforceSubmit = urlParams.get("vdigital_submit");
+  const salesforcePopup = urlParams.get("vdigital_popup");
 
   return salesforceSubmit === "true" && salesforcePopup === "true";
 }

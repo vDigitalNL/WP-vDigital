@@ -15,7 +15,7 @@ export class ColumnVariationsManager {
 
     wp.hooks.addFilter(
       "blocks.registerBlockType",
-      "dyflexis/columns-variations",
+      "vdigital/columns-variations",
       (settings, name) => {
         if (name === "core/columns") {
           setTimeout(() => {

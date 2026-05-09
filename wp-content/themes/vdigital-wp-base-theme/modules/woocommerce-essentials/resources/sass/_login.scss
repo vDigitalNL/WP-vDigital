@@ -1,0 +1,67 @@
+/**
+Login
+ */
+.navbar-login {
+	position: relative;
+	min-width: 50px;
+	margin-left: 15px;
+
+	a.navbar-login__icon {
+		position: relative;
+		text-align: center;
+		display: block;
+
+		.navbar-login__icon__icon {
+			margin: 0 auto;
+		}
+
+		span {
+			font-size: 13px;
+			display: block;
+			text-align: center;
+			color: $body-color;
+			font-weight: bold;
+		}
+	}
+}
+
+body.woocommerce-account:not(.logged-in) {
+	.woocommerce {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+form.woocommerce-form.woocommerce-form-login.login,
+form.woocommerce-ResetPassword.lost_reset_password {
+	.form-row {
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

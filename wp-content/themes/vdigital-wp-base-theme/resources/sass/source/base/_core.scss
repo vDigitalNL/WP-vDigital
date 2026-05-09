@@ -1,0 +1,22 @@
+@include media-breakpoint-up(xs) {
+	html {
+		color: $text-color;
+		font-size: $html-font-size;
+		height: 100%;
+		overflow-x: hidden;
+		//width: calc(100% + (100vw - 100%));
+	}
+
+	body {
+		min-height: 100%;
+		position: relative;
+	}
+}
+
+/**
+Disable W3C & Bootstrap standard styles for the abbr tag
+ */
+abbr[title].required {
+	border-bottom: none;
+	text-decoration: none;
+}

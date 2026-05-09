@@ -1,0 +1,758 @@
+<?php
+
+	namespace Theme\BaseTheme;
+
+	use Exception;
+	use LessParser;
+	use WW_Theme;
+
+	/**
+	 * Class Assets
+	 *
+	 * @package Theme\BaseTheme
+	 */
+	final class Assets {
+
+		/**
+		 * Include theme css and js files
+		 */
+		public static function _init() {
+			if ( 'yes' == WW_Theme::config( 'combine_css' ) ) {
+				add_filter( 'print_styles_array', [BaseTheme\Assets::class, 'combine_css_files'], 999 );
+			}
+
+			if ( 'yes' == WW_Theme::config( 'combine_js' ) ) {
+				add_filter( 'print_scripts_array', [BaseTheme\Assets::class, 'combine_js_files'], 999 );
+			}
+
+			add_action( 'tf_save_admin_ww-simple-devs-theme-admin', [BaseTheme\Assets::class, 'save_theme_colors_to_less'], 999, 3 );
+
+			add_action( 'wp_enqueue_scripts', [BaseTheme\Assets::class, 'enqueueScripts'], 9 );
+		}
+
+		public static function combine_css_files( $to_do ) {
+			global $pagenow, $wp_styles;
+
+			$page_now = explode( '/', $pagenow );
+
+			if ( apply_filters( 'ww_theme_combine_styles', true, $pagenow ) && ! is_blog_admin() && ! in_array( array_pop( $page_now ), array(
+					'wp-login.php',
+					'wp-signup.php'
+				) )
+			) {
+				$inline_style   = array();
+				$excluded_files = array( 'admin-bar', 'dashicons' );
+				$style_files    = array();
+				$base_dir       = rtrim( ABSPATH, '/\\' ) . DIRECTORY_SEPARATOR;
+				$base_url       = parse_url( $wp_styles->base_url, PHP_URL_HOST );
+
+				if ( ! empty( $base_url ) && ! empty( $to_do ) && is_array( $to_do ) ) {
+					foreach ( $to_do as $handle_key => $handle ) {
+						if ( array_key_exists( $handle, $wp_styles->registered ) && ! in_array( $handle, $excluded_files ) && apply_filters( 'ww_theme_combine_styles_do_handle', true, $handle ) ) {
+							/**
+							 * @var \_WP_Dependency $obj
+							 */
+							$obj = $wp_styles->registered[ $handle ];
+
+							if ( $wp_styles->do_concat || empty( $obj->src ) || ( isset( $obj->args ) && $obj->args != 'all' ) || isset( $obj->extra['alt'] ) || ( 'rtl' === $wp_styles->text_direction && isset( $obj->extra['rtl'] ) && $obj->extra['rtl'] ) || ( isset( $obj->extra['conditional'] ) && $obj->extra['conditional'] ) ) {
+								continue;
+							}
+
+							$src = parse_url( $obj->src );
+
+							if ( ! empty( $src['host'] ) && $base_url != $src['host'] ) {
+								continue;
+							}
+
+							$src = ltrim( str_replace( array( '/', '\\' ), DIRECTORY_SEPARATOR, ( ! empty( $src['path'] ) ? $src['path'] : $obj->src ) ), DIRECTORY_SEPARATOR );
+
+							if ( ! file_exists( $base_dir . $src ) || ! is_readable( $base_dir . $src ) ) {
+								continue;
+							}
+
+							$style_files[ $handle ] = $src;
+
+							$handle_inline = $wp_styles->print_inline_style( $handle, false );
+
+							if ( ! empty( $handle_inline ) ) {
+								$inline_style[] = $handle_inline;
+							}
+
+							unset( $to_do[ $handle_key ] );
+							wp_deregister_style( $handle );
+						}
+					}
+				}
+
+				if ( ! empty( $style_files ) ) {
+					$style_files_hash = sha1( implode( '|', array_keys( $style_files ) ) );
+					$target_file_dir  = WP_BASE_THEME_DIR_ASSETS . 'css' . DIRECTORY_SEPARATOR;
+					$target_file      = 'style-combined-' . $style_files_hash . '.css';
+					$log_file_name    = $target_file_dir . 'style-combined-' . $style_files_hash . '.log';
+					$log_file         = static::read_log_file( $log_file_name );
+					$stylesheets      = array();
+					$to_process       = array();
+
+					foreach ( $style_files as $file ) {
+						if ( ! in_array( $file, $to_process ) ) {
+							$stylesheets[] = $file;
+
+							if ( ! array_key_exists( $file, $log_file ) || filemtime( $base_dir . $file ) != $log_file[ $file ][1] ) {
+								$to_process[] = $file;
+
+								if ( array_key_exists( $file, $log_file ) ) {
+									$log_file[ $file ][1] = filemtime( $base_dir . $file );
+								} else {
+									$log_file[ $file ] = array( $file, filemtime( $base_dir . $file ) );
+								}
+							}
+						}
+					}
+
+					/**
+					 * @hook ww_theme_combine_style_force_parsing_files
+					 *
+					 * @param bool
+					 */
+					if ( ! empty( $to_process ) || ! file_exists( $target_file_dir . $target_file ) || (bool) apply_filters( 'ww_theme_combine_style_force_parsing_files', false ) ) {
+						$css_min = new CSSmin();
+
+						foreach ( $stylesheets as & $stylesheet ) {
+							$style = file_get_contents( $base_dir . $stylesheet );
+
+							/**
+							 * Fix for missing quotes within filter-progid
+							 */
+							$end_pos = 0;
+
+							while ( stripos( $style, 'filter: progid', $end_pos ) !== false || stripos( $style, 'filter:progid', $end_pos ) !== false ) {
+								$pos            = stripos( $style, 'filter: progid', $end_pos );
+								$pos            = $pos === false ? (int) stripos( $style, 'filter:progid', $end_pos ) + 7 : $pos + 8;
+								$end_pos        = (int) strpos( $style, ')', $pos ) + 1;
+								$filter_content = substr( $style, $pos, $end_pos - $pos );
+								$style          = substr( $style, 0, $pos ) . '"' . $filter_content . '"' . substr( $style, $end_pos );
+							}
+
+							/**
+							 * Fix for "\0" occurrences within stylesheets
+							 */
+							$style = str_replace( array( '\0}', '\0 }' ), '}', $style );
+
+							/**
+							 * Convert relative urls in this stylesheet to the
+							 */
+
+							$stylesheet_folder = explode( '/', $stylesheet );
+							array_pop( $stylesheet_folder );
+							$stylesheet_folder = '/' . trim( implode( '/', $stylesheet_folder ), '/' ) . '/';
+							$end_pos           = 0;
+
+							while ( stripos( $style, 'url(', $end_pos ) !== false ) {
+								$pos     = stripos( $style, 'url(', $end_pos ) + 4;
+								$end_pos = (int) strpos( $style, ')', $pos );
+
+								$filter_content = trim( substr( $style, $pos, $end_pos - $pos ), "\t '\"" );
+								$content_url    = parse_url( $filter_content );
+
+								if ( $content_url !== false && empty( $content_url['scheme'] ) && empty( $content_url['host'] ) && ! empty( $content_url['path'] ) && $content_url['path'][0] != '/' ) {
+									$filter_content = $stylesheet_folder . http_build_url( $content_url );
+								}
+
+								$style = substr( $style, 0, $pos ) . '\'' . $filter_content . '\'' . substr( $style, $end_pos );
+							}
+
+							$stylesheet = $style;
+
+							/**
+							 * Minify the stylesheet content
+							 */
+							$style = $css_min->run( $style );
+
+							if ( ! empty( $style ) ) {
+								$stylesheet = $style;
+							}
+
+							unset( $stylesheet );
+						}
+
+						$stylesheets = implode( "\n", $stylesheets );
+
+						/**
+						 * @hook ww_theme_combine_style_before_saving_content
+						 *
+						 * @param string
+						 */
+						$stylesheets = apply_filters( 'ww_theme_combine_style_before_saving_content', $stylesheets );
+
+						if ( ! file_exists( $target_file_dir ) || ! is_dir( $target_file_dir ) ) {
+							@mkdir( $target_file_dir, 0775, true );
+						}
+
+						if ( file_put_contents( $target_file_dir . $target_file, $stylesheets ) !== false ) {
+							@chmod( $target_file_dir . $target_file, 0775 );
+						}
+
+						static::write_log_file( $log_file_name, $log_file );
+
+						Backend_Hooks::flushAll();
+					}
+
+					if ( file_exists( $target_file_dir . $target_file ) && is_readable( $target_file_dir . $target_file ) ) {
+						$handle = strstr( $target_file, '.', true );
+						wp_enqueue_style( $handle, WW_Theme::themeRootUri() . '/assets/css/' . $target_file, array(), filemtime( $target_file_dir . $target_file ) );
+
+						if ( ! empty( $inline_style ) ) {
+							wp_add_inline_style( $handle, implode( $inline_style ) );
+						}
+
+						$to_do[] = $handle;
+					}
+				}
+			}
+
+			return $to_do;
+		}
+
+		/**
+		 * @param \TitanFrameworkAdminPage $titan_framework_admin_page
+		 * @param $activeTab
+		 * @param $options
+		 *
+		 * @return bool
+		 */
+		public static function save_theme_colors_to_less( $titan_framework_admin_page, $activeTab, $options ) {
+			if ( class_exists( '\TitanFramework' ) ) {
+				$less_content    = [];
+				$target_file_dir = WP_BASE_THEME_DIR_ASSETS . '_less' . DIRECTORY_SEPARATOR . '01-settings' . DIRECTORY_SEPARATOR;
+				$target_file     = '00-settings.dynamic.less';
+
+				foreach ( $titan_framework_admin_page->tabs as $tab ) {
+					$less_content[] = '/* Tab ' . $tab->settings['name'] . ' */';
+
+					/**
+					 * @var \TitanFrameworkAdminTab $tab
+					 */
+					foreach ( $tab->options as $option ) {
+						/**
+						 * @var \TitanFrameworkOptionSave $option
+						 */
+						if ( ! empty( $option->settings ) && ! empty( $option->settings['id'] ) && ! empty( $option->settings['type'] ) ) {
+							$less_key   = str_replace( ' ', '', ucwords( str_replace( [ '_', '-' ], ' ', $option->settings['id'] ) ) );
+							$less_value = false;
+
+							switch ( ! empty( $option->settings['less_type'] ) ? $option->settings['less_type'] : $option->settings['type'] ) {
+								case 'color' :
+									$less_key   = 'Color' . $less_key;
+									$less_value = ! empty( $option->getValue() ) ? $option->getValue() : 'transparent';
+									break;
+
+								case 'height':
+									$less_key   = 'Height' . $less_key;
+									$less_value = ( (float) $option->getValue() ) . 'px';
+									break;
+							}
+
+							if ( $less_value !== false ) {
+								$less_content[ $less_key ] = $less_value;
+							}
+						}
+
+						if ( ! empty( $option->options ) ) {
+							foreach ( $option->options as $group_option ) {
+								/**
+								 * @var \TitanFrameworkOptionSave $group_option
+								 */
+								if ( ! empty( $group_option->settings ) && ! empty( $group_option->settings['id'] ) && ! empty( $group_option->settings['type'] ) ) {
+									$less_key   = str_replace( ' ', '', ucwords( str_replace( [ '_', '-' ], ' ', $group_option->settings['id'] ) ) );
+									$less_value = false;
+
+									switch ( $group_option->settings['type'] ) {
+										case 'color' :
+											$less_key   = 'Color' . $less_key;
+											$less_value = ! empty( $group_option->getValue() ) ? $group_option->getValue() : 'transparent';
+											break;
+									}
+
+									if ( $less_value !== false ) {
+										$less_content[ $less_key ] = $less_value;
+									}
+								}
+							}
+						}
+					}
+
+					array_push( $less_content, '', '' );
+				}
+
+				if ( file_put_contents( $target_file_dir . $target_file, implode( "\n", array_map( function ( $key, $value ) {
+						return ! is_numeric( $key ) ? '@' . $key . ': ' . $value . ';' : $value;
+					}, array_keys( $less_content ), $less_content ) ) ) !== false
+				) {
+					@chmod( $target_file_dir . $target_file, 0775 );
+
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		public static function combine_js_files( $to_do ) {
+			global $pagenow, $wp_scripts;
+
+			$in_footer = did_action( 'wp_footer' );
+			$page_now  = explode( '/', $pagenow );
+
+			if ( apply_filters( 'ww_theme_combine_scripts', true, $pagenow ) && ! is_blog_admin() && ! in_array( array_pop( $page_now ), array(
+					'wp-login.php',
+					'wp-signup.php'
+				) )
+			) {
+				$excluded_files = array( 'jquery', 'jquery-core', 'admin-bar' );
+				$base_dir       = rtrim( ABSPATH, '/\\' ) . DIRECTORY_SEPARATOR;
+				$base_url       = parse_url( $wp_scripts->base_url, PHP_URL_HOST );
+
+				$script_files  = array();
+				$inline_script = array();
+
+				if ( ! empty( $base_url ) && ! empty( $to_do ) && is_array( $to_do ) ) {
+					foreach ( $to_do as $handle_key => $handle ) {
+						if ( array_key_exists( $handle, $wp_scripts->registered ) && ! in_array( $handle, $excluded_files ) && apply_filters( 'ww_theme_combine_scripts_do_handle', true, $handle ) ) {
+							/**
+							 * @var \_WP_Dependency $obj
+							 */
+							$obj = $wp_scripts->registered[ $handle ];
+
+							if ( $wp_scripts->do_concat || empty( $obj->src ) || ( isset( $obj->extra['conditional'] ) && $obj->extra['conditional'] ) ) {
+								continue;
+							}
+
+							$src = parse_url( $obj->src );
+
+							if ( ! empty( $src['host'] ) && $base_url != $src['host'] ) {
+								continue;
+							}
+
+							$src = ltrim( str_replace( array( '/', '\\' ), DIRECTORY_SEPARATOR, ( ! empty( $src['path'] ) ? $src['path'] : $obj->src ) ), DIRECTORY_SEPARATOR );
+
+							if ( ! file_exists( $base_dir . $src ) || ! is_readable( $base_dir . $src ) ) {
+								continue;
+							}
+
+							if ( $in_footer || ! ( ( isset( $obj->extra['group'] ) && $obj->extra['group'] == 1 ) || ( isset( $obj->args ) && $obj->args == 1 ) ) ) {
+								$script_files[ $handle ] = $src;
+								$handle_inline           = $wp_scripts->print_extra_script( $handle, false );
+
+								if ( ! empty( $handle_inline ) ) {
+									$inline_script[] = $handle_inline;
+								}
+
+								unset( $to_do[ $handle_key ] );
+								wp_deregister_script( $handle );
+							}
+						}
+					}
+				}
+
+				if ( ! empty( $script_files ) ) {
+					$scripts_files_hash = sha1( implode( '|', array_keys( $script_files ) ) );
+					$target_file_dir    = WP_BASE_THEME_DIR_ASSETS . 'js' . DIRECTORY_SEPARATOR;
+					$target_file        = 'scripts-combined-' . $scripts_files_hash . '.js';
+					$log_file_name      = $target_file_dir . 'scripts-combined-' . $scripts_files_hash . '.log';
+					$log_file           = static::read_log_file( $log_file_name );
+					$scripts            = array();
+					$to_process         = array();
+
+					foreach ( $script_files as $file ) {
+						if ( ! in_array( $file, $to_process ) ) {
+							$scripts[] = $file;
+
+							if ( ! array_key_exists( $file, $log_file ) || filemtime( $base_dir . $file ) != $log_file[ $file ][1] ) {
+								$to_process[] = $file;
+
+								if ( array_key_exists( $file, $log_file ) ) {
+									$log_file[ $file ][1] = filemtime( $base_dir . $file );
+								} else {
+									$log_file[ $file ] = array( $file, filemtime( $base_dir . $file ) );
+								}
+							}
+						}
+					}
+
+					/**
+					 * @hook ww_theme_combine_scripts_force_parsing_files
+					 *
+					 * @param bool
+					 */
+					if ( ! empty( $to_process ) || ! file_exists( $target_file_dir . $target_file ) || (bool) apply_filters( 'ww_theme_combine_scripts_force_parsing_files', false ) ) {
+
+						//Get the script contents
+						foreach ( $scripts as & $script ) {
+							$script = file_get_contents( $base_dir . $script );
+
+							unset( $script );
+						}
+
+						$scripts = implode( "\n\n", $scripts );
+
+						//Minify the scripts
+						$js_minifier = new JSMinifier();
+
+						try {
+							$scripts_min = $js_minifier->minify( $scripts, [ 'flaggedComments' => false ] );
+							$scripts     = $scripts_min;
+
+							unset( $scripts_min );
+						} catch ( Exception $e ) {
+							if ( is_super_admin() && ( WP_DEBUG || ! empty( $_GET['show_error'] ) ) ) {
+								WW_Theme::printException( $e );
+							}
+						}
+
+
+						/**
+						 * @hook ww_theme_combine_script_before_saving_content
+						 *
+						 * @param string
+						 */
+						$scripts = apply_filters( 'ww_theme_combine_script_before_saving_content', $scripts );
+
+						if ( ! file_exists( $target_file_dir ) || ! is_dir( $target_file_dir ) ) {
+							@mkdir( $target_file_dir, 0775, true );
+						}
+
+						if ( file_put_contents( $target_file_dir . $target_file, $scripts ) !== false ) {
+							@chmod( $target_file_dir . $target_file, 0775 );
+						}
+
+						static::write_log_file( $log_file_name, $log_file );
+
+						Backend_Hooks::flushAll();
+					}
+
+					if ( file_exists( $target_file_dir . $target_file ) && is_readable( $target_file_dir . $target_file ) ) {
+						$handle = strstr( $target_file, '.', true );
+						wp_enqueue_script( $handle, WW_Theme::themeRootUri() . '/assets/js/' . $target_file, array(), filemtime( $target_file_dir . $target_file ), $in_footer > 0 );
+
+						if ( ! empty( $inline_script ) ) {
+							wp_script_add_data( $handle, 'data', implode( $inline_script ) );
+						}
+
+						$to_do[] = $handle;
+					}
+				}
+			}
+
+			return $to_do;
+		}
+
+		/**
+		 * Enqueue frontend theme stylesheets and scripts
+		 */
+		public static function enqueueScripts() {
+			// Parse theme LESS files
+			$bootstrap_css_file  = WP_BASE_THEME_DIR_ASSETS . 'bootstrap/css/bootstrap.css';
+			$bootstrap_js_file   = WP_BASE_THEME_DIR_ASSETS . 'bootstrap/js/bootstrap.min.js';
+			$bootstrap_less_file = WP_BASE_THEME_DIR_ASSETS . 'bootstrap/less/bootstrap.less';
+			$theme_css_file      = WP_BASE_THEME_DIR_ASSETS . 'css/style.css';
+			$theme_js_file       = WP_BASE_THEME_DIR_ASSETS . 'js/script.js';
+
+			// Check URL before parsing the LESS files.
+			if ( defined( 'WW_DEV_SITE' ) && WW_DEV_SITE == true ) {
+				static::parse_less_files( WP_BASE_THEME_DIR_ASSETS . '_less', $theme_css_file );
+				static::parse_js_files( WP_BASE_THEME_DIR_ASSETS . '_javascript', $theme_js_file );
+			}
+
+			if ( is_readable( $bootstrap_css_file ) || static::parse_bootstrap_css( $bootstrap_less_file, $bootstrap_css_file ) ) {
+				wp_enqueue_style( 'bootstrap', WW_Theme::themeRootUri() . '/assets/bootstrap/css/bootstrap.cs s', array(), filemtime( $bootstrap_css_file ) );
+			}
+
+			if ( is_readable( $bootstrap_js_file ) ) {
+				wp_enqueue_script( 'bootstrap', WW_Theme::themeRootUri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ), filemtime( $bootstrap_js_file ), true );
+			}
+
+			if ( is_readable( $theme_css_file ) ) {
+				wp_enqueue_style( 'theme-style', WW_Theme::themeRootUri() . '/assets/css/style.css', array(), filemtime( $theme_css_file ) );
+			}
+
+			if ( is_readable( $theme_js_file ) ) {
+				wp_enqueue_script( 'theme-script', WW_Theme::themeRootUri() . '/assets/js/script.js', array(), filemtime( $theme_js_file ), true );
+			}
+		}
+
+		/**
+		 * Parse all LESS files in a folder and convert it to a single minified CSS file
+		 *
+		 * @param string $source_file The source .less file
+		 * @param string $target_file
+		 *
+		 * @return bool
+		 */
+		public static function parse_bootstrap_css( $source_file, $target_file ) {
+			//Todo: insert dynamic variables from theme config
+
+			$source_file = str_replace( array( '/', '\\' ), DIRECTORY_SEPARATOR, $source_file );
+			$target_file = str_replace( array( '/', '\\' ), DIRECTORY_SEPARATOR, $target_file );
+			$target_dir  = substr( $target_file, 0, strrpos( $target_file, DIRECTORY_SEPARATOR ) );
+
+			if ( is_readable( $source_file ) ) {
+				try {
+					$less_parser = new LessParser( array( 'compress' => true ) );
+
+					$less_parser->parseFile( $source_file );
+
+					$css = $less_parser->getCss();
+
+					if ( ! file_exists( $target_dir ) || ! is_dir( $target_dir ) ) {
+						@mkdir( $target_dir, 0775, true );
+					}
+
+					if ( file_put_contents( $target_file, $css ) !== false ) {
+						@chmod( $target_file, 0775 );
+					}
+
+					return true;
+				} catch ( Exception $e ) {
+					$css = null;
+
+					if ( is_super_admin() && ( WP_DEBUG || ! empty( $_GET['show_error'] ) ) ) {
+						WW_Theme::printException( $e );
+					}
+				}
+			}
+
+			return false;
+		}
+
+		/**
+		 * Parse all JS files in a folder and convert it to a single minified JS file
+		 *
+		 * @param $source_dir
+		 * @param $target_file
+		 *
+		 * @return bool
+		 */
+		public static function parse_js_files( $source_dir, $target_file ) {
+			$source_dir  = realpath( $source_dir ) . DIRECTORY_SEPARATOR;
+			$target_file = str_replace( array( '/', '\\' ), DIRECTORY_SEPARATOR, $target_file );
+			$files       = glob_recursive( $source_dir . '*.js' );
+
+			if ( ! empty( $files ) && is_array( $files ) ) {
+				$log_file_name = $source_dir . 'js_files.log';
+				$log_file      = static::read_log_file( $log_file_name );
+				$to_process    = array();
+
+				sort( $files );
+
+
+				/**
+				 * @hook ww_theme_js_parser_before_collecting_files
+				 */
+				do_action( 'ww_theme_js_parser_before_collecting_files' );
+
+				foreach ( $files as $file ) {
+					$file_name = str_replace( $source_dir, '', $file );
+
+					if ( is_readable( $file ) && ( ! array_key_exists( $file_name, $log_file ) || filemtime( $file ) != $log_file[ $file_name ][1] ) ) {
+						$to_process[] = $file;
+
+						if ( array_key_exists( $file_name, $log_file ) ) {
+							$log_file[ $file_name ][1] = filemtime( $file );
+						} else {
+							$log_file[ $file_name ] = array( $file_name, filemtime( $file ) );
+						}
+					}
+				}
+
+				/**
+				 * @hook ww_theme_js_parser_after_collecting_files
+				 *
+				 * @param array $to_process
+				 */
+				do_action( 'ww_theme_js_parser_after_collecting_files', $to_process );
+
+				/**
+				 * @hook ww_theme_js_parser_force_parsing_files
+				 *
+				 * @param bool
+				 */
+				if ( ! empty( $to_process ) || ! file_exists( $target_file ) || (bool) apply_filters( 'ww_theme_js_parser_force_parsing_files', false ) ) {
+					foreach ( $files as & $file ) {
+						$file = file_get_contents( $file );
+
+						unset( $file );
+					}
+
+					$js_content = implode( "\n\n", $files );
+
+					try {
+						//Minify the scripts
+						$js_minifier = new JSMinifier();
+
+						$js_content_min = $js_minifier->minify( $js_content, [ 'flaggedComments' => false ] );
+						$js_content     = $js_content_min;
+
+						unset( $js_content_min );
+					} catch ( Exception $e ) {
+						if ( is_super_admin() && ( WP_DEBUG || ! empty( $_GET['show_error'] ) ) ) {
+							WW_Theme::printException( $e );
+						}
+					}
+
+					$target_file_dir = substr( $target_file, 0, strrpos( $target_file, DIRECTORY_SEPARATOR ) );
+
+					if ( ! file_exists( $target_file_dir ) || ! is_dir( $target_file_dir ) ) {
+						@mkdir( $target_file_dir, 0775, true );
+					}
+
+					if ( file_put_contents( $target_file, $js_content ) !== false ) {
+						@chmod( $target_file, 0775 );
+					}
+
+					static::write_log_file( $log_file_name, $log_file );
+
+					return true;
+				}
+			} elseif ( file_exists( $target_file ) ) {
+				@chmod( $target_file, 0775 );
+				@unlink( $target_file );
+			}
+
+			return false;
+		}
+
+		/**
+		 * Parse all LESS files in a folder and convert it to a single minified CSS file
+		 *
+		 * @param $source_dir
+		 * @param $target_file
+		 *
+		 * @return bool
+		 */
+		public static function parse_less_files( $source_dir, $target_file ) {
+			$source_dir  = realpath( $source_dir ) . DIRECTORY_SEPARATOR;
+			$target_file = str_replace( array( '/', '\\' ), DIRECTORY_SEPARATOR, $target_file );
+			$files       = glob_recursive( $source_dir . '*.less' );
+
+			if ( ! empty( $files ) && is_array( $files ) ) {
+				$log_file_name = $source_dir . 'less_files.log';
+				$log_file      = static::read_log_file( $log_file_name );
+				$to_process    = array();
+
+				sort( $files );
+
+				/**
+				 * @hook ww_theme_less_parser_before_collecting_files
+				 *
+				 * @param array $files
+				 */
+				do_action( 'ww_theme_less_parser_before_collecting_files', $files );
+
+				foreach ( $files as $file ) {
+					$file_name = str_replace( $source_dir, '', $file );
+
+					if ( is_readable( $file ) && ( ! array_key_exists( $file_name, $log_file ) || filemtime( $file ) != $log_file[ $file_name ][1] ) ) {
+						$to_process[] = $file;
+
+						if ( array_key_exists( $file_name, $log_file ) ) {
+							$log_file[ $file_name ][1] = filemtime( $file );
+						} else {
+							$log_file[ $file_name ] = array( $file_name, filemtime( $file ) );
+						}
+					}
+				}
+
+				/**
+				 * @hook ww_theme_less_parser_before_collecting_files
+				 *
+				 * @param array $to_process
+				 */
+				do_action( 'ww_theme_less_parser_after_collecting_files', $to_process );
+
+
+				try {
+					$less_parser = new LessParser( array( 'compress' => true ) );
+
+					/**
+					 * @hook ww_theme_less_parser_force_parsing_files
+					 *
+					 * @param bool
+					 */
+					if ( ! empty( $to_process ) || ! file_exists( $target_file ) || ( bool) apply_filters( 'ww_theme_less_parser_force_parsing_files', false ) ) {
+						foreach ( $files as $file ) {
+							$less_parser->parseFile( $file );
+						}
+
+						$css = $less_parser->getCss();
+
+						$target_file_dir = substr( $target_file, 0, strrpos( $target_file, DIRECTORY_SEPARATOR ) );
+
+						if ( ! file_exists( $target_file_dir ) || ! is_dir( $target_file_dir ) ) {
+							@mkdir( $target_file_dir, 0775, true );
+						}
+
+						if ( file_put_contents( $target_file, $css ) !== false ) {
+							@chmod( $target_file, 0775 );
+						}
+
+						static::write_log_file( $log_file_name, $log_file );
+
+						return true;
+					}
+				} catch ( Exception $e ) {
+					if ( is_super_admin() && ( WP_DEBUG || ! empty( $_GET['show_error'] ) ) ) {
+						WW_Theme::printException( $e );
+					}
+				}
+			} elseif ( file_exists( $target_file ) ) {
+				@chmod( $target_file, 0775 );
+				@unlink( $target_file );
+			}
+
+			return false;
+		}
+
+		/**
+		 * Reads content from a assets log file and puts it in an array
+		 *
+		 * @param string $log_file
+		 *
+		 * @return array
+		 */
+		private static function read_log_file( $log_file ) {
+			$output = array();
+
+			if ( file_exists( $log_file ) ) {
+				$file = fopen( $log_file, 'r' );
+
+				while ( ( $line = fgetcsv( $file, 100, ';', '"', '\\' ) ) ) {
+					$output[ $line[0] ] = $line;
+				}
+
+				fclose( $file );
+			}
+
+			return $output;
+		}
+
+		/**
+		 * Writes content to a assets log file
+		 *
+		 * @param string $log_file
+		 * @param array  $content
+		 * @param string $mode
+		 *
+		 * @return bool
+		 */
+		private static function write_log_file( $log_file, $content, $mode = 'w' ) {
+			$file = fopen( $log_file, $mode );
+
+			foreach ( $content as $line ) {
+				fputcsv( $file, $line, ';', '"' );
+			}
+
+			fclose( $file );
+
+			return true;
+		}
+	}

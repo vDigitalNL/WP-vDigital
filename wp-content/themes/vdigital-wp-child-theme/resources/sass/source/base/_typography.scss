@@ -9,23 +9,6 @@
     format("truetype");
 }
 
-@font-face {
-  font-family: "Big Shoulders Display";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("/wp-content/themes/vdigital-wp-child-theme/resources/fonts/BigShoulders/big-shoulders-display.medium.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: "Big Shoulders Display";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("/wp-content/themes/vdigital-wp-child-theme/resources/fonts/BigShoulders/big-shoulders-display.bold.ttf")
-    format("truetype");
-}
 
 @font-face {
   font-family: "DM Sans";
@@ -59,8 +42,8 @@
     font-family: "Syne", sans-serif;
   }
 
-  .font--big-shoulders {
-    font-family: "Big Shoulders Display", sans-serif;
+  .font--bebas-neue {
+    font-family: "Bebas Neue", sans-serif;
   }
 
   .font--dm-sans {
@@ -77,7 +60,7 @@
     }
 
     h1, h2, h3, .title--h1, .title--h2, .title--h3 {
-      @apply font--big-shoulders tw-leading-[.95];
+      @apply font--bebas-neue tw-leading-[.95];
     }
     h1, .title--h1 {
       @apply tw-text-[40px] md:tw-text-[120px] tw-font-bold md:tw-font-medium;

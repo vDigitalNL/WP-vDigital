@@ -6,15 +6,8 @@
 
         <?php get_template_part( 'template-parts/form-popup' ); ?>
 
+        <?php include get_stylesheet_directory() . '/template-parts/language-switcher.php'; ?>
+
 		<?php wp_footer(); ?>
-
-        <?php if (! defined('WW_DEV_SITE') || ! WW_DEV_SITE) : ?>
-            <div class="footer-scripts" style="display: none;">
-                <!-- web-monitoring-ok -->
-                <div style="visibility:hidden">web-monitoring-ok</div>
-            </div>
-
-            <?php get_template_part( 'template-parts/snippets/footer-scripts' ); ?>
-        <?php endif; ?>
     </body>
 </html>

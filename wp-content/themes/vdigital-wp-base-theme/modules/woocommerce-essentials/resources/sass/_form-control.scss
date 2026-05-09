@@ -1,0 +1,144 @@
+/**
+extending woocommerce form fields with bootstrap styling
+ */
+.woocommerce-Input {
+	&.woocommerce-Input--text,
+	&.woocommerce-Input--password,
+	&.woocommerce-Input--email {
+		@extend .form-control;
+	}
+}
+
+.input-text {
+	@extend .form-control;
+}
+
+/**
+changing row and column rules for woocommerce field wrappers
+ */
+.woocommerce-address-fields__field-wrapper,
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-shipping-fields__field-wrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form-row {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+
+	label {
+		font-weight: bold;
+	}
+
+	&#billing_country_field,
+	&#order-as-company_field {
+		width: 100%;
+	}
+
+	&#order-as-company_field {
+		margin: 10px 0;
+	}
+
+	&.form-row-heading {
+		margin-top: 20px;
+		margin-bottom: 5px;
+	}
+
+	&.hide {
+		display: none;
+	}
+}
+
+/**
+Required icon
+ */
+abbr.required {
+	color: $danger;
+	text-decoration: none;
+}
+
+/**
+Custom checkbox
+ */
+.input-checkbox {
+	display: none;
+
+	+ label {
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			border: 2px solid $gray-600;
+			position: relative;
+			bottom: -1px;
+			margin-right: 2px;
+		}
+	}
+
+	&:checked + label {
+		&:before {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOHB4IiBoZWlnaHQ9IjdweCIgdmlld0JveD0iMCAwIDggNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxnIGlkPSJWaXN1YWxzLXZhcmlhbnQtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFmcmVrZW5lbi1WaXN1YWwtVjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNjguMDAwMDAwLCAtMzIxLjAwMDAwMCkiIHN0cm9rZT0iIzE5MjA0MyI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY1LjAwMDAwMCwgMzE0LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iUGF0aC01IiBzdHJva2Utd2lkdGg9IjEuMjE1IiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHBvaW50cz0iNCA3LjI1ODU2Mzk2IDYuMTI0NzUgMTAgMTAgNSI+PC9wb2x5bGluZT4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+			background-repeat: no-repeat;
+			background-position: 50%;
+		}
+	}
+}
+
+
+/**
+Country selectbox
+ */
+body {
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: 34px;
+		padding-left: 7px;
+	}
+
+	.select2-container .select2-selection--single {
+		height: 36px;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 32px;
+		right: 9px;
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+	.woocommerce-address-fields__field-wrapper,
+	.woocommerce-billing-fields__field-wrapper,
+	.woocommerce-shipping-fields__field-wrapper {
+		margin-left: -10px;
+		width: calc(100% + 20px);
+	}
+	.form-row {
+		width: calc(50% - 20px);
+		margin: 10px 10px;
+	}
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

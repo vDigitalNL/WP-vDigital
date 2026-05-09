@@ -240,18 +240,18 @@ class Validation {
 
   executeBeforeSubmitEvent() {
     const urlParams = new URLSearchParams(window.location.search);
-    const formSettings = urlParams.get("dyflexis_popup_forms");
-    const formTab = urlParams.get("dyflexis_popup_tab") || 0;
+    const formSettings = urlParams.get("vdigital_popup_forms");
+    const formTab = urlParams.get("vdigital_popup_tab") || 0;
 
     if (!formSettings || formTab.length < 1) {
       return;
     }
 
     window.dispatchEvent(
-      new CustomEvent("dyflexisFormInteraction", {
+      new CustomEvent("vdigitalFormInteraction", {
         detail: {
           category: "submit",
-          formTemplateId: urlParams.get("dyflexis_popup_id"),
+          formTemplateId: urlParams.get("vdigital_popup_id"),
           salesforceFormId: Object.values(JSON.parse(formSettings)[formTab])[0],
         },
       }),

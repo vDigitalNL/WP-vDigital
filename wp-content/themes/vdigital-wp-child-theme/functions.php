@@ -14,15 +14,15 @@ add_action( 'wp_ajax_get_form_shortcode', 'vdigital_get_form_shortcode' );
 add_action( 'wp_ajax_nopriv_get_form_shortcode', 'vdigital_get_form_shortcode' );
 function vdigital_get_form_shortcode() {
     $form_id = isset( $_GET['form_id'] ) ? sanitize_text_field( $_GET['form_id'] ) : '';
-    
+
     if ( empty( $form_id ) ) {
         echo '<p class="tw-text-gray-02 tw-text-center">No form ID provided.</p>';
         wp_die();
     }
-    
+
     // Get the home URL for form action
     $home_url = home_url( '/' );
-    
+
     // Try WPForms first
     if ( function_exists( 'wpforms' ) ) {
         // Get form HTML
@@ -32,19 +32,19 @@ function vdigital_get_form_shortcode() {
         echo $form_html;
         wp_die();
     }
-    
+
     // Try Gravity Forms
     if ( class_exists( 'GFForms' ) ) {
         echo do_shortcode( '[gravityform id="' . $form_id . '" title="false" description="false" ajax="true"]' );
         wp_die();
     }
-    
+
     // Try Contact Form 7
     if ( class_exists( 'WPCF7' ) ) {
         echo do_shortcode( '[contact-form-7 id="' . $form_id . '"]' );
         wp_die();
     }
-    
+
     // Fallback - try generic shortcode
     echo do_shortcode( '[contact-form id="' . $form_id . '"]' );
     wp_die();
@@ -123,15 +123,3 @@ function customBlockCategory( $categories, $post ): array {
 }
 
 add_filter( 'block_categories_all', 'customBlockCategory', 10, 2 );
-
-global $bugsnagWordpress;
-
-if ( $bugsnagWordpress && get_site_option( 'bugsnag_api_key' ) ) {
-    if ( ! defined( 'WW_DEV_SITE' ) || ! WW_DEV_SITE ) {
-        $bugsnagWordpress->setReleaseStage( 'production' );
-
-        return;
-    }
-
-    $bugsnagWordpress->setReleaseStage( 'development' );
-}

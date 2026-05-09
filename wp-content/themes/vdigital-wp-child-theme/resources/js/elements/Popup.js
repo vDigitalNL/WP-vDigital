@@ -30,7 +30,7 @@ class Popup {
       this.element.dispatchEvent(this.loadEvent);
       this.element.classList.remove("tw-hidden");
       this.element
-        .querySelectorAll(".dyflexis_popup_hide_on_success")
+        .querySelectorAll(".vdigital_popup_hide_on_success")
         .forEach((element) => {
           element.classList.remove("tw-hidden");
         });
@@ -40,7 +40,7 @@ class Popup {
 
   activateSuccessMessage(tab, small = false) {
     this.element
-      .querySelectorAll(".dyflexis_popup_hide_on_success")
+      .querySelectorAll(".vdigital_popup_hide_on_success")
       .forEach((element) => {
         element.classList.add("tw-hidden");
       });
@@ -140,17 +140,17 @@ class Popup {
 
   setUrlParameters(setSubmit = false) {
     const currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.set("dyflexis_popup", "true");
-    currentUrl.searchParams.set("dyflexis_popup_id", this.id);
-    currentUrl.searchParams.set("dyflexis_popup_type", this.type);
-    currentUrl.searchParams.set("dyflexis_popup_tab", 0);
+    currentUrl.searchParams.set("vdigital_popup", "true");
+    currentUrl.searchParams.set("vdigital_popup_id", this.id);
+    currentUrl.searchParams.set("vdigital_popup_type", this.type);
+    currentUrl.searchParams.set("vdigital_popup_tab", 0);
     currentUrl.searchParams.set(
-      "dyflexis_popup_forms",
+      "vdigital_popup_forms",
       JSON.stringify(this.forms),
     );
 
     if (setSubmit) {
-      currentUrl.searchParams.set("dyflexis_submit", "true");
+      currentUrl.searchParams.set("vdigital_submit", "true");
     }
 
     history.pushState({}, null, currentUrl);
@@ -204,7 +204,7 @@ class Popup {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: new URLSearchParams({
-          action: "dyflexis_render_popup",
+          action: "vdigital_render_popup",
           theme: "vdigital-wp-child-theme__vdigital-wp-base-theme",
           popupId: this.id,
           type: this.type,
@@ -265,14 +265,14 @@ class Popup {
 
     let heights = {};
     this.element
-      .querySelectorAll(".dyflexis_popup_content_container")
+      .querySelectorAll(".vdigital_popup_content_container")
       .forEach((container) => {
         let elementToClone = container.querySelectorAll(
-          ".dyflexis_element_to_clone",
+          ".vdigital_element_to_clone",
         );
         if (elementToClone.length === 0) {
           const currentUrl = new URL(window.location.href);
-          if (currentUrl.searchParams.get("dyflexis_submit") !== null) {
+          if (currentUrl.searchParams.get("vdigital_submit") !== null) {
             elementToClone = [
               container.parentElement.querySelector(
                 ":scope > .salesforce_submit_content:not(.tw-hidden), :scope > .salesforce_submit_content_small:not(.tw-hidden)",
@@ -317,8 +317,8 @@ class Popup {
     const currentUrl = new URL(window.location.href);
     let activeTabKey = activeTab?.dataset?.key;
     if (!activeTabKey) {
-      if (currentUrl.searchParams.get("dyflexis_popup_tab")) {
-        activeTabKey = currentUrl.searchParams.get("dyflexis_popup_tab");
+      if (currentUrl.searchParams.get("vdigital_popup_tab")) {
+        activeTabKey = currentUrl.searchParams.get("vdigital_popup_tab");
       } else {
         activeTabKey = 0;
       }

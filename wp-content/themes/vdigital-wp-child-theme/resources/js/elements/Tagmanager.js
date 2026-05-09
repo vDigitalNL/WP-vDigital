@@ -14,7 +14,7 @@ class Tagmanager {
       ),
     );
 
-    window.addEventListener("dyflexisFormInteraction", (event) => {
+    window.addEventListener("vdigitalFormInteraction", (event) => {
       this.pushFormInteraction(
         event.detail.category,
         event.detail.formTemplateId,

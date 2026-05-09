@@ -9,11 +9,52 @@ acf_add_local_field_group( [
 	'title'                 => baseTheme()->__( 'CTA block' ),
 	'fields'                => [
 		[
+			'key'   => 'field_' . $fieldKey . 'expert_tab',
+			'label' => baseTheme()->__( 'Expert' ),
+			'name'  => $fieldKey . 'expert_tab',
+			'type'  => 'accordion',
+			'open'  => 1,
+		],
+		[
+			'key'          => 'field_' . $fieldKey . 'expert_image',
+			'label'        => baseTheme()->__( 'Expert Photo' ),
+			'name'         => $fieldKey . 'expert_image',
+			'type'         => 'image',
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'instructions' => baseTheme()->__( 'Upload a photo of the expert (recommended: square, min 200x200px)' ),
+		],
+		[
+			'key'   => 'field_' . $fieldKey . 'expert_name',
+			'label' => baseTheme()->__( 'Expert Name' ),
+			'name'  => $fieldKey . 'expert_name',
+			'type'  => 'text',
+		],
+		[
+			'key'   => 'field_' . $fieldKey . 'expert_role',
+			'label' => baseTheme()->__( 'Expert Role' ),
+			'name'  => $fieldKey . 'expert_role',
+			'type'  => 'text',
+			'instructions' => baseTheme()->__( 'e.g. "Senior Consultant"' ),
+		],
+		[
+			'key'   => 'field_' . $fieldKey . 'expert_email',
+			'label' => baseTheme()->__( 'Email Address' ),
+			'name'  => $fieldKey . 'expert_email',
+			'type'  => 'email',
+		],
+		[
+			'key'   => 'field_' . $fieldKey . 'expert_whatsapp',
+			'label' => baseTheme()->__( 'WhatsApp Number' ),
+			'name'  => $fieldKey . 'expert_whatsapp',
+			'type'  => 'text',
+			'instructions' => baseTheme()->__( 'Include country code, e.g. "+31612345678"' ),
+		],
+		[
 			'key'   => 'field_' . $fieldKey . 'content_tab',
 			'label' => baseTheme()->__( 'Content' ),
 			'name'  => $fieldKey . 'content_tab',
 			'type'  => 'accordion',
-			'open'  => 1,
 		],
 		[
 			'key'   => 'field_' . $fieldKey . 'title',
@@ -47,25 +88,6 @@ acf_add_local_field_group( [
 					$fieldKey . 'buttons_'
 				),
 			],
-		],
-		[
-			'key'   => 'field_' . $fieldKey . 'contact_tab',
-			'label' => baseTheme()->__( 'Contact Info' ),
-			'name'  => $fieldKey . 'contact_tab',
-			'type'  => 'accordion',
-		],
-		[
-			'key'   => 'field_' . $fieldKey . 'contact_text',
-			'label' => baseTheme()->__( 'Contact Text' ),
-			'name'  => $fieldKey . 'contact_text',
-			'type'  => 'text',
-			'instructions' => baseTheme()->__( 'e.g. "Or email us directly at"' ),
-		],
-		[
-			'key'   => 'field_' . $fieldKey . 'contact_link',
-			'label' => baseTheme()->__( 'Contact Link' ),
-			'name'  => $fieldKey . 'contact_link',
-			'type'  => 'link',
 		],
 	],
 	'location'              => [

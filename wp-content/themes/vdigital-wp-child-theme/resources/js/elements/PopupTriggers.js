@@ -13,21 +13,21 @@ class PopupTriggers {
   handleUrl() {
     const currentUrl = new URL(window.location.href);
 
-    const dyflexisPopup = currentUrl.searchParams.get("dyflexis_popup");
-    if (dyflexisPopup === "true") {
-      const id = currentUrl.searchParams.get("dyflexis_popup_id");
+    const vdigitalPopup = currentUrl.searchParams.get("vdigital_popup");
+    if (vdigitalPopup === "true") {
+      const id = currentUrl.searchParams.get("vdigital_popup_id");
       this.type =
-        currentUrl.searchParams.get("dyflexis_popup_type") ?? "salesforce";
-      const tab = currentUrl.searchParams.get("dyflexis_popup_tab") ?? null;
-      let forms = currentUrl.searchParams.get("dyflexis_popup_forms") ?? null;
+        currentUrl.searchParams.get("vdigital_popup_type") ?? "salesforce";
+      const tab = currentUrl.searchParams.get("vdigital_popup_tab") ?? null;
+      let forms = currentUrl.searchParams.get("vdigital_popup_forms") ?? null;
       forms = decodeURIComponent(forms);
       forms = forms.replace(/\\\"/g, '"');
 
-      if (currentUrl.searchParams.get("dyflexis_submit") !== null) {
+      if (currentUrl.searchParams.get("vdigital_submit") !== null) {
         this.triggerPopup(id, tab, JSON.parse(forms), true);
         document.addEventListener(id + "-after-popup-loaded", () => {
           const currentUrl = new URL(window.location.href);
-          if (currentUrl.searchParams.get("dyflexis_submit") !== null) {
+          if (currentUrl.searchParams.get("vdigital_submit") !== null) {
             const industry = currentUrl.searchParams.get("industry") ?? null;
             const employees = currentUrl.searchParams.get("employees") ?? null;
             const smallSuccessMessage =
@@ -55,19 +55,19 @@ class PopupTriggers {
       return;
     }
 
-    const settings = button.dataset.dyflexisPopupSettings;
-    const tab = button.dataset.dyflexisPopupTab || 1;
+    const settings = button.dataset.vdigitalPopupSettings;
+    const tab = button.dataset.vdigitalPopupTab || 1;
 
     if (!settings) {
-      console.error("Error: data-dyflexis-popup-settings is missing");
+      console.error("Error: data-vdigital-popup-settings is missing");
       return;
     }
 
     window.dispatchEvent(
-      new CustomEvent("dyflexisFormInteraction", {
+      new CustomEvent("vdigitalFormInteraction", {
         detail: {
           category: "click",
-          formTemplateId: button.dataset.dyflexisPopupId,
+          formTemplateId: button.dataset.vdigitalPopupId,
           salesforceFormId: Object.values(
             JSON.parse(settings).forms[tab - 1],
           )[0],
@@ -76,14 +76,14 @@ class PopupTriggers {
     );
 
     try {
-      const id = button.dataset.dyflexisPopupId;
-      const tab = button.dataset.dyflexisPopupTab ?? null;
+      const id = button.dataset.vdigitalPopupId;
+      const tab = button.dataset.vdigitalPopupTab ?? null;
       const forms = JSON.parse(settings)?.forms ?? [];
 
       this.triggerPopup(id, tab, forms);
     } catch (error) {
       console.error(
-        "Invalid JSON in data-dyflexis-popup-settings:",
+        "Invalid JSON in data-vdigital-popup-settings:",
         settings,
         error,
       );
@@ -97,7 +97,7 @@ class PopupTriggers {
     });
 
     document
-      .querySelectorAll('a[data-dyflexis-popup-btn="true"]')
+      .querySelectorAll('a[data-vdigital-popup-btn="true"]')
       .forEach((buttonElement) => {
         buttonElement.addEventListener("click", (evt) => {
           this.type = "salesforce";
@@ -108,7 +108,7 @@ class PopupTriggers {
 
   reinitializePopupButtons(container) {
     container
-      .querySelectorAll('a[data-dyflexis-popup-btn="true"]')
+      .querySelectorAll('a[data-vdigital-popup-btn="true"]')
       .forEach((buttonElement) => {
         buttonElement.addEventListener("click", (evt) => {
           this.type = "salesforce";

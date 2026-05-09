@@ -23,7 +23,7 @@ if ( ! wp_verify_nonce( $_REQUEST['nonce'], 'ajax_nonce' ) ) {
 $allowedActions = [
 	'fetch_posts',
 	'fetch_more_posts',
-	'dyflexis_render_popup',
+	'vdigital_render_popup',
 	'fetch_marketplace_posts',
 ];
 
@@ -32,4 +32,4 @@ if ( ! in_array( $action, $allowedActions ) ) {
 	exit;
 }
 
-do_action( 'wp_dyflexis_ajax_' . $action );
+do_action( 'wp_vdigital_ajax_' . $action );

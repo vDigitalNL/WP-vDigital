@@ -1,0 +1,41 @@
+nav.woocommerce-pagination {
+	margin-bottom: 30px;
+	margin-top: 20px;
+
+	ul.page-numbers {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	ul.page-numbers li {
+		padding: 10px;
+
+		a {
+			color: $body-color;
+		}
+	}
+
+	ul.page-numbers li span.page-numbers.current {
+		background: $primary;
+		color: white;
+		border-radius: 50%;
+		width: 27px;
+		height: 27px;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+		margin-top: -2px;
+	}
+
+	a.next,
+	a.prev {
+		&:hover {
+			path {
+				fill: $primary;
+			}
+		}
+	}
+}

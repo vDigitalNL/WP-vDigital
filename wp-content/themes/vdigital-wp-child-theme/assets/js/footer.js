@@ -1217,7 +1217,7 @@ var Popup = /*#__PURE__*/function () {
       } else {
         this.element.dispatchEvent(this.loadEvent);
         this.element.classList.remove("tw-hidden");
-        this.element.querySelectorAll(".dyflexis_popup_hide_on_success").forEach(function (element) {
+        this.element.querySelectorAll(".vdigital_popup_hide_on_success").forEach(function (element) {
           element.classList.remove("tw-hidden");
         });
         this.element.dispatchEvent(this.afterLoadEvent);
@@ -1227,7 +1227,7 @@ var Popup = /*#__PURE__*/function () {
     key: "activateSuccessMessage",
     value: function activateSuccessMessage(tab) {
       var small = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-      this.element.querySelectorAll(".dyflexis_popup_hide_on_success").forEach(function (element) {
+      this.element.querySelectorAll(".vdigital_popup_hide_on_success").forEach(function (element) {
         element.classList.add("tw-hidden");
       });
       var succssElements = this.element.querySelectorAll('.salesforce_submit_content[data-key="' + tab + '"]');
@@ -1295,13 +1295,13 @@ var Popup = /*#__PURE__*/function () {
     value: function setUrlParameters() {
       var setSubmit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
       var currentUrl = new URL(window.location.href);
-      currentUrl.searchParams.set("dyflexis_popup", "true");
-      currentUrl.searchParams.set("dyflexis_popup_id", this.id);
-      currentUrl.searchParams.set("dyflexis_popup_type", this.type);
-      currentUrl.searchParams.set("dyflexis_popup_tab", 0);
-      currentUrl.searchParams.set("dyflexis_popup_forms", JSON.stringify(this.forms));
+      currentUrl.searchParams.set("vdigital_popup", "true");
+      currentUrl.searchParams.set("vdigital_popup_id", this.id);
+      currentUrl.searchParams.set("vdigital_popup_type", this.type);
+      currentUrl.searchParams.set("vdigital_popup_tab", 0);
+      currentUrl.searchParams.set("vdigital_popup_forms", JSON.stringify(this.forms));
       if (setSubmit) {
-        currentUrl.searchParams.set("dyflexis_submit", "true");
+        currentUrl.searchParams.set("vdigital_submit", "true");
       }
       history.pushState({}, null, currentUrl);
     }
@@ -1351,7 +1351,7 @@ function _load() {
       "Content-Type": "application/x-www-form-urlencoded"
     },
     body: new URLSearchParams({
-      action: "dyflexis_render_popup",
+      action: "vdigital_render_popup",
       theme: "vdigital-wp-child-theme__vdigital-wp-base-theme",
       popupId: this.id,
       type: this.type,
@@ -1399,11 +1399,11 @@ function _setHeight() {
   }
   wrapper.style.height = null;
   var heights = {};
-  this.element.querySelectorAll(".dyflexis_popup_content_container").forEach(function (container) {
-    var elementToClone = container.querySelectorAll(".dyflexis_element_to_clone");
+  this.element.querySelectorAll(".vdigital_popup_content_container").forEach(function (container) {
+    var elementToClone = container.querySelectorAll(".vdigital_element_to_clone");
     if (elementToClone.length === 0) {
       var _currentUrl = new URL(window.location.href);
-      if (_currentUrl.searchParams.get("dyflexis_submit") !== null) {
+      if (_currentUrl.searchParams.get("vdigital_submit") !== null) {
         elementToClone = [container.parentElement.querySelector(":scope > .salesforce_submit_content:not(.tw-hidden), :scope > .salesforce_submit_content_small:not(.tw-hidden)")];
       } else {
         elementToClone = [container];
@@ -1432,8 +1432,8 @@ function _setHeight() {
   var currentUrl = new URL(window.location.href);
   var activeTabKey = activeTab === null || activeTab === void 0 || (_activeTab$dataset = activeTab.dataset) === null || _activeTab$dataset === void 0 ? void 0 : _activeTab$dataset.key;
   if (!activeTabKey) {
-    if (currentUrl.searchParams.get("dyflexis_popup_tab")) {
-      activeTabKey = currentUrl.searchParams.get("dyflexis_popup_tab");
+    if (currentUrl.searchParams.get("vdigital_popup_tab")) {
+      activeTabKey = currentUrl.searchParams.get("vdigital_popup_tab");
     } else {
       activeTabKey = 0;
     }
@@ -1651,20 +1651,20 @@ var PopupTriggers = /*#__PURE__*/function () {
     value: function handleUrl() {
       var _this = this;
       var currentUrl = new URL(window.location.href);
-      var dyflexisPopup = currentUrl.searchParams.get("dyflexis_popup");
-      if (dyflexisPopup === "true") {
+      var vdigitalPopup = currentUrl.searchParams.get("vdigital_popup");
+      if (vdigitalPopup === "true") {
         var _currentUrl$searchPar, _currentUrl$searchPar2, _currentUrl$searchPar3;
-        var id = currentUrl.searchParams.get("dyflexis_popup_id");
-        this.type = (_currentUrl$searchPar = currentUrl.searchParams.get("dyflexis_popup_type")) !== null && _currentUrl$searchPar !== void 0 ? _currentUrl$searchPar : "salesforce";
-        var tab = (_currentUrl$searchPar2 = currentUrl.searchParams.get("dyflexis_popup_tab")) !== null && _currentUrl$searchPar2 !== void 0 ? _currentUrl$searchPar2 : null;
-        var forms = (_currentUrl$searchPar3 = currentUrl.searchParams.get("dyflexis_popup_forms")) !== null && _currentUrl$searchPar3 !== void 0 ? _currentUrl$searchPar3 : null;
+        var id = currentUrl.searchParams.get("vdigital_popup_id");
+        this.type = (_currentUrl$searchPar = currentUrl.searchParams.get("vdigital_popup_type")) !== null && _currentUrl$searchPar !== void 0 ? _currentUrl$searchPar : "salesforce";
+        var tab = (_currentUrl$searchPar2 = currentUrl.searchParams.get("vdigital_popup_tab")) !== null && _currentUrl$searchPar2 !== void 0 ? _currentUrl$searchPar2 : null;
+        var forms = (_currentUrl$searchPar3 = currentUrl.searchParams.get("vdigital_popup_forms")) !== null && _currentUrl$searchPar3 !== void 0 ? _currentUrl$searchPar3 : null;
         forms = decodeURIComponent(forms);
         forms = forms.replace(/\\\"/g, '"');
-        if (currentUrl.searchParams.get("dyflexis_submit") !== null) {
+        if (currentUrl.searchParams.get("vdigital_submit") !== null) {
           this.triggerPopup(id, tab, JSON.parse(forms), true);
           document.addEventListener(id + "-after-popup-loaded", function () {
             var currentUrl = new URL(window.location.href);
-            if (currentUrl.searchParams.get("dyflexis_submit") !== null) {
+            if (currentUrl.searchParams.get("vdigital_submit") !== null) {
               var _currentUrl$searchPar4, _currentUrl$searchPar5;
               var industry = (_currentUrl$searchPar4 = currentUrl.searchParams.get("industry")) !== null && _currentUrl$searchPar4 !== void 0 ? _currentUrl$searchPar4 : null;
               var employees = (_currentUrl$searchPar5 = currentUrl.searchParams.get("employees")) !== null && _currentUrl$searchPar5 !== void 0 ? _currentUrl$searchPar5 : null;
@@ -1687,34 +1687,34 @@ var PopupTriggers = /*#__PURE__*/function () {
       if (button.classList.contains("disabled")) {
         return;
       }
-      var settings = button.dataset.dyflexisPopupSettings;
-      var tab = button.dataset.dyflexisPopupTab || 1;
+      var settings = button.dataset.vdigitalPopupSettings;
+      var tab = button.dataset.vdigitalPopupTab || 1;
       if (!settings) {
-        console.error("Error: data-dyflexis-popup-settings is missing");
+        console.error("Error: data-vdigital-popup-settings is missing");
         return;
       }
-      window.dispatchEvent(new CustomEvent("dyflexisFormInteraction", {
+      window.dispatchEvent(new CustomEvent("vdigitalFormInteraction", {
         detail: {
           category: "click",
-          formTemplateId: button.dataset.dyflexisPopupId,
+          formTemplateId: button.dataset.vdigitalPopupId,
           salesforceFormId: Object.values(JSON.parse(settings).forms[tab - 1])[0]
         }
       }));
       try {
-        var _button$dataset$dyfle, _JSON$parse$forms, _JSON$parse;
-        var id = button.dataset.dyflexisPopupId;
-        var _tab = (_button$dataset$dyfle = button.dataset.dyflexisPopupTab) !== null && _button$dataset$dyfle !== void 0 ? _button$dataset$dyfle : null;
+        var _button$dataset$vdigi, _JSON$parse$forms, _JSON$parse;
+        var id = button.dataset.vdigitalPopupId;
+        var _tab = (_button$dataset$vdigi = button.dataset.vdigitalPopupTab) !== null && _button$dataset$vdigi !== void 0 ? _button$dataset$vdigi : null;
         var forms = (_JSON$parse$forms = (_JSON$parse = JSON.parse(settings)) === null || _JSON$parse === void 0 ? void 0 : _JSON$parse.forms) !== null && _JSON$parse$forms !== void 0 ? _JSON$parse$forms : [];
         this.triggerPopup(id, _tab, forms);
       } catch (error) {
-        console.error("Invalid JSON in data-dyflexis-popup-settings:", settings, error);
+        console.error("Invalid JSON in data-vdigital-popup-settings:", settings, error);
       }
     }
   }, {
     key: "reinitializePopupButtons",
     value: function reinitializePopupButtons(container) {
       var _this2 = this;
-      container.querySelectorAll('a[data-dyflexis-popup-btn="true"]').forEach(function (buttonElement) {
+      container.querySelectorAll('a[data-vdigital-popup-btn="true"]').forEach(function (buttonElement) {
         buttonElement.addEventListener("click", function (evt) {
           _this2.type = "salesforce";
           _this2.handlePopupButton(evt);
@@ -1741,7 +1741,7 @@ function _registerEventListeners() {
     _this3.handleUrl();
     _Salesforce_HiddenFields__WEBPACK_IMPORTED_MODULE_1__["default"].setCookies();
   });
-  document.querySelectorAll('a[data-dyflexis-popup-btn="true"]').forEach(function (buttonElement) {
+  document.querySelectorAll('a[data-vdigital-popup-btn="true"]').forEach(function (buttonElement) {
     buttonElement.addEventListener("click", function (evt) {
       _this3.type = "salesforce";
       _this3.handlePopupButton(evt);
@@ -2033,16 +2033,16 @@ var Tabs = /*#__PURE__*/function () {
       this.setUrlParams(tab);
       _assertClassBrand(_Tabs_brand, this, _toggleMobileDropdown).call(this, tab);
       var urlParams = new URLSearchParams(window.location.search);
-      var formSettings = urlParams.get("dyflexis_popup_forms");
-      var formTab = urlParams.get("dyflexis_popup_tab");
+      var formSettings = urlParams.get("vdigital_popup_forms");
+      var formTab = urlParams.get("vdigital_popup_tab");
       if (!formSettings || formTab.length < 1) {
         return;
       }
       if (dispatchEvent) {
-        window.dispatchEvent(new CustomEvent("dyflexisFormInteraction", {
+        window.dispatchEvent(new CustomEvent("vdigitalFormInteraction", {
           detail: {
             category: "switch",
-            formTemplateId: urlParams.get("dyflexis_popup_id"),
+            formTemplateId: urlParams.get("vdigital_popup_id"),
             salesforceFormId: Object.values(JSON.parse(formSettings)[formTab])[0]
           }
         }));
@@ -2053,10 +2053,10 @@ var Tabs = /*#__PURE__*/function () {
     value: function setUrlParams(tab, isInteger) {
       var currentUrl = new URL(window.location.href);
       var tabParameter = isInteger ? tab : tab.dataset.key;
-      currentUrl.searchParams.set("dyflexis_popup", "true");
-      currentUrl.searchParams.set("dyflexis_popup_id", this.popupId);
-      currentUrl.searchParams.set("dyflexis_popup_tab", tabParameter);
-      currentUrl.searchParams.set("dyflexis_popup_forms", JSON.stringify(this.forms));
+      currentUrl.searchParams.set("vdigital_popup", "true");
+      currentUrl.searchParams.set("vdigital_popup_id", this.popupId);
+      currentUrl.searchParams.set("vdigital_popup_tab", tabParameter);
+      currentUrl.searchParams.set("vdigital_popup_forms", JSON.stringify(this.forms));
       history.pushState({}, null, currentUrl);
     }
   }, {
@@ -2072,7 +2072,7 @@ function _setActive() {
   var _tab$classList5,
     _tab$classList6,
     _this4 = this;
-  if (this.urlParams.has("dyflexis_popup") === false && this.urlParams.has("dyflexis_submit") === false) {
+  if (this.urlParams.has("vdigital_popup") === false && this.urlParams.has("vdigital_submit") === false) {
     return;
   }
   var tab = _assertClassBrand(_Tabs_brand, this, _getActive).call(this);
@@ -2081,7 +2081,7 @@ function _setActive() {
   var key = tab.dataset.key;
   this.mobileActiveText.innerText = tab.textContent;
   this.formContents.forEach(function (content) {
-    if (content.dataset.key === key && _this4.urlParams.has("dyflexis_submit") === false) {
+    if (content.dataset.key === key && _this4.urlParams.has("vdigital_submit") === false) {
       content.classList.add("active");
       content.classList.remove("tw-hidden");
       return;
@@ -2094,7 +2094,7 @@ function _setActive() {
 function _getActive() {
   var _this5 = this;
   var activeTab = Array.from(this.tabs).find(function (tab) {
-    return tab.dataset.key === _this5.urlParams.get("dyflexis_popup_tab");
+    return tab.dataset.key === _this5.urlParams.get("vdigital_popup_tab");
   });
   return activeTab || this.tabs[0];
 }
@@ -2183,15 +2183,15 @@ var Validation = /*#__PURE__*/function () {
     key: "executeBeforeSubmitEvent",
     value: function executeBeforeSubmitEvent() {
       var urlParams = new URLSearchParams(window.location.search);
-      var formSettings = urlParams.get("dyflexis_popup_forms");
-      var formTab = urlParams.get("dyflexis_popup_tab") || 0;
+      var formSettings = urlParams.get("vdigital_popup_forms");
+      var formTab = urlParams.get("vdigital_popup_tab") || 0;
       if (!formSettings || formTab.length < 1) {
         return;
       }
-      window.dispatchEvent(new CustomEvent("dyflexisFormInteraction", {
+      window.dispatchEvent(new CustomEvent("vdigitalFormInteraction", {
         detail: {
           category: "submit",
-          formTemplateId: urlParams.get("dyflexis_popup_id"),
+          formTemplateId: urlParams.get("vdigital_popup_id"),
           salesforceFormId: Object.values(JSON.parse(formSettings)[formTab])[0]
         }
       }));
@@ -2756,7 +2756,7 @@ var Tagmanager = /*#__PURE__*/function () {
           return _this.handleLanguageButtonClick(button);
         });
       });
-      window.addEventListener("dyflexisFormInteraction", function (event) {
+      window.addEventListener("vdigitalFormInteraction", function (event) {
         _this.pushFormInteraction(event.detail.category, event.detail.formTemplateId, event.detail.salesforceFormId);
       });
     }
@@ -2997,8 +2997,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function salesforceFormFilled() {
   var urlParams = new URLSearchParams(window.location.search);
-  var salesforceSubmit = urlParams.get("dyflexis_submit");
-  var salesforcePopup = urlParams.get("dyflexis_popup");
+  var salesforceSubmit = urlParams.get("vdigital_submit");
+  var salesforcePopup = urlParams.get("vdigital_popup");
   return salesforceSubmit === "true" && salesforcePopup === "true";
 }
 

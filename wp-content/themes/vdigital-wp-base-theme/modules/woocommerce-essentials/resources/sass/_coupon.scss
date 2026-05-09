@@ -1,0 +1,96 @@
+/**
+Used on multiple pages for example cart and checkout pages
+ */
+.coupon-clone {
+	padding: 20px 20px 0;
+	margin-bottom: -10px;
+
+	> label {
+		cursor: pointer;
+		width: 100%;
+
+		svg {
+			float: right;
+			margin-top: 7px;
+			transition: all 0.3s ease;
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.coupon-clone__inner {
+		display: none;
+	}
+
+	&.active {
+		> label {
+			svg {
+				transform: rotate(0);
+			}
+		}
+
+		.coupon-clone__inner {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+
+			button {
+				width: 100%;
+				margin-top: 4px;
+				white-space: nowrap;
+				font-size: 13px;
+				text-align: center;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			input {
+				width: 100%;
+				margin: 0;
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.coupon-clone {
+		&.active {
+			.coupon-clone__inner {
+				flex-direction: row;
+
+				button {
+					width: 200px;
+					margin-top: 0;
+				}
+
+				input {
+					width: calc(100% - 210px);
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	form[name=checkout] {
+		&.woocommerce-checkout-steppers-mobile {
+			.coupon-clone {
+				padding: 20px 0 20px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	form[name=checkout] {
+		&.woocommerce-checkout-steppers-desktop {
+			.coupon-clone {
+				padding: 20px 0 20px;
+			}
+		}
+	}
+}

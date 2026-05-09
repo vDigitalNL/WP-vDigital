@@ -8,7 +8,7 @@ export class BlockTitleWrapper {
   init() {
     wp.hooks.addFilter(
       "editor.BlockEdit",
-      "dyflexis/block-title-wrapper",
+      "vdigital/block-title-wrapper",
       this.createWrapper.bind(this),
     );
   }
@@ -50,8 +50,8 @@ export class BlockTitleWrapper {
 
       const handleWrapperClick = (e) => {
         if (
-          e.target.classList.contains("dyflexis-block-wrapper") ||
-          e.target.classList.contains("dyflexis-block-title")
+          e.target.classList.contains("vdigital-block-wrapper") ||
+          e.target.classList.contains("vdigital-block-title")
         ) {
           wp.data.dispatch("core/block-editor").selectBlock(props.clientId);
           e.stopPropagation();
@@ -61,13 +61,13 @@ export class BlockTitleWrapper {
       return wp.element.createElement(
         "div",
         {
-          className: "dyflexis-block-wrapper",
+          className: "vdigital-block-wrapper",
           style: wrapperStyle,
           onClick: handleWrapperClick,
         },
         wp.element.createElement(
           "h3",
-          { className: "dyflexis-block-title" },
+          { className: "vdigital-block-title" },
           title,
         ),
         wp.element.createElement(BlockEdit, props),

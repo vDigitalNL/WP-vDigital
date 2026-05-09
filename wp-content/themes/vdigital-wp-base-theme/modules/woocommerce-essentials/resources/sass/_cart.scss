@@ -1,0 +1,126 @@
+/**
+Cart
+ */
+$cart-table-border-color: $gray-400;
+
+.cart-navigation {
+	margin-bottom: 20px;
+
+	.btn {
+		width: 100%;
+		margin-bottom: 10px;
+
+		&:first-child {
+			svg {
+				margin-right: 10px;
+			}
+		}
+
+		&:nth-child(2) {
+			svg {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.btn-outline-primary {
+		&:hover {
+			g {
+				fill: $white;
+			}
+		}
+	}
+}
+
+.woocommerce-cart-form {
+	&__cart-item {
+		dl.variation {
+			margin-top: 10px;
+		}
+	}
+}
+
+.cart-collaterals {
+	box-shadow: $box-shadow-sm;
+	border: 1px solid $card-border-color;
+	padding: 0;
+	margin-top: 30px;
+	width: 100%;
+
+	a.checkout-button {
+		border-radius: 0;
+		width: 100%;
+	}
+
+	.shop_table {
+		margin: 20px;
+		width: calc(100% - 40px);
+	}
+
+}
+
+.cart-cross-sells {
+	max-width: calc(100% - 440px);
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+
+	ul.products {
+		li.product-type-simple {
+			a.add_to_cart_button {
+				position: absolute;
+				right: 20px;
+				bottom: 20px;
+				border-radius: 2px;
+				background-color: $primary;
+				color: $white;
+				padding: 7px 10px;
+				max-width: 105px;
+				text-align: center;
+				line-height: 15px;
+				font-weight: 400;
+				border: none;
+			}
+
+			a.product-cta {
+				display: none;
+			}
+		}
+	}
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+	.cart-navigation {
+		display: flex;
+		justify-content: space-between;
+
+		.btn {
+			margin-bottom: 0;
+			width: auto;
+		}
+	}
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+	.cart-collaterals {
+		max-width: 420px;
+		float: right;
+	}
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+
+
+}

@@ -1,0 +1,34 @@
+.products {
+	.product-cta {
+		transition: background-color .3s;
+	}
+
+	.product {
+		img.attachment-woocommerce_thumbnail {
+			width: auto;
+			margin: 0 auto;
+			text-align: center;
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		img.woocommerce-placeholder.wp-post-image {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.product-type-simple.product {
+	.summary {
+		p.price {
+			margin-bottom: 0;
+			margin-top: 15px;
+		}
+	}
+}
+
+.woocommerce-product-gallery__image--placeholder img {
+	max-width: 90%;
+}

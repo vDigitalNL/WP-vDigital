@@ -12,7 +12,7 @@ module.exports = {
       'jakarta': ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       'dm-sans': ['"DM Sans"', 'sans-serif'],
       'syne': ['"Syne"', 'sans-serif'],
-      'big-shoulders': ['"Big Shoulders Display"', 'sans-serif'],
+      'bebas-neue': ['"Bebas Neue"', 'sans-serif'],
     },
     extend: {
       screens: {
@@ -54,7 +54,7 @@ module.exports = {
       turquoise: "#007D7D",
       spring: "#32aa00",
       core: {
-        DEFAULT: "#081328",
+        DEFAULT: "#071226",
         20: "rgba(8, 19, 40, 0.2)",
         50: "rgba(8, 19, 40, 0.5)",
         80: "rgba(8, 19, 40, 0.8)",
@@ -63,7 +63,7 @@ module.exports = {
       mist: "#526fa6",
       horizon: "#f1f2ff",
       edge: {
-        DEFAULT: "#0195E8",
+        DEFAULT: "#04a0f7",
         hover: "#0376B8",
       },
       sky: "#0195E8",

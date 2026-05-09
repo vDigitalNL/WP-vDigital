@@ -4,7 +4,7 @@
     <div class="salesforce_popup__wrapper tw-transition-all tw-max-w-[1124px] tw-ml-auto tw-mr-auto tw-bg-focus tw-rounded-[20px] tw-w-full tw-flex tw-flex-col lg:tw-flex-row lg:tw-mt-auto tw-mb-auto tw-relative <?php echo $_SERVER['REQUEST_METHOD'] === 'POST' && $args['isAjax'] !== true ? 'tw-hidden' : '' ?>">
         <button class="salesforce_popup__close tw-cursor-pointer tw-absolute btn button--close alternative tw-top-[10px] lg:tw-top-0 tw-right-[10px] lg:tw-right-[-60px]">✕</button>
 
-        <div class="salesforce_popup__wrapper__left dyflexis_popup_content_container tw-overflow-hidden tw-w-full tw-pb-8 tw-px-8 tw-pt-10 lg:tw-w-1/2 lg:tw-py-20 lg:tw-px-15 tw-flex tw-flex-col tw-gap-y-6">
+        <div class="salesforce_popup__wrapper__left vdigital_popup_content_container tw-overflow-hidden tw-w-full tw-pb-8 tw-px-8 tw-pt-10 lg:tw-w-1/2 lg:tw-py-20 lg:tw-px-15 tw-flex tw-flex-col tw-gap-y-6">
             <?php foreach ( $args['forms'] as $index => $form ) : ?>
                 <?php
                 $successMessage = $form['form_templates_forms_success'] ?? [];
@@ -67,7 +67,7 @@
                 <?php endif; ?>
 
                 <div data-key="<?php echo $index ?>" class="salesforce_popup__wrapper__left__text
-                dyflexis_element_to_clone dyflexis_popup_hide_on_success salesforce_popup__content salesforce_form_content tw-flex tw-flex-col tw-h-full <?php echo ( ! empty( $_GET['salesforce_submit'] ) ? 'tw-hidden' : '' ); ?>">
+                vdigital_element_to_clone vdigital_popup_hide_on_success salesforce_popup__content salesforce_form_content tw-flex tw-flex-col tw-h-full <?php echo ( ! empty( $_GET['salesforce_submit'] ) ? 'tw-hidden' : '' ); ?>">
                     <h2 class="tw-font-bold tw-mb-1 lg:tw-mb-5"><?php echo $form['form_templates_forms_title'] ?></h2>
                     <div class="tw-mb-4">
                         <?php echo $form['form_templates_forms_description'] ?>
@@ -136,8 +136,8 @@
                 </div>
             <?php endif; ?>
 
-            <div data-key="<?php echo $index ?>" class="salesforce_popup__wrapper__right dyflexis_popup_hide_on_success md:tw-min-h-[760px] tw-flex
-            dyflexis_popup_content_container custom__scrollbar--vertical tw-transition-all lg:tw-overflow-y-auto salesforce_popup__content salesforce_form_content tw-w-full lg:tw-w-1/2 tw-bg-horizon tw-rounded-3xl tw-rounded-tl-none tw-rounded-bl-[25px] lg:tw-rounded-bl-none tw-p-5 tw-pb-5 lg:tw-p-8 lg:tw-pt-14">
+            <div data-key="<?php echo $index ?>" class="salesforce_popup__wrapper__right vdigital_popup_hide_on_success md:tw-min-h-[760px] tw-flex
+            vdigital_popup_content_container custom__scrollbar--vertical tw-transition-all lg:tw-overflow-y-auto salesforce_popup__content salesforce_form_content tw-w-full lg:tw-w-1/2 tw-bg-horizon tw-rounded-3xl tw-rounded-tl-none tw-rounded-bl-[25px] lg:tw-rounded-bl-none tw-p-5 tw-pb-5 lg:tw-p-8 lg:tw-pt-14">
                 <?php echo do_shortcode( "[salesforce form='". $form['form_templates_forms_form']. "']" ); ?>
             </div>
         <?php endforeach; ?>

@@ -1,95 +1,132 @@
 <?php
 
-use ChildTheme\ChildTheme\Helpers\Menu;
+use ChildTheme\ChildTheme\Helpers\Acf\Buttons;
 
-$navbarOptions   = get_field( 'navbar', 'option' ) ?? [];
+$navbarOptions   = get_field( 'homehero_navbar', 'option' ) ?? [];
 $navbarLogo      = $navbarOptions['navbar_logo'] ?? null;
-$navbarLoginLink = $navbarOptions['navbar_login_link'] ?? null;
 $navbarItems     = $navbarOptions['navbar_items'] ?? [];
-$demoButton      = get_field( 'demo_button', 'option' ) ?? [];
+$ctaButton       = $navbarOptions['cta_button'] ?? [];
 
+$logoUrl = '';
+if (!empty($navbarLogo)) {
+	$logoUrl = $navbarLogo['url'] ?? (is_numeric($navbarLogo) ? wp_get_attachment_image_src($navbarLogo, 'full')[0] ?? '' : '');
+}
+$homeUrl = get_home_url();
 
 ?>
 
-<div id="navbar" class="tw-bg-shade tw-w-full tw-relative tw-z-20 lg:tw-px-4">
-    <div class="tw-mx-auto tw-max-w-[1352px] lg:md:tw-px-0 tw-px-10 sm:tw-px-10 tw-h-20 lg:tw-h-full tw-flex tw-items-center tw-w-full">
+<?php $navbarBgClass = is_front_page() ? '' : 'tw-bg-core tw-shadow-lg tw-py-6'; ?>
+<?php $navbarPyClass = is_front_page() ? 'tw-py-6' : ''; ?>
+<?php $adminBarOffset = is_admin_bar_showing() ? 'tw-top-8' : 'tw-top-0'; ?>
+<nav id="home_hero_navbar" class="navbar-new font--jakarta tw-fixed <?php echo $adminBarOffset; ?> container-padding-mobile lg:container-padding-desktop tw-left-0 tw-right-0 tw-z-50 <?php echo $navbarPyClass; ?> tw-px-8 tw-transition-all tw-duration-300 <?php echo $navbarBgClass; ?>">
+    <div class="tw-mx-auto tw-max-w-[1200px] tw-flex tw-justify-between tw-items-center">
         <!-- Logo -->
-        <?php if ( ! empty( $navbarLogo ) ) : ?>
-            <?php get_template_part( 'template-parts/navbar/elements/navbar', 'logo', ['navbarLogo' => $navbarLogo]); ?>
-        <?php endif; ?>
+		<?php if ( ! empty( $logoUrl ) ) : ?>
+            <a href="<?php echo esc_url($homeUrl); ?>" class="tw-flex tw-items-center">
+                <img src="<?php echo esc_url($logoUrl); ?>" alt="vDigital" class="tw-h-12 tw-block" />
+            </a>
+		<?php endif; ?>
 
-        <!-- Desktop menu -->
-        <div class="menu--desktop tw-w-auto tw-h-full tw-hidden lg:tw-flex lg:tw-items-center tw-gap-x-[49px]">
-            <?php if ( ! empty( $navbarItems ) ) : ?>
-                <ul class="tw-ml-auto tw-flex tw-gap-x-[49px]">
-                    <?php foreach ( $navbarItems as $index => $navbarItem ) : ?>
-                        <?php if ( ! empty( $navbarItem['navbar_link'] && ! empty( $navbarItem['navbar_link']['title'] && ! empty( $navbarItem['navbar_link']['url'] ) ) ) )  : ?>
-                            <?php
-                            $class = '';
-                            if ( ! empty( $navbarItem['navbar_submenu_columns'] ) ) {
-                                $class = 'navbar-item--has-submenu';
-                            }
-                            $link = $navbarItem['navbar_link']['url'];
+        <!-- Menu -->
+		<?php if ( ! empty( $navbarItems ) ) : ?>
+            <div class="tw-hidden md:tw-flex tw-gap-10 tw-list-none tw-m-0 tw-p-0">
+				<?php foreach ( $navbarItems as $item ) : ?>
+					<?php if ( ! empty( $item['navbar_link'] ) ) : ?>
+                        <div>
+                            <a href="<?php echo esc_url($item['navbar_link']['url']); ?>"
+                               target="<?php echo esc_attr($item['navbar_link']['target'] ?? '_self'); ?>"
+                               class="tw-text-focus-90 tw-no-underline tw-text-[20px] hover:tw-text-edge tw-transition-colors">
+								<?php echo esc_html($item['navbar_link']['title']); ?>
+                            </a>
+                        </div>
+					<?php endif; ?>
+				<?php endforeach; ?>
+            </div>
+		<?php endif; ?>
 
-                            if ($link === '#') {
-                                $link = '#header';
-                            }
-
-                            ?>
-                            <li class="navbar-item <?php echo $class; ?> tw-group/nav-item tw-flex tw-items-center tw-py-12 <?php echo ( ! empty( $navbarItem['navbar_submenu_columns'] ) ) ? 'tw-cursor-default' : 'tw-cursor-pointer' ?>"
-                                data-submenu-index="<?php echo $index ?>">
-                                <a href="<?php echo $link; ?>"
-                                   target="<?php echo $navbarItem['navbar_link']['target'] ?? '_self' ?>"
-                                   class="tw-text-base tw-font-light group-hover/nav-item:tw-text-sky gray <?php echo( Menu::isCurrentPage( $navbarItem['navbar_link']['url'] ) ?
-                                           '!tw-text-sky navbar-item__link--active' :
-                                           '' ) ?> <?php echo ( ! empty( $navbarItem['navbar_submenu_columns'] ) ) ? 'tw-cursor-default' : '' ?>"><?php echo $navbarItem['navbar_link']['title']; ?></a>
-
-                            </li>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-
-            <?php if ( ! empty( $navbarLoginLink ) ) : ?>
-                <a class="navbar__container__login-link gray hover:tw-text-growth tw-text-base tw-font-medium <?php echo( Menu::isCurrentPage( $navbarLoginLink['url'] ) ?
-                        '!tw-text-sky' : '' ) ?>"
-                   href="<?php echo $navbarLoginLink['url']; ?>"
-                   target="<?php echo $navbarLoginLink['target'] ?>"><?php echo $navbarLoginLink['title'] ?></a>
-            <?php endif; ?>
+        <!-- CTA Button (Desktop) -->
+        <div class="tw-hidden md:tw-flex tw-items-center tw-gap-4">
+			<?php if ( ! empty( $ctaButton ) ) : ?>
+				<?php Buttons::render( $ctaButton, 'hero_navbar_cta_' ); ?>
+			<?php endif; ?>
         </div>
 
-        <!-- Mobile nav button -->
-        <div class="tw-flex tw-items-center tw-justify-center tw-w-8 lg:tw-hidden tw-ml-auto">
-
-            <svg class="mobile-menu-button--open tw-cursor-pointer" width="25" height="11" viewBox="0 0 25 11"
-                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="0.5" y1="0.5" x2="24.5" y2="0.5" stroke="white" stroke-linecap="round"/>
-                <line x1="9.5" y1="5.5" x2="24.5" y2="5.5" stroke="white" stroke-linecap="round"/>
-                <line x1="0.5" y1="10.5" x2="24.5" y2="10.5" stroke="white" stroke-linecap="round"/>
-            </svg>
-
-            <svg class="mobile-menu-button--close tw-cursor-pointer tw-text-3xl tw-hidden" width="17" height="17"
-                 viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="0.707107" y1="0.5" x2="16" y2="15.7929" stroke="white" stroke-linecap="round"/>
-                <line x1="1" y1="15.7929" x2="16.2929" y2="0.500001" stroke="white" stroke-linecap="round"/>
-            </svg>
+        <!-- Mobile Menu Toggle -->
+        <div class="tw-flex md:tw-hidden tw-items-center">
+            <button
+                    type="button"
+                    id="mobile_menu_toggle"
+                    class="tw-p-2 tw-text-white hover:tw-text-edge tw-transition-colors"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+            >
+                <svg class="tw-w-6 tw-h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="mobile-menu-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path class="mobile-menu-close tw-hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
     </div>
-</div>
 
-<!-- Sliding content -->
-<?php if ( ! empty( $navbarItems ) ) : ?>
-    <?php foreach ( $navbarItems as $index => $navbarItem ) : ?>
-        <?php if ( ! empty( $navbarItem['navbar_submenu_columns'] ) ) : ?>
-            <?php get_template_part( 'template-parts/navbar/submenu-desktop', null, [
-                    'columns' => $navbarItem['navbar_submenu_columns'],
-                    'index'   => $index,
-            ] ); ?>
-        <?php endif; ?>
-    <?php endforeach; ?>
+    <!-- Mobile Menu Panel -->
+    <div id="mobile_menu_panel" class="tw-hidden md:tw-hidden tw-absolute tw-left-0 tw-right-0 tw-top-full tw-bg-core tw-border-t tw-border-white/10 tw-shadow-xl">
+        <div class="tw-px-8 tw-py-6 tw-flex tw-flex-col tw-gap-4">
+			<?php if ( ! empty( $navbarItems ) ) : ?>
+				<?php foreach ( $navbarItems as $item ) : ?>
+					<?php if ( ! empty( $item['navbar_link'] ) ) : ?>
+                        <a href="<?php echo esc_url($item['navbar_link']['url']); ?>"
+                           target="<?php echo esc_attr($item['navbar_link']['target'] ?? '_self'); ?>"
+                           class="tw-text-focus-90 tw-no-underline tw-text-[18px] hover:tw-text-edge tw-transition-colors tw-py-2">
+							<?php echo esc_html($item['navbar_link']['title']); ?>
+                        </a>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			<?php endif; ?>
 
-    <?php get_template_part( 'template-parts/navbar/menu-mobile', null, [
-            'navbarItems' => $navbarItems,
-            'loginLink'   => $navbarLoginLink,
-    ] ); ?>
-<?php endif; ?>
+			<?php if ( ! empty( $ctaButton ) ) : ?>
+                <div class="tw-pt-4 tw-border-t tw-border-white/10">
+					<?php Buttons::render( $ctaButton, 'hero_navbar_cta_' ); ?>
+                </div>
+			<?php endif; ?>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.getElementById('home_hero_navbar');
+        const mobileToggle = document.getElementById('mobile_menu_toggle');
+        const mobilePanel = document.getElementById('mobile_menu_panel');
+        const openIcon = mobileToggle?.querySelector('.mobile-menu-open');
+        const closeIcon = mobileToggle?.querySelector('.mobile-menu-close');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('tw-bg-core', 'tw-shadow-lg', 'tw-py-4');
+                navbar.classList.remove('tw-py-6');
+            } else {
+                navbar.classList.remove('tw-bg-core', 'tw-shadow-lg', 'tw-py-4');
+                navbar.classList.add('tw-py-6');
+            }
+        });
+
+        if (mobileToggle && mobilePanel) {
+            mobileToggle.addEventListener('click', function() {
+                const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                mobileToggle.setAttribute('aria-expanded', !isExpanded);
+                mobilePanel.classList.toggle('tw-hidden');
+                openIcon?.classList.toggle('tw-hidden');
+                closeIcon?.classList.toggle('tw-hidden');
+
+                // Add dark background when mobile menu is open
+                if (!isExpanded) {
+                    navbar.classList.add('tw-bg-core', 'tw-shadow-lg');
+                } else if (window.scrollY <= 50) {
+                    navbar.classList.remove('tw-bg-core', 'tw-shadow-lg');
+                }
+            });
+        }
+    });
+</script>
+
+

@@ -10,7 +10,7 @@ use ChildTheme\ChildTheme\Helpers\Acf\Buttons;
 get_header();
 
 $title       = baseTheme()->__( 'Login' );
-$description = baseTheme()->__( 'Once a month, we send our customers the Release Radar. In this, we announce the most important updates for the coming month. This way, you’ll immediately know how to work smarter in Dyflexis and can inform your colleagues.' );
+$description = baseTheme()->__( 'Once a month, we send our customers the Release Radar. In this, we announce the most important updates for the coming month. This way, you’ll immediately know how to work smarter in vdigital and can inform your colleagues.' );
 $placeholder = baseTheme()->__( 'System name (Company name)' );
 $buttonText  = baseTheme()->__( 'To your system' );
 

@@ -27,8 +27,8 @@ $overviewUrl = get_post_type_archive_link( 'cases' );
 			: '';
 		?>
 
-		<div class="single-case__header tw-px-8 lg:tw-mx-auto break-container-padding tw-relative tw-max-w-[1512px] tw-bg-cover tw-bg-no-repeat tw-bg-center tw-py-16 md:tw-py-24" style="<?php echo $imageStyle; ?>">
-			<div class="tw-absolute tw--inset-1 tw-z-0 tw-bg-core tw-opacity-90"></div>
+		<div class="single-case__header tw-w-[100vw] container-padding-mobile lg:container-padding-desktop tw-relative tw-left-1/2 tw-right-1/2 tw--ml-[50vw] tw--mr-[50vw] tw-bg-cover tw-bg-no-repeat tw-bg-center tw-py-16 md:tw-py-24" style="<?php echo $imageStyle; ?>">
+			<div class="tw-absolute tw-inset-0 tw-z-0 tw-bg-core tw-opacity-90"></div>
 
 			<div class="tw-mx-auto tw-max-w-[1200px] tw-z-20 tw-relative">
 				<div class="tw-mb-8">

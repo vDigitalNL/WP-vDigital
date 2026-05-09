@@ -34,7 +34,7 @@ final class Assets extends AbstractClass {
 			get_stylesheet_directory_uri() . '/resources/js/intlTelInput.min.js',
 			[],
 			null,
-			! empty($_GET['dyflexis_popup']) ? [] : [
+			! empty($_GET['vdigital_popup']) ? [] : [
 				'in_footer' => true,
 				'strategy'  => 'defer',
 			]

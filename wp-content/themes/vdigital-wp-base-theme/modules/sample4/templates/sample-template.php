@@ -1,0 +1,2 @@
+<?php
+	// @ToDo: Change the name of this template when wishing to use it. When changing the name you should also change the way this file is being linked to at: modules/sample4/classes/General/AcfGroups.php where the addFilter function is being used with the parameter: flexible_content_box/layouts_template.

@@ -1,0 +1,139 @@
+.visual-navigation-blocks {
+	margin : 0 0 30px;
+
+	// make sure in the flexible block the blocks
+	// automatically gets stretched equally in height
+	&__flexible {
+		display         : flex;
+		flex-direction  : column;
+		justify-content : space-between;
+		height          : 100%;
+		align-content   : stretch;
+	}
+
+	&__block {
+		background-size     : cover !important;
+		background-position : center !important;
+		padding             : 20px;
+		position            : relative;
+		transition          : all 0.3s ease;
+
+		&:after {
+			background : $black;
+			content    : "";
+			width      : 100%;
+			height     : 100%;
+			position   : absolute;
+			left       : 0;
+			top        : 0;
+			opacity    : 0.6;
+			transition : all 0.3s ease;
+		}
+
+		&:hover {
+			text-decoration : none;
+
+			&:after {
+				opacity : 0.9;
+			}
+		}
+
+		// Big block
+		&--big {
+			display       : block;
+			min-height    : 400px;
+			margin-bottom : 30px;
+
+			&:after {
+				background : -moz-linear-gradient(180deg, $black 0%, rgba(0, 0, 0, 0) 60%);
+				background : -webkit-linear-gradient(180deg, $black 0%, rgba(0, 0, 0, 0) 60%);
+				background : linear-gradient(180deg, $black 0%, rgba(0, 0, 0, 0) 60%);
+				filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+			}
+
+			.visual-navigation-blocks__block__title {
+				bottom : 0;
+			}
+
+			&:hover {
+				.visual-navigation-blocks__block__title {
+					bottom : -20px;
+				}
+			}
+		}
+
+		// Small block in flexible container
+		&--flexible {
+			align-content  : stretch;
+			flex-grow      : 1;
+			margin-bottom  : 30px;
+			display        : flex;
+			flex-direction : column-reverse;
+			text-align     : right;
+
+			&:after {
+				background : -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, $black 100%);
+				background : -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, $black 100%);
+				background : linear-gradient(180deg, transparent 40%, $black 100%);
+				filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+			}
+
+			&:hover {
+				.visual-navigation-blocks__block__title {
+					top : -20px;
+				}
+			}
+
+			.visual-navigation-blocks__block__title {
+				margin-top : 70px;
+				top        : 0;
+			}
+		}
+
+		// Title in all blocks
+		&__title {
+			color      : $white;
+			transition : all 0.3s ease;
+			position   : relative;
+			z-index    : 2;
+
+			svg {
+				position : relative;
+				top      : -2px;
+			}
+		}
+	}
+
+}
+
+// lg: 575px
+// ==================================================
+@include media-breakpoint-up(sm) {
+	.visual-navigation-blocks {
+		&__block {
+			&--big {
+				min-height : 560px;
+			}
+
+			&--flexible {
+				.visual-navigation-blocks__block__title {
+					margin-top : 100px;
+				}
+			}
+		}
+	}
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+	.visual-navigation-blocks {
+		&__block {
+			&--flexible {
+				.visual-navigation-blocks__block__title {
+					margin-top : 50px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+//
+// This file is meant for declaring variables that uses existing variabled from Bootstrap and has therefore to be loaded
+//  after Bootstrap's variable.scss file
+//
+
+//
+// Text
+//
+
+// Font colors
+$font-color-primary: $body-color !default;
+$font-color-secondary: $secondary !default;

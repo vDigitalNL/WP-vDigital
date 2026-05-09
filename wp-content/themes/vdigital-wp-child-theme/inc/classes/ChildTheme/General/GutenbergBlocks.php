@@ -74,9 +74,9 @@ class GutenbergBlocks extends AbstractClass {
 			if ( ! has_block( $block['blockName'], get_post() ?: get_post( $_GET['post'] ?? null ) ) && ! is_admin() ) {
 				continue;
 			}
-			// Script & style handle should be prefixed with 'ww_' to avoid conflicts with other scripts
+			// Script & style handle should be prefixed with 'vd_' to avoid conflicts with other scripts
 			wp_register_script(
-				'ww_' . $block['folderName'],
+				'vd_' . $block['folderName'],
 				get_stylesheet_directory_uri() . '/blocks/' . $block['folderName'] . '/dist/main.js',
 				[],
 				false,
@@ -84,7 +84,7 @@ class GutenbergBlocks extends AbstractClass {
 			);
 
 			wp_register_style(
-				'ww_' . $block['folderName'],
+				'vd_' . $block['folderName'],
 				get_stylesheet_directory_uri() . '/blocks/' . $block['folderName'] . '/dist/main.css',
 			);
 		}
@@ -215,7 +215,7 @@ class GutenbergBlocks extends AbstractClass {
 		foreach ($blocks as $block) {
 			$folderName  = explode('/', $block['blockName'])[1] ?? null;
 			wp_register_script(
-				'ww_' . $folderName ,
+				'vd_' . $folderName ,
 				get_stylesheet_directory_uri() . '/blocks/' . $folderName . '/dist/main.js',
 				[],
 				false,
@@ -223,7 +223,7 @@ class GutenbergBlocks extends AbstractClass {
 			);
 
 			wp_register_style(
-				'ww_' . $folderName,
+				'vd_' . $folderName,
 				get_stylesheet_directory_uri() . '/blocks/' . $folderName . '/dist/main.css',
 			);
 		}

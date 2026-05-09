@@ -1,0 +1,28 @@
+/**
+extending woocommerce buttons with bootstrap styling
+ */
+.woocommerce-Button,
+.button {
+	@extend .btn;
+	@extend .btn-primary;
+}
+
+// sm: 576px tablet.css +
+// ==================================================
+@include media-breakpoint-up(sm) {
+}
+
+// md: 768px desktop.css +
+// ==================================================
+@include media-breakpoint-up(md) {
+}
+
+// lg: 992px
+// ==================================================
+@include media-breakpoint-up(lg) {
+}
+
+// xl: 1200px
+// ==================================================
+@include media-breakpoint-up(xl) {
+}

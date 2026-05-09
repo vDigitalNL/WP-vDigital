@@ -1,0 +1,26 @@
+@import 'source/utils/all';
+
+//
+// Import Bootstrap basics
+//
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import '~bootstrap/scss/_mixins';
+
+// Import Bootstrap modules
+@import "source/bootstrap-modules";
+
+//
+// Import vendor overrides
+//
+@import 'source/vendor/overrides/wp/admin-bar';
+
+//
+// Import the rest of the styling
+//
+@import 'source/utils/variables_after_bootstrap';
+@import 'source/base/all';
+@import 'source/vendor/all';
+@import 'source/components/all';
+@import 'source/layout/all';
+@import 'source/pages/all';

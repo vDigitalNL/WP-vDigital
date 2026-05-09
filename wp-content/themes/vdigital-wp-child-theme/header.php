@@ -13,10 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <?php if ( ! defined( 'WW_DEV_SITE' ) || ! WW_DEV_SITE ) : ?>
-        <?php get_template_part( 'template-parts/snippets/header-scripts' ); ?>
-    <?php endif; ?>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -35,6 +32,6 @@
 <?php if(is_front_page()): ?>
     <?php echo get_template_part( 'template-parts/home-hero/hero');  ?>
 <?php else: ?>
-    <?php get_template_part('template-parts/home-hero/navbar'); ?>
+    <?php get_template_part('template-parts/navbar'); ?>
     <div class="tw-pt-[108px]"></div>
 <?php endif; ?>
