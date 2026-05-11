@@ -4,9 +4,8 @@
  * This popup is triggered by buttons with data-form-popup="true"
  * Two-column layout: Left side with content, Right side with form
  */
-
-$popupTitle       = get_field( 'popup_title', 'option' ) ?: "Let's Build Something Great Together";
-$popupDescription = get_field( 'popup_description', 'option' ) ?: "Tell us about your project and we'll get back to you within 24 hours with a free consultation.";
+$popupTitle       = get_field( 'popup_title', 'option' ) ?: baseTheme()->__( "Let's Build Something Great Together" );
+$popupDescription = get_field( 'popup_description', 'option' ) ?: baseTheme()->__( "Tell us about your project and we'll get back to you within 24 hours with a free consultation." );
 $popupFeatures    = get_field( 'popup_features', 'option' ) ?: [];
 $defaultFormId    = get_field( 'popup_default_form_id', 'option' ) ?: '';
 ?>
@@ -51,7 +50,7 @@ $defaultFormId    = get_field( 'popup_default_form_id', 'option' ) ?: '';
 
             <!-- Right Side: Form -->
             <div class="tw-w-full md:tw-w-7/12 tw-p-8 md:tw-p-10 tw-bg-focus md:tw-overflow-y-auto md:tw-max-h-[90vh] !tw-text-core">
-                <h3 class="!tw-text-core tw-text-xl tw-font-bold tw-mb-6 tw-normal-case tw-tracking-normal">Send us a message</h3>
+                <h3 class="!tw-text-core tw-text-xl tw-font-bold tw-mb-6 tw-normal-case tw-tracking-normal"><?php echo esc_html( baseTheme()->__( 'Send us a message' ) ); ?></h3>
                 <div id="form-popup-body" class="form-popup-styled">
                     <!-- Form content loaded dynamically -->
                     <div class="tw-flex tw-justify-center tw-py-12">
@@ -291,15 +290,113 @@ document.addEventListener('DOMContentLoaded', function() {
         const useFormId = formId || defaultFormId;
 
         if (!useFormId) {
-            popupBody.innerHTML = '<p class="tw-text-gray-02 tw-text-center tw-py-8">No form configured. Please set a form ID in the theme settings.</p>';
+            popupBody.innerHTML = '<p class="tw-text-gray-02 tw-text-center tw-py-8"><?php echo esc_js( baseTheme()->__( 'No form configured. Please set a form ID in the theme settings.' ) ); ?></p>';
             showPopup();
             return;
+        }
+
+        // Initialize WPForms after form is loaded into popup
+        function initWPFormsInPopup(formId) {
+            setTimeout(() => {
+                // Hide honeypot fields
+                popupBody.querySelectorAll('.wpforms-field').forEach(field => {
+                    const computedStyle = window.getComputedStyle(field);
+                    if (computedStyle.position === 'absolute' ||
+                        computedStyle.height === '1px' ||
+                        computedStyle.width === '1px') {
+                        field.style.display = 'none';
+                    }
+                    const input = field.querySelector('input');
+                    if (input) {
+                        const inputStyle = window.getComputedStyle(input);
+                        if (inputStyle.visibility === 'hidden') {
+                            field.style.display = 'none';
+                        }
+                    }
+                });
+
+                const form = popupBody.querySelector('.wpforms-form');
+                if (!form) return;
+
+                // Handle form submission via WPForms AJAX endpoint
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const submitBtn = form.querySelector('button[type="submit"], .wpforms-submit');
+                    const originalText = submitBtn ? submitBtn.textContent : '';
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = '<?php echo esc_js( baseTheme()->__( 'Sending...' ) ); ?>';
+                    }
+
+                    const formData = new FormData(form);
+                    formData.append('action', 'wpforms_submit');
+
+                    fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success && data.data && data.data.confirmation) {
+                            // Show the WPForms confirmation message
+                            popupBody.innerHTML = data.data.confirmation;
+                            // Clear cache so form reloads fresh next time
+                            delete formCache[formId];
+                        } else if (data.success && data.data && data.data.redirect_url) {
+                            // Handle redirect confirmation
+                            popupBody.innerHTML = '<div class="wpforms-confirmation-container-full tw-text-center tw-py-8"><p><?php echo esc_js( baseTheme()->__( 'Thank you! Redirecting...' ) ); ?></p></div>';
+                            delete formCache[formId];
+                            setTimeout(() => {
+                                window.location.href = data.data.redirect_url;
+                            }, 1500);
+                        } else if (!data.success && data.data && data.data.errors) {
+                            // Show validation errors
+                            if (submitBtn) {
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = originalText;
+                            }
+                            // Display general errors
+                            const errorContainer = form.querySelector('.wpforms-error-container') || document.createElement('div');
+                            errorContainer.className = 'wpforms-error-container';
+                            errorContainer.innerHTML = '';
+                            if (data.data.errors.general) {
+                                for (const key in data.data.errors.general) {
+                                    errorContainer.innerHTML += data.data.errors.general[key];
+                                }
+                            }
+                            if (!form.querySelector('.wpforms-error-container')) {
+                                form.insertBefore(errorContainer, form.firstChild);
+                            }
+                        } else {
+                            // Fallback success message
+                            popupBody.innerHTML = '<div class="wpforms-confirmation-container-full tw-text-center tw-py-8"><svg class="tw-w-16 tw-h-16 tw-text-green-500 tw-mx-auto tw-mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><h4 class="tw-text-xl tw-font-bold tw-mb-2"><?php echo esc_js( baseTheme()->__( 'Thank you!' ) ); ?></h4><p><?php echo esc_js( baseTheme()->__( 'Your message has been sent successfully.' ) ); ?></p></div>';
+                            delete formCache[formId];
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Form submission error:', error);
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalText;
+                        }
+                        alert('<?php echo esc_js( baseTheme()->__( 'There was an error submitting the form. Please try again.' ) ); ?>');
+                    });
+                });
+
+                // Trigger Gravity Forms ready event
+                if (typeof jQuery !== 'undefined') {
+                    jQuery(document).trigger('gform_post_render');
+                }
+            }, 100);
         }
 
         // Load form via AJAX if not cached
         if (formCache[useFormId]) {
             popupBody.innerHTML = formCache[useFormId];
             showPopup();
+            initWPFormsInPopup(useFormId);
         } else {
             popupBody.innerHTML = '<div class="tw-flex tw-justify-center tw-py-12"><div class="tw-animate-spin tw-w-8 tw-h-8 tw-border-4 tw-border-primary tw-border-t-transparent tw-rounded-full"></div></div>';
             showPopup();
@@ -310,74 +407,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(html => {
                     formCache[useFormId] = html;
                     popupBody.innerHTML = html;
-
-                    // Wait for WPForms inline scripts to execute, then hide honeypot fields
-                    setTimeout(() => {
-                        popupBody.querySelectorAll('.wpforms-field').forEach(field => {
-                            const computedStyle = window.getComputedStyle(field);
-                            if (computedStyle.position === 'absolute' ||
-                                computedStyle.height === '1px' ||
-                                computedStyle.width === '1px') {
-                                field.style.display = 'none';
-                            }
-                            const input = field.querySelector('input');
-                            if (input) {
-                                const inputStyle = window.getComputedStyle(input);
-                                if (inputStyle.visibility === 'hidden') {
-                                    field.style.display = 'none';
-                                }
-                            }
-                        });
-
-                        // Intercept WPForms submission to handle via AJAX
-                        const form = popupBody.querySelector('.wpforms-form');
-                        if (form) {
-                            form.addEventListener('submit', function(e) {
-                                e.preventDefault();
-
-                                const submitBtn = form.querySelector('button[type="submit"]');
-                                const originalText = submitBtn ? submitBtn.textContent : '';
-                                if (submitBtn) {
-                                    submitBtn.disabled = true;
-                                    submitBtn.textContent = 'Sending...';
-                                }
-
-                                const formData = new FormData(form);
-
-                                fetch('<?php echo home_url('/'); ?>', {
-                                    method: 'POST',
-                                    body: formData
-                                })
-                                .then(response => response.text())
-                                .then(html => {
-                                    // Check if submission was successful
-                                    if (html.includes('wpforms-confirmation') || html.includes('success')) {
-                                        popupBody.innerHTML = '<div class="tw-text-center tw-py-8"><svg class="tw-w-16 tw-h-16 tw-text-green-500 tw-mx-auto tw-mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><h4 class="tw-text-xl tw-font-bold tw-text-core tw-mb-2">Thank you!</h4><p class="tw-text-gray-02">Your message has been sent successfully. We\'ll get back to you soon.</p></div>';
-                                    } else {
-                                        // Show success anyway (form was submitted)
-                                        popupBody.innerHTML = '<div class="tw-text-center tw-py-8"><svg class="tw-w-16 tw-h-16 tw-text-green-500 tw-mx-auto tw-mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><h4 class="tw-text-xl tw-font-bold tw-text-core tw-mb-2">Thank you!</h4><p class="tw-text-gray-02">Your message has been sent successfully. We\'ll get back to you soon.</p></div>';
-                                    }
-                                    // Clear cache so form reloads fresh next time
-                                    delete formCache[useFormId];
-                                })
-                                .catch(error => {
-                                    if (submitBtn) {
-                                        submitBtn.disabled = false;
-                                        submitBtn.textContent = originalText;
-                                    }
-                                    alert('There was an error submitting the form. Please try again.');
-                                });
-                            });
-                        }
-                    }, 100);
-
-                    // Trigger jQuery ready for Gravity Forms
-                    if (typeof jQuery !== 'undefined') {
-                        jQuery(document).trigger('gform_post_render');
-                    }
+                    initWPFormsInPopup(useFormId);
                 })
                 .catch(error => {
-                    popupBody.innerHTML = '<p class="tw-text-red-500 tw-text-center tw-py-8">Error loading form. Please try again.</p>';
+                    popupBody.innerHTML = '<p class="tw-text-red-500 tw-text-center tw-py-8"><?php echo esc_js( baseTheme()->__( 'Error loading form. Please try again.' ) ); ?></p>';
                 });
         }
     }

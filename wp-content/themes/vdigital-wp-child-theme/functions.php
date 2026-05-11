@@ -20,34 +20,20 @@ function vdigital_get_form_shortcode() {
         wp_die();
     }
 
-    // Get the home URL for form action
-    $home_url = home_url( '/' );
-
     // Try WPForms first
     if ( function_exists( 'wpforms' ) ) {
         // Get form HTML
         $form_html = do_shortcode( '[wpforms id="' . $form_id . '"]' );
-        // Fix the form action URL to point to the home page (WPForms handles submission there)
-        $form_html = preg_replace( '/action="[^"]*"/', 'action="' . esc_url( $home_url ) . '"', $form_html );
+        
+        // Fix the form action URL - WPForms sets it to current URL which is wrong in AJAX context
+        // Set it to home URL for non-AJAX fallback (AJAX submission uses admin-ajax.php directly)
+        $form_html = preg_replace( '/action="[^"]*"/', 'action="' . esc_url( home_url( '/' ) ) . '"', $form_html );
+        
         echo $form_html;
         wp_die();
     }
 
-    // Try Gravity Forms
-    if ( class_exists( 'GFForms' ) ) {
-        echo do_shortcode( '[gravityform id="' . $form_id . '" title="false" description="false" ajax="true"]' );
-        wp_die();
-    }
-
-    // Try Contact Form 7
-    if ( class_exists( 'WPCF7' ) ) {
-        echo do_shortcode( '[contact-form-7 id="' . $form_id . '"]' );
-        wp_die();
-    }
-
-    // Fallback - try generic shortcode
-    echo do_shortcode( '[contact-form id="' . $form_id . '"]' );
-    wp_die();
+	wp_die();
 }
 
 //Define the base theme and child theme root
